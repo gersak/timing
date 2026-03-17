@@ -13,7 +13,7 @@ approach refreshing.
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
 </p>
 
-# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.6.5/doc/readme)
+# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.0/doc/readme)
 
 
 ## 🤔 Why Try Timing?
@@ -87,17 +87,17 @@ Handle edge cases naturally with smart period functions:
 You can also pick specific modules:
 ```clojure
 ;; Just core functionality (no dependencies)
-{:deps {dev.gersak/timing.core {:mvn/version "0.6.5"}}}
+{:deps {dev.gersak/timing.core {:mvn/version "0.8.0"}}}
 
 ;; Timezones - choose ONE:
-{:deps {dev.gersak/timing.timezones {:mvn/version "0.7.0"}}}      ; Current rules only (~66KB)
-{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.7.0"}}} ; With historical data (~529KB)
+{:deps {dev.gersak/timing.timezones {:mvn/version "0.8.0"}}}      ; Current rules only (~66KB)
+{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.8.0"}}} ; With historical data (~529KB)
 
 ;; Holidays
-{:deps {dev.gersak/timing.holidays {:mvn/version "0.7.1"}}}
+{:deps {dev.gersak/timing.holidays {:mvn/version "0.8.0"}}}
 
 ;; Cron expressions
-{:deps {dev.gersak/timing.cron {:mvn/version "0.7.0"}}}
+{:deps {dev.gersak/timing.cron {:mvn/version "0.8.0"}}}
 ```
 
 ### Basic Usage
