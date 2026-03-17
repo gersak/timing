@@ -13,7 +13,7 @@ approach refreshing.
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
 </p>
 
-# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.1/doc/readme)
+# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.2/doc/readme)
 
 
 ## 🤔 Why Try Timing?
@@ -77,31 +77,31 @@ Handle edge cases naturally with smart period functions:
 ### Installation
 ```clojure
 ;; deps.edn - Full umbrella library
-{:deps {dev.gersak/timing {:mvn/version "0.8.1"}}}
+{:deps {dev.gersak/timing {:mvn/version "0.8.2"}}}
 
 ;; Leiningen
-[dev.gersak/timing "0.8.1"]
+[dev.gersak/timing "0.8.2"]
 ```
 
 ### Modular Installation
 You can also pick specific modules:
 ```clojure
 ;; Core + standard timezones (current rules only)
-{:deps {dev.gersak/timing.core {:mvn/version "0.8.1"}}}
+{:deps {dev.gersak/timing.core {:mvn/version "0.8.2"}}}
 
 ;; Holidays
-{:deps {dev.gersak/timing.holidays {:mvn/version "0.8.1"}}}
+{:deps {dev.gersak/timing.holidays {:mvn/version "0.8.2"}}}
 
 ;; Cron expressions
-{:deps {dev.gersak/timing.cron {:mvn/version "0.8.1"}}}
+{:deps {dev.gersak/timing.cron {:mvn/version "0.8.2"}}}
 ```
 
 > **⚠️ Using Historical Timezones:** `timing.core` depends on `timing.timezones` by default.
 > If you need historical timezone data, you must exclude it and use `timing.timezones.full` instead:
 > ```clojure
-> {:deps {dev.gersak/timing.core {:mvn/version "0.8.1"
+> {:deps {dev.gersak/timing.core {:mvn/version "0.8.2"
 >                                 :exclusions [dev.gersak/timing.timezones]}
->         dev.gersak/timing.timezones.full {:mvn/version "0.8.1"}}}
+>         dev.gersak/timing.timezones.full {:mvn/version "0.8.2"}}}
 > ```
 > Both artifacts provide the same `timing.timezones.db` namespace. The `.full` variant adds ~529KB
 > but includes complete IANA tzdata history for accurate historical date calculations.

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.gersak</groupId>
   <artifactId>timing</artifactId>
-  <version>0.8.1</version>
+  <version>0.8.2</version>
   <name>timing</name>
   <packaging>jar</packaging>
 
@@ -11,22 +11,22 @@
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.core</artifactId>
-      <version>0.8.1</version>
+      <version>0.8.2</version>
     </dependency>
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.timezones</artifactId>
-      <version>0.8.1</version>
+      <version>0.8.2</version>
     </dependency>
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.cron</artifactId>
-      <version>0.8.1</version>
+      <version>0.8.2</version>
     </dependency>
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.holidays</artifactId>
-      <version>0.8.1</version>
+      <version>0.8.2</version>
     </dependency>
   </dependencies>
 
@@ -73,6 +73,6 @@
     <url>https://github.com/gersak/timing</url>
     <connection>scm:git:git://github.com/gersak/timing.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/gersak/timing.git</developerConnection>
-    <tag>v0.8.1</tag>
+    <tag>v0.8.2</tag>
   </scm>
 </project>

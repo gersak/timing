@@ -3,11 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.gersak</groupId>
   <artifactId>timing.timezones.full</artifactId>
-  <version>0.8.1</version>
+  <version>0.8.2</version>
   <name>timing.timezones.full</name>
   <packaging>jar</packaging>
 
   <build>
+    <sourceDirectory>src-full</sourceDirectory>
     <resources>
       <resource>
         <directory>src-full</directory>
@@ -35,6 +36,6 @@
     <url>https://github.com/gersak/timing</url>
     <connection>scm:git:git://github.com/gersak/timing.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/gersak/timing.git</developerConnection>
-    <tag>v0.8.1</tag>
+    <tag>v0.8.2</tag>
   </scm>
 </project>
