@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.gersak</groupId>
   <artifactId>timing.cron</artifactId>
-  <version>0.6.1</version>
+  <version>0.8.0</version>
   <name>timing.cron</name>
   <packaging>jar</packaging>
 
@@ -11,7 +11,7 @@
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.core</artifactId>
-      <version>0.6.4</version>
+      <version>0.8.0</version>
     </dependency>
   </dependencies>
 
@@ -31,12 +31,18 @@
     </repository>
   </distributionManagement>
 
-  <description>Timing cron expression parser and scheduler</description>
+  <description>Timing cron expression parser</description>
   <url>https://github.com/gersak/timing</url>
   <licenses>
     <license>
       <name>MIT</name>
-      <url>https://github.com/gersak/timing/LICENSE</url>
+      <url>https://github.com/gersak/timing/blob/master/LICENSE</url>
     </license>
   </licenses>
+  <scm>
+    <url>https://github.com/gersak/timing</url>
+    <connection>scm:git:git://github.com/gersak/timing.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/gersak/timing.git</developerConnection>
+    <tag>v0.8.0</tag>
+  </scm>
 </project>

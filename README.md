@@ -13,7 +13,7 @@ approach refreshing.
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
 </p>
 
-# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.6.4/doc/readme)
+# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.6.5/doc/readme)
 
 
 ## 🤔 Why Try Timing?
@@ -76,11 +76,28 @@ Handle edge cases naturally with smart period functions:
 
 ### Installation
 ```clojure
-;; deps.edn
-{:deps {dev.gersak/timing {:mvn/version "0.7.0"}}}
+;; deps.edn - Full umbrella library
+{:deps {dev.gersak/timing {:mvn/version "0.8.0"}}}
 
-;; Leiningen  
-[dev.gersak/timing "0.7.0"]
+;; Leiningen
+[dev.gersak/timing "0.8.0"]
+```
+
+### Modular Installation
+You can also pick specific modules:
+```clojure
+;; Just core functionality (no dependencies)
+{:deps {dev.gersak/timing.core {:mvn/version "0.6.5"}}}
+
+;; Timezones - choose ONE:
+{:deps {dev.gersak/timing.timezones {:mvn/version "0.7.0"}}}      ; Current rules only (~66KB)
+{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.7.0"}}} ; With historical data (~529KB)
+
+;; Holidays
+{:deps {dev.gersak/timing.holidays {:mvn/version "0.7.1"}}}
+
+;; Cron expressions
+{:deps {dev.gersak/timing.cron {:mvn/version "0.7.0"}}}
 ```
 
 ### Basic Usage
@@ -266,11 +283,17 @@ t/week        ; => 604800000
 
 ### **Timezone & Configuration**
 ```clojure
+(require '[timing.timezones.db :as tz])
+
 ;; Dynamic timezone context
 (t/with-time-configuration {:timezone "America/New_York"}
-  (select-keys (t/day-time-context (t/time->value (t/date 2024 6 15))) 
+  (select-keys (t/day-time-context (t/time->value (t/date 2024 6 15)))
                [:year :month :day-in-month :hour]))
 ; => {:year 2024, :month 6, :day-in-month 15, :hour 0}
+
+;; Work in UTC (ignores local timezone)
+(t/with-utc
+  (t/day-time-context (t/time->value (t/date 2024 6 15))))
 
 ;; Convert between timezones
 (def my-time (t/time->value (t/date 2024 6 15 12 0 0)))
@@ -278,11 +301,35 @@ t/week        ; => 604800000
 (t/value->time london-time)
 ; => #inst "2024-06-15T09:00:00.000-00:00" (adjusted for timezone)
 
+;; Fuzzy timezone matching (helpful suggestions on typos)
+(tz/get-timezone "NewYork")  ; Throws with suggestion: "America/New_York"
+
 ;; Custom weekend days and holidays
 (t/with-time-configuration {:weekend-days #{5 6}      ; Fri/Sat weekend
                             :holiday? my-holiday-fn}   ; Custom holiday logic
   (t/weekend? (t/time->value (t/date 2024 6 14))))    ; Friday
 ; => true
+```
+
+### **Historical Timezone Support**
+With `timing.timezones.full`, you can look up timezone rules as they existed at any point in history:
+```clojure
+(require '[timing.timezones.db :as tz])
+
+;; 2-arity get-timezone returns historical rules
+(def ts-1943 (t/time->value (t/utc-date 1943 6 15)))
+(def ts-2023 (t/time->value (t/utc-date 2023 6 15)))
+
+(tz/get-timezone "Europe/Belgrade" ts-1943)  ; WWII era rules (C-Eur)
+(tz/get-timezone "Europe/Belgrade" ts-2023)  ; Modern EU rules
+
+;; 1-arity returns current rules only
+(tz/get-timezone "Europe/Belgrade")  ; Always returns current rules
+
+;; Check if historical data is available
+(contains? (get-in tz/db [:zones "Europe/Belgrade"]) :history)
+; => true (with timing.timezones.full)
+; => false (with timing.timezones)
 ```
 
 ### **Multiple Calendar Systems**
@@ -327,7 +374,7 @@ t/week        ; => 604800000
 ;; Supports ~200 countries
 ```
 
-### **Cron Scheduling**
+### **Cron Expression Parser**
 ```clojure
 (require '[timing.cron :as cron])
 
@@ -345,6 +392,9 @@ t/week        ; => 604800000
 ; => (#inst "2024-06-17T07:00:00.000-00:00"    ; Next Monday 9 AM
 ;     #inst "2024-06-24T07:00:00.000-00:00"    ; Following Monday
 ;     #inst "2024-07-01T07:00:00.000-00:00")   ; And the one after
+
+;; Standard 6-field cron format: second minute hour day-of-month month day-of-week
+;; Supports: ranges (1-5), lists (1,3,5), steps (*/15), names (MON, JAN), L/W modifiers
 ```
 
 ## 💡 Real-World Examples
@@ -419,12 +469,18 @@ t/week        ; => 604800000
 ### **Modular Design**
 ```
 timing/
-├── core/        # Core time computation (timing.core)
-├── timezones/   # IANA timezone database (timing.timezones)  
+├── core/        # Core time computation (timing.core) - no dependencies
+├── timezones/   # IANA timezone database (timing.timezones.db)
+│   ├── timing.timezones       # Current rules only (~66KB)
+│   └── timing.timezones.full  # With historical data (~529KB)
 ├── holidays/    # Country-specific holidays (timing.holiday)
-├── cron/        # Cron scheduling (timing.cron)
+├── cron/        # Cron expression parser (timing.cron)
 └── util/        # Utility functions (timing.util, timing.adjusters)
 ```
+
+Both timezone artifacts provide the same `timing.timezones.db` namespace. Choose based on your needs:
+- **timing.timezones**: Smaller footprint, current timezone rules only
+- **timing.timezones.full**: Complete IANA tzdata history for accurate historical date calculations
 
 ### **Design Philosophy**
 

@@ -3,19 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.gersak</groupId>
   <artifactId>timing.holidays</artifactId>
-  <version>0.7.0</version>
+  <version>0.8.0</version>
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
       <groupId>dev.gersak</groupId>
       <artifactId>timing.core</artifactId>
-      <version>0.6.4</version>
-    </dependency>
-    <dependency>
-      <groupId>dev.gersak</groupId>
-      <artifactId>timing.timezones</artifactId>
-      <version>0.6.0</version>
+      <version>0.8.0</version>
     </dependency>
   </dependencies>
   
@@ -41,7 +36,14 @@
   <url>https://github.com/gersak/timing</url>
   <licenses>
     <license>
-      <url>https://github.com/gersak/timing/LICENSE</url>
+      <name>MIT</name>
+      <url>https://github.com/gersak/timing/blob/master/LICENSE</url>
     </license>
   </licenses>
+  <scm>
+    <url>https://github.com/gersak/timing</url>
+    <connection>scm:git:git://github.com/gersak/timing.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/gersak/timing.git</developerConnection>
+    <tag>v0.8.0</tag>
+  </scm>
 </project>
