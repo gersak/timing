@@ -10,16 +10,17 @@
 
 (def holidays
   {"3rd monday in February" {:name {:en "Washington's Birthday"}},
-   "04-17 and if sunday then next monday"
-   {"substitute" true, :name {:en "American Samoa Flag Day"}},
-   "07-16"
-   {"type" "optional",
-    "note" "Goverment offices closed",
-    :name {:en "Manu'a Cession Day"}},
-   "2nd sunday in October"
-   {"type" "observance", "note" "christian", :name {:en "White Sunday"}},
-   "12-24 12:00" {"type" "bank", :name (partial get-name "12-24")},
-   "12-31 12:00" {"type" "bank", :name (partial get-name "12-31")}})
+ "04-17 and if sunday then next monday"
+ {"substitute" true, :name {:en "American Samoa Flag Day"}},
+ "07-16"
+ {"type" "optional",
+  "note" "Goverment offices closed",
+  :name {:en "Manu'a Cession Day"}},
+ "2nd sunday in October"
+ {"type" "observance", "note" "christian", :name {:en "White Sunday"}},
+ "12-24 12:00" {"type" "bank", :name (partial get-name "12-24")},
+ "12-31 12:00" {"type" "bank", :name (partial get-name "12-31")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

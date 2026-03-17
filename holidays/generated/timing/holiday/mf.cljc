@@ -10,7 +10,8 @@
 
 (def holidays
   {"05-27"
-   {:name {:fr "Abolition de l'esclavage", :en "abolition of slavery"}}})
+ {:name {:fr "Abolition de l'esclavage", :en "abolition of slavery"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

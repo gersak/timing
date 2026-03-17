@@ -10,21 +10,22 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah"
-   {"_name" "10 Dhu al-Hijjah", :name {:en "Tabaski"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "05-25" {:name {:en "Africa Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "10 Muharram" {:name (partial get-name "10 Muharram")},
-   "1 Shawwal" {"_name" "1 Shawwal", :name {:en "Korité"}},
-   "23 Ramadan" {:name (partial get-name "23 Ramadan")},
-   "02-18" {:name (partial get-name "Independence Day")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "07-22" {:name {:en "Revolution Day"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah"
+ {"_name" "10 Dhu al-Hijjah", :name {:en "Tabaski"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "05-25" {:name {:en "Africa Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "10 Muharram" {:name (partial get-name "10 Muharram")},
+ "1 Shawwal" {"_name" "1 Shawwal", :name {:en "Korité"}},
+ "23 Ramadan" {:name (partial get-name "23 Ramadan")},
+ "02-18" {:name (partial get-name "Independence Day")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "07-22" {:name {:en "Revolution Day"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

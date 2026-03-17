@@ -10,29 +10,30 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "1st sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "02-16"
-   {:name
-    {:en "Day of Restoration of the State of Lithuania",
-     :lt "Lietuvos valstybės atkūrimo diena"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "11-01" {:name (partial get-name "11-01")},
-   "03-11"
-   {:name
-    {:en "Day of Restoration of Independence of Lithuania",
-     :lt "Lietuvos nepriklausomybės atkūrimo diena"}},
-   "easter" {:name (partial get-name "easter")},
-   "06-24" {:name {:en "St. John's Day", :lt "Joninės, Rasos"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "07-06" {:name {:en "Statehood Day", :lt "Valstybės diena"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "11-02" {"active" [{"from" 2020}], :name (partial get-name "11-02")},
-   "1st sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "1st sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "02-16"
+ {:name
+  {:en "Day of Restoration of the State of Lithuania",
+   :lt "Lietuvos valstybės atkūrimo diena"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "11-01" {:name (partial get-name "11-01")},
+ "03-11"
+ {:name
+  {:en "Day of Restoration of Independence of Lithuania",
+   :lt "Lietuvos nepriklausomybės atkūrimo diena"}},
+ "easter" {:name (partial get-name "easter")},
+ "06-24" {:name {:en "St. John's Day", :lt "Joninės, Rasos"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "07-06" {:name {:en "Statehood Day", :lt "Valstybės diena"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "11-02" {"active" [{"from" 2020}], :name (partial get-name "11-02")},
+ "1st sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

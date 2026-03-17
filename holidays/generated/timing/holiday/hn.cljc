@@ -10,29 +10,30 @@
 
 (def holidays
   {"2nd monday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "10-12" {:name {:es "Día de la Raza", :en "Columbus Day"}},
-   "09-15" {:name (partial get-name "Independence Day")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "03-19" {"type" "observance", :name (partial get-name "Fathers Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "04-14" {:name {:es "Día de las Américas"}},
-   "06-11"
-   {"type" "observance",
-    :name {:en "Pupil's Day", :es "Día del Estudiante"}},
-   "09-10"
-   {"type" "observance",
-    :name {:en "Children's Day", :es "Día del Niño"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "10-21"
-   {:name {:es "Día de las Fuerzas Armadas", :en "Armed forces Day"}},
-   "09-17"
-   {"type" "observance",
-    :name {:en "Teacher's Day", :es "Día del Maestro"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "10-03" {:name {:en "Soldier's Day", :es "Día del Soldado"}}})
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "10-12" {:name {:es "Día de la Raza", :en "Columbus Day"}},
+ "09-15" {:name (partial get-name "Independence Day")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "03-19" {"type" "observance", :name (partial get-name "Fathers Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "04-14" {:name {:es "Día de las Américas"}},
+ "06-11"
+ {"type" "observance",
+  :name {:en "Pupil's Day", :es "Día del Estudiante"}},
+ "09-10"
+ {"type" "observance",
+  :name {:en "Children's Day", :es "Día del Niño"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "10-21"
+ {:name {:es "Día de las Fuerzas Armadas", :en "Armed forces Day"}},
+ "09-17"
+ {"type" "observance",
+  :name {:en "Teacher's Day", :es "Día del Maestro"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "10-03" {:name {:en "Soldier's Day", :es "Día del Soldado"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

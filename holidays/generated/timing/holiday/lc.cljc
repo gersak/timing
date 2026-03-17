@@ -10,19 +10,20 @@
 
 (def holidays
   {"02-22" {:name (partial get-name "Independence Day")},
-   "1st Friday after 07-10 P4D" {:name {:en "Carnival"}},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-02" {:name {:en "Second New Year's Day"}},
-   "12-13" {:name {:en "National Day"}},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "08-01" {:name {:en "Emancipation Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")},
-   "1st Monday in October" {:name {:en "Thanksgiving"}}})
+ "1st Friday after 07-10 P4D" {:name {:en "Carnival"}},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-02" {:name {:en "Second New Year's Day"}},
+ "12-13" {:name {:en "National Day"}},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "08-01" {:name {:en "Emancipation Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")},
+ "1st Monday in October" {:name {:en "Thanksgiving"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

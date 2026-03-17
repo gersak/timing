@@ -10,29 +10,30 @@
 
 (def holidays
   {"07-28 12:00 if sunday then 00:00"
-   {"note" "half-day holiday for some workers' unions",
-    "type" "observance",
-    :name {:da "Sankt Olavsaften", :en "St.Olav's Eve"}},
-   "12-31 12:00 if sunday then 00:00" {:name (partial get-name "12-31")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "06-05 12:00 if sunday then 00:00"
-   {:name (partial get-name "Constitution Day")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "12-24" {:name (partial get-name "12-24")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "07-29"
-   {"note" "full holiday for most workers' unions",
-    "type" "observance",
-    :name {:fo "Ólavsøka", :da "Sankt Olavs Dag", :en "St.Olav's Day"}},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "easter 26" {:name {:fo "Dýri biðidagur", :en "Great Prayer Day"}},
-   "04-24" {:name {:fo "Flaggdagur", :da "Flagdag", :en "Flag Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"note" "half-day holiday for some workers' unions",
+  "type" "observance",
+  :name {:da "Sankt Olavsaften", :en "St.Olav's Eve"}},
+ "12-31 12:00 if sunday then 00:00" {:name (partial get-name "12-31")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "06-05 12:00 if sunday then 00:00"
+ {:name (partial get-name "Constitution Day")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24" {:name (partial get-name "12-24")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "07-29"
+ {"note" "full holiday for most workers' unions",
+  "type" "observance",
+  :name {:fo "Ólavsøka", :da "Sankt Olavs Dag", :en "St.Olav's Day"}},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "easter 26" {:name {:fo "Dýri biðidagur", :en "Great Prayer Day"}},
+ "04-24" {:name {:fo "Flaggdagur", :da "Flagdag", :en "Flag Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

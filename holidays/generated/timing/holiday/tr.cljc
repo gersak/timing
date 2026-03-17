@@ -10,27 +10,28 @@
 
 (def holidays
   {"10 Dhu al-Hijjah PT114H"
-   {:name (partial get-name "10 Dhu al-Hijjah")},
-   "07-15"
-   {:name
-    {:en "Democracy and National Unity Day",
-     :tr "Demokrasi ve Millî Birlik Günü"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "10-29" {:name {:en "Republic Day", :tr "Cumhuriyet Bayramı"}},
-   "1 Shawwal PT90H" {:name (partial get-name "1 Shawwal")},
-   "08-30" {:name {:en "Victory Day", :tr "Zafer Bayramı"}},
-   "04-23"
-   {:name
-    {:en "National Sovereignty and Children's Day",
-     :tr "Ulusal Egemenlik ve Çocuk Bayramı"}},
-   "05-01"
-   {"_name" "05-01",
-    :name
-    {:en "Labour and Solidarity Day", :tr "Emek ve Dayanışma Günü"}},
-   "05-19"
-   {:name
-    {:en "Commemoration of Atatürk, Youth and Sports Day",
-     :tr "Atatürk'ü Anma Gençlik ve Spor Bayramı"}}})
+ {:name (partial get-name "10 Dhu al-Hijjah")},
+ "07-15"
+ {:name
+  {:en "Democracy and National Unity Day",
+   :tr "Demokrasi ve Millî Birlik Günü"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "10-29" {:name {:en "Republic Day", :tr "Cumhuriyet Bayramı"}},
+ "1 Shawwal PT90H" {:name (partial get-name "1 Shawwal")},
+ "08-30" {:name {:en "Victory Day", :tr "Zafer Bayramı"}},
+ "04-23"
+ {:name
+  {:en "National Sovereignty and Children's Day",
+   :tr "Ulusal Egemenlik ve Çocuk Bayramı"}},
+ "05-01"
+ {"_name" "05-01",
+  :name
+  {:en "Labour and Solidarity Day", :tr "Emek ve Dayanışma Günü"}},
+ "05-19"
+ {:name
+  {:en "Commemoration of Atatürk, Youth and Sports Day",
+   :tr "Atatürk'ü Anma Gençlik ve Spor Bayramı"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,124 +10,125 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "easter 39"
-   {"_name" "easter 39",
-    :name
-    {:nl "Hemelvaartsdag",
-     :en "Ascension Day",
-     :de "Christi Himmelfahrt",
-     :fr "Jour de l'Ascension",
-     :es "Día de la Ascensión",
-     :it "Giorno dell'Ascensione",
-     :pt "Festa da Ascensão"}},
-   "3rd sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "12-15"
-   {"type" "observance",
-    :name
-    {:nl "Koninkrijksdag",
-     :en "Kingdom Day",
-     :de "Königreichstag",
-     :fr "Jour du Royaume",
-     :es "Día del Reino",
-     :it "Giorno del Regno",
-     :pt "Dia do Reino"}},
-   "05-05"
-   {"type" "school",
-    :name
-    {:nl "Bevrijdingsdag",
-     :en "Liberation Day",
-     :de "Befreiungstag",
-     :fr "Jour de la Libération",
-     :es "Día de la liberacion",
-     :it "Giorno della Liberazione",
-     :pt "Dia da Libertação"}},
-   "08-31 since 1891 and prior to 1949"
-   {:name
-    {:nl "Koninginnedag",
-     :en "Queen's Day",
-     :de "Königinnentag",
-     :fr "Fête de la Reine",
-     :es "Día de la Reina",
-     :it "Giorno della Regina",
-     :pt "Dia da Rainha"}},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "05-04"
-   {"type" "observance",
-    :name
-    {:nl "Nationale Dodenherdenking",
-     :en "Remembrance of the Dead",
-     :de "Nationaler Totengedenktag",
-     :fr "Journée nationale du Souvenir",
-     :es "Día Nacional del Recuerdo",
-     :it "Giorno della Memoria Nazionale",
-     :pt "Dia Nacional da Memória"}},
-   "12-05"
-   {"type" "observance",
-    :name
-    {:nl "Sinterklaasavond",
-     :en "St Nicholas' Eve",
-     :de "Nikolausabend",
-     :fr "Soirée Saint-Nicolas",
-     :es "Noche de Sinterklaas",
-     :it "Serata di Sinterklaas",
-     :pt "Noite de Sinterklaas"}},
-   "08-31 since 1885 and prior to 1891"
-   {:name
-    {:nl "Prinsessedag",
-     :en "Princess Day",
-     :de "Prinzessinnentag",
-     :fr "Journée de la princesse",
-     :es "Día de la princesa",
-     :it "Giorno della principessa",
-     :pt "Dia da Princesa"}},
-   "easter -2" {"type" "school", :name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "04-30 if sunday then next monday since 1949 and prior to 1980"
-   {:name
-    {:nl "Koninginnedag",
-     :en "Queen's Day",
-     :de "Königinnentag",
-     :fr "Fête de la Reine",
-     :es "Día de la Reina",
-     :it "Giorno della Regina",
-     :pt "Dia da Rainha"}},
-   "04-27 if sunday then previous saturday since 2014"
-   {:name
-    {:nl "Koningsdag",
-     :en "King's Day",
-     :de "Königstag",
-     :fr "Fête du Roi",
-     :es "Día del Rey",
-     :it "Giorno del Re",
-     :pt "Dia do Rei"}},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "3rd tuesday in September"
-   {"type" "observance",
-    :name
-    {:nl "Prinsjesdag",
-     :en "Prince's Day",
-     :de "Prinzentag",
-     :fr "Journée budgétaire",
-     :es "Día del presupuesto",
-     :it "Giornata del bilancio",
-     :pt "Dia do Príncipe"}},
-   "11-11" {"type" "observance", :name (partial get-name "11-11")},
-   "12-25" {:name (partial get-name "12-25")},
-   "04-30 if sunday then previous saturday since 1980 and prior to 2014"
-   {:name
-    {:nl "Koninginnedag",
-     :en "Queen's Day",
-     :de "Königinnentag",
-     :fr "Fête de la Reine",
-     :es "Día de la Reina",
-     :it "Giorno della Regina",
-     :pt "Dia da Rainha"}}})
+ "easter 39"
+ {"_name" "easter 39",
+  :name
+  {:nl "Hemelvaartsdag",
+   :en "Ascension Day",
+   :de "Christi Himmelfahrt",
+   :fr "Jour de l'Ascension",
+   :es "Día de la Ascensión",
+   :it "Giorno dell'Ascensione",
+   :pt "Festa da Ascensão"}},
+ "3rd sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "12-15"
+ {"type" "observance",
+  :name
+  {:nl "Koninkrijksdag",
+   :en "Kingdom Day",
+   :de "Königreichstag",
+   :fr "Jour du Royaume",
+   :es "Día del Reino",
+   :it "Giorno del Regno",
+   :pt "Dia do Reino"}},
+ "05-05"
+ {"type" "school",
+  :name
+  {:nl "Bevrijdingsdag",
+   :en "Liberation Day",
+   :de "Befreiungstag",
+   :fr "Jour de la Libération",
+   :es "Día de la liberacion",
+   :it "Giorno della Liberazione",
+   :pt "Dia da Libertação"}},
+ "08-31 since 1891 and prior to 1949"
+ {:name
+  {:nl "Koninginnedag",
+   :en "Queen's Day",
+   :de "Königinnentag",
+   :fr "Fête de la Reine",
+   :es "Día de la Reina",
+   :it "Giorno della Regina",
+   :pt "Dia da Rainha"}},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "05-04"
+ {"type" "observance",
+  :name
+  {:nl "Nationale Dodenherdenking",
+   :en "Remembrance of the Dead",
+   :de "Nationaler Totengedenktag",
+   :fr "Journée nationale du Souvenir",
+   :es "Día Nacional del Recuerdo",
+   :it "Giorno della Memoria Nazionale",
+   :pt "Dia Nacional da Memória"}},
+ "12-05"
+ {"type" "observance",
+  :name
+  {:nl "Sinterklaasavond",
+   :en "St Nicholas' Eve",
+   :de "Nikolausabend",
+   :fr "Soirée Saint-Nicolas",
+   :es "Noche de Sinterklaas",
+   :it "Serata di Sinterklaas",
+   :pt "Noite de Sinterklaas"}},
+ "08-31 since 1885 and prior to 1891"
+ {:name
+  {:nl "Prinsessedag",
+   :en "Princess Day",
+   :de "Prinzessinnentag",
+   :fr "Journée de la princesse",
+   :es "Día de la princesa",
+   :it "Giorno della principessa",
+   :pt "Dia da Princesa"}},
+ "easter -2" {"type" "school", :name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "04-30 if sunday then next monday since 1949 and prior to 1980"
+ {:name
+  {:nl "Koninginnedag",
+   :en "Queen's Day",
+   :de "Königinnentag",
+   :fr "Fête de la Reine",
+   :es "Día de la Reina",
+   :it "Giorno della Regina",
+   :pt "Dia da Rainha"}},
+ "04-27 if sunday then previous saturday since 2014"
+ {:name
+  {:nl "Koningsdag",
+   :en "King's Day",
+   :de "Königstag",
+   :fr "Fête du Roi",
+   :es "Día del Rey",
+   :it "Giorno del Re",
+   :pt "Dia do Rei"}},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "3rd tuesday in September"
+ {"type" "observance",
+  :name
+  {:nl "Prinsjesdag",
+   :en "Prince's Day",
+   :de "Prinzentag",
+   :fr "Journée budgétaire",
+   :es "Día del presupuesto",
+   :it "Giornata del bilancio",
+   :pt "Dia do Príncipe"}},
+ "11-11" {"type" "observance", :name (partial get-name "11-11")},
+ "12-25" {:name (partial get-name "12-25")},
+ "04-30 if sunday then previous saturday since 1980 and prior to 2014"
+ {:name
+  {:nl "Koninginnedag",
+   :en "Queen's Day",
+   :de "Königinnentag",
+   :fr "Fête de la Reine",
+   :es "Día de la Reina",
+   :it "Giorno della Regina",
+   :pt "Dia da Rainha"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

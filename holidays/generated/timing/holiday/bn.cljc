@@ -10,26 +10,27 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "07-15"
-   {:name
-    {:en "Sultan's Birthday",
-     :ms "Hari Keputeraan KDYMM Sultan Brunei"}},
-   "01-01" {"_name" "01-01", :name {:ms "Awal Tahun Masihi"}},
-   "17 Ramadan"
-   {:name {:en "Nuzul Al-Quran", :ms "Hari Nuzul Al-Quran"}},
-   "27 Rajab" {:name (partial get-name "27 Rajab")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "chinese 01-0-01"
-   {:name {:en "Chinese New Year", :ms "Tahun Baru Cina"}},
-   "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
-   "03-31"
-   {:name
-    {:en "Armed Forces Day",
-     :ms "Hari Angkatan Bersenjata Diraja Brunei"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "02-23" {:name {:en "National Day", :ms "Hari Kebangsaan"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "1 Ramadan" {:name (partial get-name "1 Ramadan")}})
+ "07-15"
+ {:name
+  {:en "Sultan's Birthday",
+   :ms "Hari Keputeraan KDYMM Sultan Brunei"}},
+ "01-01" {"_name" "01-01", :name {:ms "Awal Tahun Masihi"}},
+ "17 Ramadan"
+ {:name {:en "Nuzul Al-Quran", :ms "Hari Nuzul Al-Quran"}},
+ "27 Rajab" {:name (partial get-name "27 Rajab")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "chinese 01-0-01"
+ {:name {:en "Chinese New Year", :ms "Tahun Baru Cina"}},
+ "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
+ "03-31"
+ {:name
+  {:en "Armed Forces Day",
+   :ms "Hari Angkatan Bersenjata Diraja Brunei"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "02-23" {:name {:en "National Day", :ms "Hari Kebangsaan"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "1 Ramadan" {:name (partial get-name "1 Ramadan")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

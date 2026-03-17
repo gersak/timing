@@ -10,27 +10,28 @@
 
 (def holidays
   {"04-27 and if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "01-01 and if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "12-25 and if Sunday then next Tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "12 Rabi al-awwal and if Sunday then next Monday"
-   {"substitute" true, "_name" "12 Rabi al-awwal", :name {:en "Mawlid"}},
-   "03-08 and if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "03-08")},
-   "12-26 and if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "10 Dhu al-Hijjah and if Sunday then next Monday"
-   {"substitute" true,
-    "_name" "10 Dhu al-Hijjah",
-    :name {:en "Tabaski"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1 Shawwal and if Sunday then next Monday"
-   {"substitute" true, "_name" "1 Shawwal", :name {:en "Korité"}},
-   "02-18 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Armed Forces Day"}}})
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "01-01 and if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "12-25 and if Sunday then next Tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "12 Rabi al-awwal and if Sunday then next Monday"
+ {"substitute" true, "_name" "12 Rabi al-awwal", :name {:en "Mawlid"}},
+ "03-08 and if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "03-08")},
+ "12-26 and if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "10 Dhu al-Hijjah and if Sunday then next Monday"
+ {"substitute" true,
+  "_name" "10 Dhu al-Hijjah",
+  :name {:en "Tabaski"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1 Shawwal and if Sunday then next Monday"
+ {"substitute" true, "_name" "1 Shawwal", :name {:en "Korité"}},
+ "02-18 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Armed Forces Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,21 +10,22 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "1 Shawwal and if sunday then next monday"
-   {:name (partial get-name "1 Shawwal")},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-04" {:name (partial get-name "National Holiday")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "18 Safar" {:name "Magal de Touba"},
-   "10 Muharram" {:name (partial get-name "10 Muharram")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "10 Dhu al-Hijjah and if sunday then next monday"
-   {:name (partial get-name "10 Dhu al-Hijjah")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "1 Shawwal and if sunday then next monday"
+ {:name (partial get-name "1 Shawwal")},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-04" {:name (partial get-name "National Holiday")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "18 Safar" {:name "Magal de Touba"},
+ "10 Muharram" {:name (partial get-name "10 Muharram")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "10 Dhu al-Hijjah and if sunday then next monday"
+ {:name (partial get-name "10 Dhu al-Hijjah")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

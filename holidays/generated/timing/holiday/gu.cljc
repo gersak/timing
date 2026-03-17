@@ -10,13 +10,14 @@
 
 (def holidays
   {"1st monday in March"
-   {:name {:en "Guam History and Chamorro Heritage Day"}},
-   "easter -2"
-   {"type" "observance", :name (partial get-name "easter -2")},
-   "07-21 if sunday then next monday" {:name {:en "Liberation Day"}},
-   "11-02" {:name (partial get-name "11-02")},
-   "12-08 if sunday then next monday"
-   {:name {:en "Our Lady of Camarin Day"}}})
+ {:name {:en "Guam History and Chamorro Heritage Day"}},
+ "easter -2"
+ {"type" "observance", :name (partial get-name "easter -2")},
+ "07-21 if sunday then next monday" {:name {:en "Liberation Day"}},
+ "11-02" {:name (partial get-name "11-02")},
+ "12-08 if sunday then next monday"
+ {:name {:en "Our Lady of Camarin Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

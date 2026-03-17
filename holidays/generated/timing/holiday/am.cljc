@@ -10,54 +10,55 @@
 
 (def holidays
   {"06-01"
-   {"type" "observance",
-    :name
-    {:en "The day of protection of children rights",
-     :hy "Երեխաների իրավունքների պաշտպանության օր"}},
-   "09-21" {:name (partial get-name "Independence Day")},
-   "12-07"
-   {"type" "observance",
-    :name
-    {:en "Earthquake Remembrance Day",
-     :hy "Երկրաշարժի զոհերի հիշատակի օր"}},
-   "05-09"
-   {:name
-    {:en "Victory and Peace Day", :hy "Հաղթանակի եւ Խաղաղության տոն"}},
-   "05-28" {:name {:en "Republic Day", :hy "Հանրապետության օր"}},
-   "easter -52"
-   {"type" "observance",
-    :name
-    {:en "St. Vartan the good work and the duty days",
-     :hy "Սուրբ Վարդանանց տոն՝ բարի գործի եւ ազգային տուրքի օր"}},
-   "01-28" {:name {:en "Army Day", :hy "Բանակի օր"}},
-   "07-05" {:name (partial get-name "Constitution Day")},
-   "09-01"
-   {"type" "observance",
-    :name
-    {:en "Knowledge, Literacy and Education Day",
-     :hy "Գիտելիքի, գրի եւ դպրության օր"}},
-   "01-01 P2D" {:name (partial get-name "01-01")},
-   "03-08" {:name (partial get-name "03-08")},
-   "01-03 P3D"
-   {:name {:en "Pre-Christmas holidays", :hy "Նախածննդյան տոներ"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "05-08"
-   {"type" "observance",
-    :name {:en "Yerkrapah Day", :hy "Երկրապահի օր"}},
-   "04-24" {:name (partial get-name "Mothers Day")},
-   "2nd saturday in October"
-   {"type" "observance",
-    :name {:en "Translator's Day", :hy "Թարգմանչաց տոն"}},
-   "01-06" {:name (partial get-name "12-25")},
-   "12-31" {:name (partial get-name "12-31")},
-   "02-21"
-   {"type" "observance",
-    :name {:en "Mother Language Day", :hy "Մայրենի լեզվի օր"}},
-   "04-07"
-   {"type" "observance",
-    :name
-    {:en "Motherhood and Beauty Day",
-     :hy "Մայրության, գեղեցկության եւ սիրո տոն"}}})
+ {"type" "observance",
+  :name
+  {:en "The day of protection of children rights",
+   :hy "Երեխաների իրավունքների պաշտպանության օր"}},
+ "09-21" {:name (partial get-name "Independence Day")},
+ "12-07"
+ {"type" "observance",
+  :name
+  {:en "Earthquake Remembrance Day",
+   :hy "Երկրաշարժի զոհերի հիշատակի օր"}},
+ "05-09"
+ {:name
+  {:en "Victory and Peace Day", :hy "Հաղթանակի եւ Խաղաղության տոն"}},
+ "05-28" {:name {:en "Republic Day", :hy "Հանրապետության օր"}},
+ "easter -52"
+ {"type" "observance",
+  :name
+  {:en "St. Vartan the good work and the duty days",
+   :hy "Սուրբ Վարդանանց տոն՝ բարի գործի եւ ազգային տուրքի օր"}},
+ "01-28" {:name {:en "Army Day", :hy "Բանակի օր"}},
+ "07-05" {:name (partial get-name "Constitution Day")},
+ "09-01"
+ {"type" "observance",
+  :name
+  {:en "Knowledge, Literacy and Education Day",
+   :hy "Գիտելիքի, գրի եւ դպրության օր"}},
+ "01-01 P2D" {:name (partial get-name "01-01")},
+ "03-08" {:name (partial get-name "03-08")},
+ "01-03 P3D"
+ {:name {:en "Pre-Christmas holidays", :hy "Նախածննդյան տոներ"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "05-08"
+ {"type" "observance",
+  :name {:en "Yerkrapah Day", :hy "Երկրապահի օր"}},
+ "04-24" {:name (partial get-name "Mothers Day")},
+ "2nd saturday in October"
+ {"type" "observance",
+  :name {:en "Translator's Day", :hy "Թարգմանչաց տոն"}},
+ "01-06" {:name (partial get-name "12-25")},
+ "12-31" {:name (partial get-name "12-31")},
+ "02-21"
+ {"type" "observance",
+  :name {:en "Mother Language Day", :hy "Մայրենի լեզվի օր"}},
+ "04-07"
+ {"type" "observance",
+  :name
+  {:en "Motherhood and Beauty Day",
+   :hy "Մայրության, գեղեցկության եւ սիրո տոն"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

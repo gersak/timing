@@ -10,16 +10,17 @@
 
 (def holidays
   {"08-24" {:name {:en "Flag Day"}},
-   "07-26" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "1st Thursday in November" {:name {:en "Thanksgiving"}},
-   "2nd Wednesday in March" {:name {:en "Decoration Day"}},
-   "11-29" {:name {:en "William Tubman's Birthday"}},
-   "2nd Friday in April" {:name {:en "Fast and Prayer Day"}},
-   "02-11" {:name {:en "Armed Forces Day"}},
-   "05-14" {:name {:en "National Unification Day"}},
-   "03-15" {:name {:en "J. J. Robert's Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "07-26" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "1st Thursday in November" {:name {:en "Thanksgiving"}},
+ "2nd Wednesday in March" {:name {:en "Decoration Day"}},
+ "11-29" {:name {:en "William Tubman's Birthday"}},
+ "2nd Friday in April" {:name {:en "Fast and Prayer Day"}},
+ "02-11" {:name {:en "Armed Forces Day"}},
+ "05-14" {:name {:en "National Unification Day"}},
+ "03-15" {:name {:en "J. J. Robert's Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

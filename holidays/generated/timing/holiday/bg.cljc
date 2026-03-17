@@ -10,37 +10,38 @@
 
 (def holidays
   {"09-06" {:name {:bg "Ден на съединението", :en "Unification Day"}},
-   "03-03"
-   {:name
-    {:bg "Ден на Освобождението на България от Османската Империя",
-     :en "Liberation Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "11-01"
-   {"type" "school",
-    :name {:bg "Ден на народните будители", :en "Revival Leaders' Day"}},
-   "05-24"
-   {:name
-    {:bg "Ден на азбуката, културата и просветата",
-     :en
-     "Bulgarian Education and Culture, and Slavonic Literature Day"}},
-   "03-01"
-   {"type" "observance",
-    :name {:bg "Баба Марта", :en "Granny March Day"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "05-06" {:name {:bg "Гергьовден", :en "St. George's Day"}},
-   "12-26" {"type" "observance", :name (partial get-name "12-26")},
-   "orthodox -2" {:name (partial get-name "easter -2")},
-   "03-08" {"type" "observance", :name (partial get-name "03-08")},
-   "05-01" {:name (partial get-name "05-01")},
-   "05-07"
-   {"type" "observance",
-    :name
-    {:bg "Ден на радиото и телевизията",
-     :en "Radio and Television Day"}},
-   "09-22" {:name (partial get-name "Independence Day")},
-   "orthodox" {:name (partial get-name "easter")},
-   "orthodox 1" {:name (partial get-name "easter 1")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "03-03"
+ {:name
+  {:bg "Ден на Освобождението на България от Османската Империя",
+   :en "Liberation Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "11-01"
+ {"type" "school",
+  :name {:bg "Ден на народните будители", :en "Revival Leaders' Day"}},
+ "05-24"
+ {:name
+  {:bg "Ден на азбуката, културата и просветата",
+   :en
+   "Bulgarian Education and Culture, and Slavonic Literature Day"}},
+ "03-01"
+ {"type" "observance",
+  :name {:bg "Баба Марта", :en "Granny March Day"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "05-06" {:name {:bg "Гергьовден", :en "St. George's Day"}},
+ "12-26" {"type" "observance", :name (partial get-name "12-26")},
+ "orthodox -2" {:name (partial get-name "easter -2")},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "05-01" {:name (partial get-name "05-01")},
+ "05-07"
+ {"type" "observance",
+  :name
+  {:bg "Ден на радиото и телевизията",
+   :en "Radio and Television Day"}},
+ "09-22" {:name (partial get-name "Independence Day")},
+ "orthodox" {:name (partial get-name "easter")},
+ "orthodox 1" {:name (partial get-name "easter 1")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

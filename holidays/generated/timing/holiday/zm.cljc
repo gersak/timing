@@ -10,24 +10,25 @@
 
 (def holidays
   {"03-12 and if sunday then next monday"
-   {"substitute" true, :name {:en "Youth Day"}},
-   "1st monday in July" {:name {:en "Heroes' Day"}},
-   "03-09" {:name {:en "Women’s Day"}},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "tuesday after 1st monday in July" {:name {:en "Unity Day"}},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "10-24 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "2015-10-18" {:name {:en "National day of Prayers"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-25 and if sunday then next monday"
-   {"substitute" true, :name {:en "African Freedom Day"}},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "1st monday in August" {:name {:en "Farmers' Day"}}})
+ {"substitute" true, :name {:en "Youth Day"}},
+ "1st monday in July" {:name {:en "Heroes' Day"}},
+ "03-09" {:name {:en "Women’s Day"}},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "tuesday after 1st monday in July" {:name {:en "Unity Day"}},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "10-24 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "2015-10-18" {:name {:en "National day of Prayers"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-25 and if sunday then next monday"
+ {"substitute" true, :name {:en "African Freedom Day"}},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "1st monday in August" {:name {:en "Farmers' Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

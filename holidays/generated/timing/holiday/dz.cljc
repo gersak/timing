@@ -10,19 +10,20 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "11-01" {:name (partial get-name "Revolution Day")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "07-05" {:name (partial get-name "Independence Day")},
-   "10 Muharram" {:name (partial get-name "10 Muharram")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "01-12"
-   {:name
-    {:ar "رأس السنة الأمازيغية",
-     :fr "Nouvel an amazigh",
-     :en "Amazigh New Year"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "11-01" {:name (partial get-name "Revolution Day")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "07-05" {:name (partial get-name "Independence Day")},
+ "10 Muharram" {:name (partial get-name "10 Muharram")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "01-12"
+ {:name
+  {:ar "رأس السنة الأمازيغية",
+   :fr "Nouvel an amazigh",
+   :en "Amazigh New Year"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

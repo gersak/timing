@@ -10,23 +10,24 @@
 
 (def holidays
   {"02-22" {:name (partial get-name "Public Holiday")},
-   "08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "10-29" {:name "Jour de l'Unité"},
-   "07-24" {:name "Journée Mondiale des Enfants"},
-   "12-27" {:name (partial get-name "Public Holiday")},
-   "10-05" {:name (partial get-name "Constitution Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "08-16" {:name (partial get-name "Public Holiday")},
-   "12-26" {:name "Fête de Famille"},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "07-30" {:name (partial get-name "Independence Day")},
-   "03-05" {:name "Fête des chefs coutumiers"},
-   "05-01" {:name (partial get-name "05-01")},
-   "02-21"
-   {:name "Mémoire du père de l'indépendance Rév. Dr. W.H. Lini"},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "10-29" {:name "Jour de l'Unité"},
+ "07-24" {:name "Journée Mondiale des Enfants"},
+ "12-27" {:name (partial get-name "Public Holiday")},
+ "10-05" {:name (partial get-name "Constitution Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "08-16" {:name (partial get-name "Public Holiday")},
+ "12-26" {:name "Fête de Famille"},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "07-30" {:name (partial get-name "Independence Day")},
+ "03-05" {:name "Fête des chefs coutumiers"},
+ "05-01" {:name (partial get-name "05-01")},
+ "02-21"
+ {:name "Mémoire du père de l'indépendance Rév. Dr. W.H. Lini"},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

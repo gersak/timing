@@ -10,36 +10,37 @@
 
 (def holidays
   {"1st monday in September" {:name (partial get-name "05-01")},
-   "09-30 since 2021"
-   {:name
-    {:en "National Day for Truth and Reconciliation",
-     :fr "Journée nationale de la vérité et de la réconciliation"}},
-   "2nd sunday after 05-01"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "07-01" {:name {:en "Canada Day", :fr "Fête du Canada"}},
-   "monday before 05-25"
-   {:name {:en "Victoria Day", :fr "Fête de la Reine"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "02-14" {"type" "observance", :name (partial get-name "02-14")},
-   "easter" {:name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "3rd sunday after 06-01"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "10-31 18:00"
-   {"type" "observance", :name {:en "Halloween", :fr "l'Halloween"}},
-   "03-17"
-   {"type" "observance",
-    :name {:en "St. Patrick’s Day", :fr "Fête de la Saint-Patrick"}},
-   "monday after 08-01"
-   {:name {:en "Civic Holiday", :fr "Premier lundi d’août"}},
-   "11-11" {:name {:en "Remembrance Day", :fr "Jour du Souvenir"}},
-   "02-02"
-   {"type" "observance",
-    :name {:en "Groundhog Day", :fr "Jour de la marmotte"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "2nd monday after 10-01"
-   {:name {:en "Thanksgiving", :fr "Action de grâce"}}})
+ "09-30 since 2021"
+ {:name
+  {:en "National Day for Truth and Reconciliation",
+   :fr "Journée nationale de la vérité et de la réconciliation"}},
+ "2nd sunday after 05-01"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "07-01" {:name {:en "Canada Day", :fr "Fête du Canada"}},
+ "monday before 05-25"
+ {:name {:en "Victoria Day", :fr "Fête de la Reine"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "02-14" {"type" "observance", :name (partial get-name "02-14")},
+ "easter" {:name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "3rd sunday after 06-01"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "10-31 18:00"
+ {"type" "observance", :name {:en "Halloween", :fr "l'Halloween"}},
+ "03-17"
+ {"type" "observance",
+  :name {:en "St. Patrick’s Day", :fr "Fête de la Saint-Patrick"}},
+ "1st monday in August"
+ {:name {:en "Civic Holiday", :fr "Premier lundi d’août"}},
+ "11-11" {:name {:en "Remembrance Day", :fr "Jour du Souvenir"}},
+ "02-02"
+ {"type" "observance",
+  :name {:en "Groundhog Day", :fr "Jour de la marmotte"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "2nd monday after 10-01"
+ {:name {:en "Thanksgiving", :fr "Action de grâce"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

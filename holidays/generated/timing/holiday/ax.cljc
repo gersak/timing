@@ -10,27 +10,28 @@
 
 (def holidays
   {"03-30"
-   {:name
-    {:sv "Ålands demilitariseringsdag", :en "Demilitarization Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "12-31 12:00" {"type" "bank", :name (partial get-name "12-31")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "06-09" {:name {:sv "Självstyrelsedagen", :en "Autonomy Day"}},
-   "friday after 06-19"
-   {"type" "bank", :name {:sv "Midsommarafton", :en "Midsummer Eve"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-06" {:name (partial get-name "Independence Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "saturday after 06-20"
-   {:name {:sv "Midsommardagen", :en "Midsummer Day"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "12-24 12:00" {"type" "bank", :name (partial get-name "12-24")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {:name
+  {:sv "Ålands demilitariseringsdag", :en "Demilitarization Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "12-31 12:00" {"type" "bank", :name (partial get-name "12-31")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "06-09" {:name {:sv "Självstyrelsedagen", :en "Autonomy Day"}},
+ "friday after 06-19"
+ {"type" "bank", :name {:sv "Midsommarafton", :en "Midsummer Eve"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-06" {:name (partial get-name "Independence Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "saturday after 06-20"
+ {:name {:sv "Midsommardagen", :en "Midsummer Day"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "12-24 12:00" {"type" "bank", :name (partial get-name "12-24")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

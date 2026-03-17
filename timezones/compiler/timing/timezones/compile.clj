@@ -5,7 +5,7 @@
    [me.raynes.fs.compression
     :refer [gunzip untar]]))
 
-(def +target+ "timezones/src/timing/timezones/db.cljc")
+(def +target+ "src/timing/timezones/db.cljc")
 
 ;; Clear db.cljc with default empty db.init file
 (fs/copy+ (io/resource "db.init") +target+)

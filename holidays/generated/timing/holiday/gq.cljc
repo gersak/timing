@@ -10,25 +10,26 @@
 
 (def holidays
   {"easter 60" {:name (partial get-name "easter 60")},
-   "06-05 and if sunday then next monday"
-   {"substitute" true,
-    :name {:es "Natalicio de Teodoro Obiang", :en "President's Day"}},
-   "12-08 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-08")},
-   "08-15 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Constitution Day")},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "10-12 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "08-03 and if sunday then next monday"
-   {"substitute" true,
-    :name {:es "Día del Golpe de Libertad", :en "Armed Forces Day"}},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")}})
+ "06-05 and if sunday then next monday"
+ {"substitute" true,
+  :name {:es "Natalicio de Teodoro Obiang", :en "President's Day"}},
+ "12-08 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-08")},
+ "08-15 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Constitution Day")},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "10-12 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "08-03 and if sunday then next monday"
+ {"substitute" true,
+  :name {:es "Día del Golpe de Libertad", :en "Armed Forces Day"}},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

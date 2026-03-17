@@ -10,16 +10,17 @@
 
 (def holidays
   {"10-04" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "05-25" {:name {:en "Africa Day/ Heroes' Day"}},
-   "03-11" {:name {:en "Moshoeshoe Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "07-17" {:name {:en "King Letsie III's Birthday"}},
-   "05-01" {"_name" "05-01", :name {:en "Workers' Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "05-25" {:name {:en "Africa Day/ Heroes' Day"}},
+ "03-11" {:name {:en "Moshoeshoe Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "07-17" {:name {:en "King Letsie III's Birthday"}},
+ "05-01" {"_name" "05-01", :name {:en "Workers' Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

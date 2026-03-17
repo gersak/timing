@@ -1,5 +1,6 @@
 {:deps
- {dev.gersak/timing.core {:local/root "../core"}}
+ {dev.gersak/timing.core {:local/root "../core"}
+  dev.gersak/timing.timezones {:local/root "../timezones"}}
  :paths ["generated" "src"]
  :aliases
  {:compile

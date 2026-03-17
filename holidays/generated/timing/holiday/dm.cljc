@@ -10,25 +10,26 @@
 
 (def holidays
   {"easter -48" {"_name" "easter -48", :name {:en "Carnival Monday"}},
-   "11-03 if sunday then next monday"
-   {:name (partial get-name "Independence Day")},
-   "easter -47" {"_name" "easter -47", :name {:en "Carnival Tuesday"}},
-   "12-25 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "11-04 if sunday then next monday if monday then next tuesday"
-   {:name {:en "National Day of Community Service"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "1st monday in August" {:name {:en "Emancipation Day"}}})
+ "11-03 if sunday then next monday"
+ {:name (partial get-name "Independence Day")},
+ "easter -47" {"_name" "easter -47", :name {:en "Carnival Tuesday"}},
+ "12-25 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "11-04 if sunday then next monday if monday then next tuesday"
+ {:name {:en "National Day of Community Service"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "1st monday in August" {:name {:en "Emancipation Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

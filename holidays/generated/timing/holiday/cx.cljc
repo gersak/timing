@@ -10,17 +10,18 @@
 
 (def holidays
   {"10 Dhu al-Hijjah"
-   {"_name" "10 Dhu al-Hijjah", :name {:ms "Hari Raya Haji"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-26" {:name {:en "Australia Day"}},
-   "10-06" {:name {:en "Territory Day"}},
-   "4th monday in March" {:name (partial get-name "05-01")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1 Shawwal" {"_name" "1 Shawwal", :name {:ms "Hari Raya Puasa"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "chinese 01-0-01 P2D" {:name {:en "Chinese New Year", :zh "春节"}},
-   "04-25" {:name {:en "Anzac Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"_name" "10 Dhu al-Hijjah", :name {:ms "Hari Raya Haji"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-26" {:name {:en "Australia Day"}},
+ "10-06" {:name {:en "Territory Day"}},
+ "4th monday in March" {:name (partial get-name "05-01")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1 Shawwal" {"_name" "1 Shawwal", :name {:ms "Hari Raya Puasa"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "chinese 01-0-01 P2D" {:name {:en "Chinese New Year", :zh "春节"}},
+ "04-25" {:name {:en "Anzac Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

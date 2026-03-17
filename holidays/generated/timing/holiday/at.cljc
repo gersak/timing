@@ -10,30 +10,31 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter -2 prior to 2019"
-   {"type" "optional", :name (partial get-name "easter -2")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter -1"
-   {"type" "observance", :name (partial get-name "easter -1")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "12-31 14:00 if sunday then 00:00"
-   {"type" "bank", :name (partial get-name "12-31")},
-   "12-24 14:00 if sunday then 00:00"
-   {"type" "bank", :name (partial get-name "12-24")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name {:de-at "Staatsfeiertag"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "10-26" {:name (partial get-name "National Holiday")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter -2 prior to 2019"
+ {"type" "optional", :name (partial get-name "easter -2")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter -1"
+ {"type" "observance", :name (partial get-name "easter -1")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "12-31 14:00 if sunday then 00:00"
+ {"type" "bank", :name (partial get-name "12-31")},
+ "12-24 14:00 if sunday then 00:00"
+ {"type" "bank", :name (partial get-name "12-24")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name {:de-at "Staatsfeiertag"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "10-26" {:name (partial get-name "National Holiday")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

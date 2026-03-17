@@ -10,25 +10,26 @@
 
 (def holidays
   {"1st friday in June"
-   {"_name" "05-01", :name {:en "Randol Fawkes Labour Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "07-10 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "10-12 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "National Heroes' Day"}},
-   "01-10 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "Majority Rule Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1st monday in August" {:name {:en "Emancipation Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"_name" "05-01", :name {:en "Randol Fawkes Labour Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "07-10 and if saturday,sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "10-12 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "National Heroes' Day"}},
+ "01-10 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "Majority Rule Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1st monday in August" {:name {:en "Emancipation Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,27 +10,28 @@
 
 (def holidays
   {"easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "02-27" {:name (partial get-name "Independence Day")},
-   "01-06 if tuesday,wednesday then previous monday if thursday,friday then next monday"
-   {:name (partial get-name "01-06")},
-   "11-06 if tuesday,wednesday,thursday,friday,saturday then next monday"
-   {:name (partial get-name "Constitution Day")},
-   "01-21"
-   {:name
-    {:es "Nuestra Señora de la Altagracia",
-     :en "Our Lady of Altagracia"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01 if tuesday,wednesday then previous monday if thursday,friday,sunday then next monday"
-   {:name (partial get-name "05-01")},
-   "08-16" {:name {:es "Día de la Restauración", :en "Restoration Day"}},
-   "09-24"
-   {:name
-    {:es "Nuestra Señora de las Mercedes",
-     :en "Our Lady of las Mercedes"}},
-   "01-26 if tuesday,wednesday then previous monday if thursday,friday then next monday"
-   {:name {:es "Día de Duarte", :en "Duarte's Birthday"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "02-27" {:name (partial get-name "Independence Day")},
+ "01-06 if tuesday,wednesday then previous monday if thursday,friday then next monday"
+ {:name (partial get-name "01-06")},
+ "11-06 if tuesday,wednesday,thursday,friday,saturday then next monday"
+ {:name (partial get-name "Constitution Day")},
+ "01-21"
+ {:name
+  {:es "Nuestra Señora de la Altagracia",
+   :en "Our Lady of Altagracia"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-01 if tuesday,wednesday then previous monday if thursday,friday,sunday then next monday"
+ {:name (partial get-name "05-01")},
+ "08-16" {:name {:es "Día de la Restauración", :en "Restoration Day"}},
+ "09-24"
+ {:name
+  {:es "Nuestra Señora de las Mercedes",
+   :en "Our Lady of las Mercedes"}},
+ "01-26 if tuesday,wednesday then previous monday if thursday,friday then next monday"
+ {:name {:es "Día de Duarte", :en "Duarte's Birthday"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

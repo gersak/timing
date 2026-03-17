@@ -10,21 +10,22 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-14"
-   {:name
-    {:fr "Fête de la Révolution et de la Jeunesse",
-     :ar "عيد الثورة و الشباب"}},
-   "07-25" {:name {:fr "Fête de la République", :ar "عيد الجمهورية"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-09" {:name {:fr "Journée des Martyrs", :ar "عيد الشهداء"}},
-   "03-20" {:name {:fr "Fête de l'indépendance", :ar "عيد الإستقلال"}},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "05-01" {:name (partial get-name "05-01")},
-   "10-15" {:name {:fr "Fête de l'Évacuation", :ar "عيد الجلاء"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "08-13"
-   {:name {:fr "Fête de la Femme et de la Famille", :ar "عيد المرأة"}}})
+ "01-14"
+ {:name
+  {:fr "Fête de la Révolution et de la Jeunesse",
+   :ar "عيد الثورة و الشباب"}},
+ "07-25" {:name {:fr "Fête de la République", :ar "عيد الجمهورية"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-09" {:name {:fr "Journée des Martyrs", :ar "عيد الشهداء"}},
+ "03-20" {:name {:fr "Fête de l'indépendance", :ar "عيد الإستقلال"}},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "05-01" {:name (partial get-name "05-01")},
+ "10-15" {:name {:fr "Fête de l'Évacuation", :ar "عيد الجلاء"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "08-13"
+ {:name {:fr "Fête de la Femme et de la Famille", :ar "عيد المرأة"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,18 +10,19 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-20" {:name {:pt "Dia dos heróis", :en "Heroes Day"}},
-   "08-03" {:name {:pt "Pidjiguiti Day"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "03-08" {:name (partial get-name "03-08")},
-   "05-01" {:name (partial get-name "05-01")},
-   "09-24" {:name (partial get-name "Independence Day")},
-   "11-14"
-   {:name
-    {:pt "Dia do Movimento de Reajustamento",
-     :en "Readjustment Movement Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "01-20" {:name {:pt "Dia dos heróis", :en "Heroes Day"}},
+ "08-03" {:name {:pt "Pidjiguiti Day"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "03-08" {:name (partial get-name "03-08")},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-24" {:name (partial get-name "Independence Day")},
+ "11-14"
+ {:name
+  {:pt "Dia do Movimento de Reajustamento",
+   :en "Readjustment Movement Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

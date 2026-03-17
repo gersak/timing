@@ -9,43 +9,59 @@
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
-  {"11-17"
-   {:name
-    {:sk "Deň boja za slobodu a demokraciu",
-     :en "Struggle for Freedom and Democracy Day"}},
-   "08-29"
-   {:name
-    {:sk "Výročie Slovenského národného povstania",
-     :en "Slovak National Uprising anniversary"}},
-   "01-01"
-   {"_name" "01-01", :name {:sk "Deň vzniku Slovenskej republiky"}},
-   "09-15"
-   {:name
-    {:sk "Sviatok Panny Márie Sedembolestnej",
-     :en "Day of Our Lady of the Seven Sorrows"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-24" {:name (partial get-name "12-24")},
-   "07-05"
-   {:name
-    {:sk "Sviatok svätého Cyrila a Metoda",
-     :en "Saints Cyril and Methodius Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "09-01 since 2024"
-   {"type" "observance", :name (partial get-name "Constitution Day")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "05-08"
-   {:name
-    {:sk "Deň víťazstva nad fašizmom",
-     :en "Day of victory over fascism"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "09-01 since 1994 and prior to 2024"
-   {:name (partial get-name "Constitution Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+  {"05-08 since 2026"
+ {"type" "observance",
+  :name
+  {:sk "Deň víťazstva nad fašizmom",
+   :en "Day of victory over fascism"}},
+ "08-29"
+ {:name
+  {:sk "Výročie Slovenského národného povstania",
+   :en "Slovak National Uprising anniversary"}},
+ "09-15 since 2026"
+ {"type" "observance",
+  :name
+  {:sk "Sviatok Panny Márie Sedembolestnej",
+   :en "Day of Our Lady of the Seven Sorrows"}},
+ "01-01"
+ {"_name" "01-01", :name {:sk "Deň vzniku Slovenskej republiky"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24" {:name (partial get-name "12-24")},
+ "07-05"
+ {:name
+  {:sk "Sviatok svätého Cyrila a Metoda",
+   :en "Saints Cyril and Methodius Day"}},
+ "11-17 since 2025"
+ {"type" "observance",
+  :name
+  {:sk "Deň boja za slobodu a demokraciu",
+   :en "Struggle for Freedom and Democracy Day"}},
+ "05-08 prior to 2026"
+ {:name
+  {:sk "Deň víťazstva nad fašizmom",
+   :en "Day of victory over fascism"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "09-01 since 2024"
+ {"type" "observance", :name (partial get-name "Constitution Day")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-15 prior to 2026"
+ {:name
+  {:sk "Sviatok Panny Márie Sedembolestnej",
+   :en "Day of Our Lady of the Seven Sorrows"}},
+ "11-17 prior to 2025"
+ {:name
+  {:sk "Deň boja za slobodu a demokraciu",
+   :en "Struggle for Freedom and Democracy Day"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "09-01 since 1994 and prior to 2024"
+ {:name (partial get-name "Constitution Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

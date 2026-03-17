@@ -10,28 +10,29 @@
 
 (def holidays
   {"1st sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-04" {:name {:pt "Dia da Paz", :en "Peace Day"}},
-   "easter -47" {:name (partial get-name "easter -47")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "02-04"
-   {:name
-    {:pt "Dia do Início da Luta Armada de Libertação Nacional",
-     :en "Liberation Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "03-08"
-   {:name
-    {:pt "Dia Internacional da Mulher",
-     :en "International Woman's Day"}},
-   "11-02" {:name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "09-17"
-   {:name
-    {:pt "Fundador da Nação e Dia dos Heróis Nacionais",
-     :en "National Hero Day"}},
-   "11-11" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-04" {:name {:pt "Dia da Paz", :en "Peace Day"}},
+ "easter -47" {:name (partial get-name "easter -47")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "02-04"
+ {:name
+  {:pt "Dia do Início da Luta Armada de Libertação Nacional",
+   :en "Liberation Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "03-08"
+ {:name
+  {:pt "Dia Internacional da Mulher",
+   :en "International Woman's Day"}},
+ "11-02" {:name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-17"
+ {:name
+  {:pt "Fundador da Nação e Dia dos Heróis Nacionais",
+   :en "National Hero Day"}},
+ "11-11" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

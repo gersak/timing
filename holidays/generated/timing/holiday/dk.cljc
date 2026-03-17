@@ -10,32 +10,33 @@
 
 (def holidays
   {"easter -48" {"type" "observance", :name {:da "Fastelavn"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "12-24"
-   {"type" "observance",
-    "note" "Shops are closed",
-    :name (partial get-name "12-24")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "06-05"
-   {"type" "observance",
-    "note" "Shops are closed",
-    :name (partial get-name "Constitution Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01"
-   {"type" "observance",
-    "note" "Full holiday for blue collar workers",
-    :name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "12-25" {:name (partial get-name "12-25")},
-   "easter 26 prior to 2024"
-   {:name {:da "Store Bededag", :en "Prayer Day", :de "Buß- und Bettag"}}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24"
+ {"type" "observance",
+  "note" "Shops are closed",
+  :name (partial get-name "12-24")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "06-05"
+ {"type" "observance",
+  "note" "Shops are closed",
+  :name (partial get-name "Constitution Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01"
+ {"type" "observance",
+  "note" "Full holiday for blue collar workers",
+  :name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "12-25" {:name (partial get-name "12-25")},
+ "easter 26 prior to 2024"
+ {:name {:da "Store Bededag", :en "Prayer Day", :de "Buß- und Bettag"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

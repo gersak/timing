@@ -10,23 +10,24 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "09-12 in leap years" {:name (partial get-name "01-01")},
-   "09-28 in leap years"
-   {:name {:am "ብርሐነ-መስቀል", :en "Finding of the True Cross"}},
-   "09-27 in non-leap years"
-   {:name {:am "ብርሐነ-መስቀል", :en "Finding of the True Cross"}},
-   "05-28" {:name {:am "ደርግ የወደቀበት ቀን", :en "Derg Downfall Day"}},
-   "03-28" {:name {:am "የቀይ ሽብር መታሰቢያ ቀን", :en "Day of Lament"}},
-   "01-07 in leap years" {:name (partial get-name "12-25")},
-   "01-06 in non-leap years" {:name (partial get-name "12-25")},
-   "03-02" {:name {:am "የዓድዋ ድል በዓል", :en "Victory at Adwa Day"}},
-   "09-11 in non-leap years" {:name (partial get-name "01-01")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "01-19" {:name (partial get-name "01-06")},
-   "orthodox -2" {:name (partial get-name "easter -2")},
-   "orthodox" {:name (partial get-name "easter")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "1 Ramadan" {:name (partial get-name "1 Ramadan")}})
+ "09-12 in leap years" {:name (partial get-name "01-01")},
+ "09-28 in leap years"
+ {:name {:am "ብርሐነ-መስቀል", :en "Finding of the True Cross"}},
+ "09-27 in non-leap years"
+ {:name {:am "ብርሐነ-መስቀል", :en "Finding of the True Cross"}},
+ "05-28" {:name {:am "ደርግ የወደቀበት ቀን", :en "Derg Downfall Day"}},
+ "03-28" {:name {:am "የቀይ ሽብር መታሰቢያ ቀን", :en "Day of Lament"}},
+ "01-07 in leap years" {:name (partial get-name "12-25")},
+ "01-06 in non-leap years" {:name (partial get-name "12-25")},
+ "03-02" {:name {:am "የዓድዋ ድል በዓል", :en "Victory at Adwa Day"}},
+ "09-11 in non-leap years" {:name (partial get-name "01-01")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "01-19" {:name (partial get-name "01-06")},
+ "orthodox -2" {:name (partial get-name "easter -2")},
+ "orthodox" {:name (partial get-name "easter")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "1 Ramadan" {:name (partial get-name "1 Ramadan")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

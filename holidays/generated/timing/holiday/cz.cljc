@@ -10,43 +10,44 @@
 
 (def holidays
   {"09-28"
-   {:name
-    {:cz "Den české státnosti",
-     :en "St. Wenceslas Day (Czech Statehood Day)"}},
-   "11-17"
-   {:name
-    {:cz "Den boje za svobodu a demokracii",
-     :en "Struggle for Freedom and Democracy Day"}},
-   "01-01"
-   {"_name" "01-01",
-    :name {:cz "Nový rok a Den obnovy samostatného českého státu"}},
-   "easter -4"
-   {"type" "observance",
-    :name {:cz "Škaredá středa", :en "Ugly Wednesday"}},
-   "easter -1"
-   {"type" "observance", :name (partial get-name "easter -1")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-24" {:name (partial get-name "12-24")},
-   "07-05"
-   {:name
-    {:cz "Den slovanských věrozvěstů Cyrila a Metoděje",
-     :en "Saints Cyril and Methodius Day"}},
-   "07-06"
-   {:name {:cz "Den upálení mistra Jana Husa", :en "Jan Hus Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3"
-   {"type" "observance", :name (partial get-name "easter -3")},
-   "10-28"
-   {:name
-    {:cz "Den vzniku samostatného československého státu",
-     :en "Independent Czechoslovak State Day"}},
-   "05-08" {:name {:cz "Den vítězství", :en "Liberation Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {:name
+  {:cz "Den české státnosti",
+   :en "St. Wenceslas Day (Czech Statehood Day)"}},
+ "11-17"
+ {:name
+  {:cz "Den boje za svobodu a demokracii",
+   :en "Struggle for Freedom and Democracy Day"}},
+ "01-01"
+ {"_name" "01-01",
+  :name {:cz "Nový rok a Den obnovy samostatného českého státu"}},
+ "easter -4"
+ {"type" "observance",
+  :name {:cz "Škaredá středa", :en "Ugly Wednesday"}},
+ "easter -1"
+ {"type" "observance", :name (partial get-name "easter -1")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "12-24" {:name (partial get-name "12-24")},
+ "07-05"
+ {:name
+  {:cz "Den slovanských věrozvěstů Cyrila a Metoděje",
+   :en "Saints Cyril and Methodius Day"}},
+ "07-06"
+ {:name {:cz "Den upálení mistra Jana Husa", :en "Jan Hus Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3"
+ {"type" "observance", :name (partial get-name "easter -3")},
+ "10-28"
+ {:name
+  {:cz "Den vzniku samostatného československého státu",
+   :en "Independent Czechoslovak State Day"}},
+ "05-08" {:name {:cz "Den vítězství", :en "Liberation Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

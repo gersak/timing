@@ -10,41 +10,42 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "05-21" {:name {:en "Navy Day", :es "Día de las Glorias Navales"}},
-   "08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "09-17 on friday, monday since 2017"
-   {:name
-    {:en "National holiday", :es "Feriado Adicional Fiestas Patrias"}},
-   "07-16"
-   {:name {:en "Our Lady of Mount Carmel", :es "Virgen del Carmen"}},
-   "01-02 on monday since 2017"
-   {"active" [{"from" 2017}], :name "Día adicional"},
-   "10-12 if tuesday, wednesday, thursday then previous monday if friday then next monday"
-   {:name {:en "Columbus Day", :es "Encuentro de Dos Mundos"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "06-29 if tuesday, wednesday, thursday then previous monday if friday then next monday"
-   {:name (partial get-name "06-29")},
-   "june solstice in America/Santiago since 2022"
-   {:name
-    {:en "Indigenous People's Day", :es "Día de los Pueblos Indígenas"}},
-   "easter" {:name (partial get-name "easter")},
-   "10-31 if wednesday then next friday if tuesday then previous friday"
-   {:name (partial get-name "Reformation Day")},
-   "06-21 since 2021 prior to 2022"
-   {:name
-    {:en "Indigenous People's Day", :es "Día de los Pueblos Indígenas"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "09-20 on friday"
-   {:name
-    {:es "Feriado Adicional Fiestas Patrias", :en "National Holiday"}},
-   "2022-09-16" {:name {:es "Fiestas Patrias", :en "National Holiday"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "09-18" {:name {:en "National holiday", :es "Fiestas Patrias"}},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "09-19"
-   {:name {:en "Army Day", :es "Día de las Glorias del Ejército"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "05-21" {:name {:en "Navy Day", :es "Día de las Glorias Navales"}},
+ "08-15" {:name (partial get-name "08-15")},
+ "01-01" {:name (partial get-name "01-01")},
+ "09-17 on friday, monday since 2017"
+ {:name
+  {:en "National holiday", :es "Feriado Adicional Fiestas Patrias"}},
+ "07-16"
+ {:name {:en "Our Lady of Mount Carmel", :es "Virgen del Carmen"}},
+ "01-02 on monday since 2017"
+ {"active" [{"from" 2017}], :name "Día adicional"},
+ "10-12 if tuesday, wednesday, thursday then previous monday if friday then next monday"
+ {:name {:en "Columbus Day", :es "Encuentro de Dos Mundos"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "06-29 if tuesday, wednesday, thursday then previous monday if friday then next monday"
+ {:name (partial get-name "06-29")},
+ "june solstice in America/Santiago since 2022"
+ {:name
+  {:en "Indigenous People's Day", :es "Día de los Pueblos Indígenas"}},
+ "easter" {:name (partial get-name "easter")},
+ "10-31 if wednesday then next friday if tuesday then previous friday"
+ {:name (partial get-name "Reformation Day")},
+ "06-21 since 2021 prior to 2022"
+ {:name
+  {:en "Indigenous People's Day", :es "Día de los Pueblos Indígenas"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "09-20 on friday"
+ {:name
+  {:es "Feriado Adicional Fiestas Patrias", :en "National Holiday"}},
+ "2022-09-16" {:name {:es "Fiestas Patrias", :en "National Holiday"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-18" {:name {:en "National holiday", :es "Fiestas Patrias"}},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "09-19"
+ {:name {:en "Army Day", :es "Día de las Glorias del Ejército"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

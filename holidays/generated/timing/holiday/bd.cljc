@@ -10,45 +10,46 @@
 
 (def holidays
   {"bengali-revised 4-31"
-   {:name {:bn "জাতীয় শোক দিবস", :en "National Mourning Day"}},
-   "08-24"
-   {"enable"
-    ["2016-08-25" "2017-08-14" "2018-09-02" "2019-08-24" "2020-08-11"],
-    "disable"
-    ["2016-08-24" "2017-08-24" "2018-08-24" "2019-08-24" "2020-08-24"],
-    :name {:bn "জন্মাষ্টমী", :en "Krishna Janmashtami"}},
-   "bengali-revised 9-2" {:name {:bn "বিজয় দিবস", :en "Victory Day"}},
-   "bengali-revised 1-18"
-   {"_name" "05-01", :name {:bn "মে দিবস", :en "May Day"}},
-   "12-14"
-   {"type" "observance", :name {:en "Martyred Intellectuals Day"}},
-   "03-25" {"type" "observance", :name {:en "Genocide Remembrance Day"}},
-   "10-08"
-   {"enable"
-    ["2016-10-11" "2017-09-30" "2018-10-19" "2019-10-08" "2020-10-25"],
-    "disable"
-    ["2016-10-08" "2017-10-08" "2018-10-08" "2019-10-08" "2020-10-08"],
-    :name {:bn "দুর্গা পূজা", :en "Durga Puja"}},
-   "bengali-revised 9-11" {:name (partial get-name "12-25")},
-   "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
-   "10 Muharram" {:name (partial get-name "10 Muharram")},
-   "bengali-revised 12-12"
-   {:name {:bn "স্বাধীনতা দিবস", :en "Independence Day"}},
-   "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "11-21" {"type" "observance", :name {:en "Armed Forces Day"}},
-   "bengali-revised 11-9"
-   {:name {:bn "শহীদ দিবস", :en "Language Martyrs' Day"}},
-   "bengali-revised 1-1"
-   {:name {:bn "পহেলা বৈশাখ", :en "Bengali New Year's Day"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "bengali-revised 12-3"
-   {:name {:bn "মুজিব জয়ন", :en "Mujib's Birthday & Children's Day"}},
-   "05-19"
-   {"enable"
-    ["2016-05-21" "2017-05-10" "2018-04-29" "2019-05-19" "2020-05-07"],
-    "disable"
-    ["2016-05-19" "2017-05-19" "2018-05-19" "2019-05-19" "2020-05-19"],
-    :name {:bn "বুদ্ধ পূর্ণিমা", :en "Buddha's Birthday"}}})
+ {:name {:bn "জাতীয় শোক দিবস", :en "National Mourning Day"}},
+ "08-24"
+ {"enable"
+  ["2016-08-25" "2017-08-14" "2018-09-02" "2019-08-24" "2020-08-11"],
+  "disable"
+  ["2016-08-24" "2017-08-24" "2018-08-24" "2019-08-24" "2020-08-24"],
+  :name {:bn "জন্মাষ্টমী", :en "Krishna Janmashtami"}},
+ "bengali-revised 9-2" {:name {:bn "বিজয় দিবস", :en "Victory Day"}},
+ "bengali-revised 1-18"
+ {"_name" "05-01", :name {:bn "মে দিবস", :en "May Day"}},
+ "12-14"
+ {"type" "observance", :name {:en "Martyred Intellectuals Day"}},
+ "03-25" {"type" "observance", :name {:en "Genocide Remembrance Day"}},
+ "10-08"
+ {"enable"
+  ["2016-10-11" "2017-09-30" "2018-10-19" "2019-10-08" "2020-10-25"],
+  "disable"
+  ["2016-10-08" "2017-10-08" "2018-10-08" "2019-10-08" "2020-10-08"],
+  :name {:bn "দুর্গা পূজা", :en "Durga Puja"}},
+ "bengali-revised 9-11" {:name (partial get-name "12-25")},
+ "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
+ "10 Muharram" {:name (partial get-name "10 Muharram")},
+ "bengali-revised 12-12"
+ {:name {:bn "স্বাধীনতা দিবস", :en "Independence Day"}},
+ "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "11-21" {"type" "observance", :name {:en "Armed Forces Day"}},
+ "bengali-revised 11-9"
+ {:name {:bn "শহীদ দিবস", :en "Language Martyrs' Day"}},
+ "bengali-revised 1-1"
+ {:name {:bn "পহেলা বৈশাখ", :en "Bengali New Year's Day"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "bengali-revised 12-3"
+ {:name {:bn "মুজিব জয়ন", :en "Mujib's Birthday & Children's Day"}},
+ "05-19"
+ {"enable"
+  ["2016-05-21" "2017-05-10" "2018-04-29" "2019-05-19" "2020-05-07"],
+  "disable"
+  ["2016-05-19" "2017-05-19" "2018-05-19" "2019-05-19" "2020-05-19"],
+  :name {:bn "বুদ্ধ পূর্ণিমা", :en "Buddha's Birthday"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

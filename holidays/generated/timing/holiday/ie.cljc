@@ -10,30 +10,31 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "1st Monday before 11-01"
-   {:name {:en "October Bank Holiday", :type "bank"}},
-   "3rd sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "12-26 and if saturday then next monday if sunday then next monday"
-   {"_name" "12-26",
-    "substitute" true,
-    "type" "bank",
-    :name {:en "St. Stephen's Day"}},
-   "easter" {:name (partial get-name "easter")},
-   "easter -21"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "1st monday in June" {:name {:en "First Monday in June"}},
-   "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
-   "03-17 and if saturday then next monday if sunday then next monday"
-   {"substitute" true, "type" "bank", :name {:en "St. Patrick’s Day"}},
-   "12-26" {"_name" "12-26", :name {:en "St. Stephen's Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-17" {:name {:en "St. Patrick’s Day"}},
-   "1st monday in May" {:name {:en "May Day"}},
-   "02-01 if Tuesday,Wednesday,Thursday,Saturday,Sunday then next Monday since 2023"
-   {:name {:en "St. Brigid’s Day"}},
-   "1st monday in August" {:name {:en "First Monday in August"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "1st Monday before 11-01"
+ {:name {:en "October Bank Holiday", :type "bank"}},
+ "3rd sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "12-26 and if saturday then next monday if sunday then next monday"
+ {"_name" "12-26",
+  "substitute" true,
+  "type" "bank",
+  :name {:en "St. Stephen's Day"}},
+ "easter" {:name (partial get-name "easter")},
+ "easter -21"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "1st monday in June" {:name {:en "First Monday in June"}},
+ "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
+ "03-17 and if saturday then next monday if sunday then next monday"
+ {"substitute" true, "type" "bank", :name {:en "St. Patrick’s Day"}},
+ "12-26" {"_name" "12-26", :name {:en "St. Stephen's Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-17" {:name {:en "St. Patrick’s Day"}},
+ "1st monday in May" {:name {:en "May Day"}},
+ "02-01 if Tuesday,Wednesday,Thursday,Saturday,Sunday then next Monday since 2023"
+ {:name {:en "St. Brigid’s Day"}},
+ "1st monday in August" {:name {:en "First Monday in August"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

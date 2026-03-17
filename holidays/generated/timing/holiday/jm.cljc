@@ -10,21 +10,22 @@
 
 (def holidays
   {"easter -46" {:name (partial get-name "easter -46")},
-   "08-06 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "12-25 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "3rd monday in October" {:name {:en "National Heroes Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-23 if saturday,sunday then next monday"
-   {:name (partial get-name "05-01")},
-   "08-01 if sunday then next monday" {:name {:en "Emancipation Day"}}})
+ "08-06 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "12-25 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "3rd monday in October" {:name {:en "National Heroes Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-23 if saturday,sunday then next monday"
+ {:name (partial get-name "05-01")},
+ "08-01 if sunday then next monday" {:name {:en "Emancipation Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

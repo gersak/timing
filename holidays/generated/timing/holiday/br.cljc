@@ -10,35 +10,36 @@
 
 (def holidays
   {"09-07" {:name (partial get-name "Independence Day")},
-   "easter -50 PT110H"
-   {"type" "optional", :name {:pt "Carnaval", :en "Carnival"}},
-   "easter 60" {"type" "optional", :name (partial get-name "easter 60")},
-   "11-20"
-   {"active" [{"from" #inst "2023-12-21T00:00:00.000-00:00"}],
-    :name {:pt "Dia da Consciência Negra", :en "Black Awareness Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "10-12"
-   {:name {:pt "Nossa Senhora Aparecida", :en "Our Lady of Aparecida"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-24 14:00" {"type" "optional", :name (partial get-name "12-24")},
-   "11-15" {:name {:pt "Proclamação da República", :en "Republic Day"}},
-   "2nd sunday in August"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "12-31 14:00" {"type" "optional", :name (partial get-name "12-31")},
-   "1st sunday before 11-01 in even years"
-   {:name {:pt "Dia de Eleição", :en "Election Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "06-12"
-   {"type" "observance",
-    :name {:pt "Dia dos Namorados", :en "Lovers' Day"}},
-   "11-02" {:name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-21" {:name {:pt "Dia de Tiradentes", :en "Tiradentes' Day"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "1st sunday in October in even years"
-   {:name {:pt "Dia de Eleição", :en "Election Day"}}})
+ "easter -50 PT110H"
+ {"type" "optional", :name {:pt "Carnaval", :en "Carnival"}},
+ "easter 60" {"type" "optional", :name (partial get-name "easter 60")},
+ "11-20"
+ {"active" [{"from" #inst "2023-12-21T00:00:00.000-00:00"}],
+  :name {:pt "Dia da Consciência Negra", :en "Black Awareness Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "10-12"
+ {:name {:pt "Nossa Senhora Aparecida", :en "Our Lady of Aparecida"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "12-24 14:00" {"type" "optional", :name (partial get-name "12-24")},
+ "11-15" {:name {:pt "Proclamação da República", :en "Republic Day"}},
+ "2nd sunday in August"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "12-31 14:00" {"type" "optional", :name (partial get-name "12-31")},
+ "1st sunday before 11-01 in even years"
+ {:name {:pt "Dia de Eleição", :en "Election Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "06-12"
+ {"type" "observance",
+  :name {:pt "Dia dos Namorados", :en "Lovers' Day"}},
+ "11-02" {:name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-21" {:name {:pt "Dia de Tiradentes", :en "Tiradentes' Day"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "1st sunday in October in even years"
+ {:name {:pt "Dia de Eleição", :en "Election Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

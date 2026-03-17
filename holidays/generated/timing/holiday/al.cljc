@@ -10,53 +10,54 @@
 
 (def holidays
   {"06-01"
-   {"type" "observance",
-    :name {:sq "Dita Ndërkombëtare e Fëmijëve", :en "Children's Day"}},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "11-29 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Liberation Day")},
-   "12-08 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" 2010}],
-    :name {:sq "Dita Kombëtare e Rinisë", :en "Youth Day"}},
-   "easter" {:name {:sq "Pashkët Katolike", :en "Catholic Easter"}},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "11-22"
-   {"type" "observance",
-    :name {:sq "Dita e Alfabetit", :en "Alphabet Day"}},
-   "03-14 and if sunday then next monday"
-   {"substitute" true, :name {:sq "Dita e Verës", :en "Summer Day"}},
-   "12-24" {"type" "bank", :name (partial get-name "12-24")},
-   "03-22 and if sunday then next monday"
-   {"substitute" true,
-    :name {:sq "Dita e Sulltan Nevruzit", :en "Sultan Nevruz's Day"}},
-   "01-01 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "03-02"
-   {"type" "observance",
-    :name
-    {:sq "Dita e Besëlidhjes së Lezhës", :en "League of Lezhë day"}},
-   "10-19 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" 2004}],
-    :name {:sq "Dita e Nënë Terezës", :en "Mother Teresa Day"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "11-28 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "01-02 and if sunday then next monday"
-   {"substitute" true,
-    :name {:sq "Festa e Vitit të Ri", :en "New Year Holiday"}},
-   "easter 1" {:name {:sq "Pashkët Katolike", :en "Catholic Easter"}},
-   "03-08" {"type" "observance", :name (partial get-name "Mothers Day")},
-   "04-01" {"type" "observance", :name (partial get-name "04-01")},
-   "orthodox" {:name {:sq "Pashkët Ortodokse", :en "Orthodox Easter"}},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "orthodox 1" {:name {:sq "Pashkët Ortodokse", :en "Orthodox Easter"}},
-   "03-07"
-   {"type" "observance",
-    :name {:sq "Dita e Mësuesit", :en "Teacher's Day"}}})
+ {"type" "observance",
+  :name {:sq "Dita Ndërkombëtare e Fëmijëve", :en "Children's Day"}},
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "11-29 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Liberation Day")},
+ "12-08 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" 2010}],
+  :name {:sq "Dita Kombëtare e Rinisë", :en "Youth Day"}},
+ "easter" {:name {:sq "Pashkët Katolike", :en "Catholic Easter"}},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "11-22"
+ {"type" "observance",
+  :name {:sq "Dita e Alfabetit", :en "Alphabet Day"}},
+ "03-14 and if sunday then next monday"
+ {"substitute" true, :name {:sq "Dita e Verës", :en "Summer Day"}},
+ "12-24" {"type" "bank", :name (partial get-name "12-24")},
+ "03-22 and if sunday then next monday"
+ {"substitute" true,
+  :name {:sq "Dita e Sulltan Nevruzit", :en "Sultan Nevruz's Day"}},
+ "01-01 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "03-02"
+ {"type" "observance",
+  :name
+  {:sq "Dita e Besëlidhjes së Lezhës", :en "League of Lezhë day"}},
+ "10-19 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" 2004}],
+  :name {:sq "Dita e Nënë Terezës", :en "Mother Teresa Day"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "11-28 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "01-02 and if sunday then next monday"
+ {"substitute" true,
+  :name {:sq "Festa e Vitit të Ri", :en "New Year Holiday"}},
+ "easter 1" {:name {:sq "Pashkët Katolike", :en "Catholic Easter"}},
+ "03-08" {"type" "observance", :name (partial get-name "Mothers Day")},
+ "04-01" {"type" "observance", :name (partial get-name "04-01")},
+ "orthodox" {:name {:sq "Pashkët Ortodokse", :en "Orthodox Easter"}},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "orthodox 1" {:name {:sq "Pashkët Ortodokse", :en "Orthodox Easter"}},
+ "03-07"
+ {"type" "observance",
+  :name {:sq "Dita e Mësuesit", :en "Teacher's Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

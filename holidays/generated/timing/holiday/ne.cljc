@@ -10,21 +10,22 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "27 Ramadan" {:name (partial get-name "27 Ramadan")},
-   "12-18"
-   {:name {:fr "Proclamation de la République", :en "Republic Day"}},
-   "08-03"
-   {"_name" "Independence Day",
-    :name {:fr "Proclamation de l'indépendance"}},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-24"
-   {:name {:fr "Journée Nationale de la Concorde", :en "Concord Day"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "27 Ramadan" {:name (partial get-name "27 Ramadan")},
+ "12-18"
+ {:name {:fr "Proclamation de la République", :en "Republic Day"}},
+ "08-03"
+ {"_name" "Independence Day",
+  :name {:fr "Proclamation de l'indépendance"}},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-24"
+ {:name {:fr "Journée Nationale de la Concorde", :en "Concord Day"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

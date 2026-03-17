@@ -10,31 +10,32 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "orthodox 49" {:name (partial get-name "easter 49")},
-   "01-01" {:name (partial get-name "01-01")},
-   "03-25"
-   {:name
-    {:el "Ευαγγελισμός, Εθνική Εορτή",
-     :en "Annunciation, Anniversary of 1821 Revolution"}},
-   "10-01"
-   {:name
-    {:en "Cyprus Independence Day",
-     :el "Ημέρα της Ανεξαρτησίας Κύπρος"}},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "orthodox -47" {:name {:el "Καθαρά Δευτέρα", :en "Clean Monday"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "orthodox -2" {:name (partial get-name "easter -2")},
-   "04-01"
-   {:name {:en "Cyprus National Day", :el "Κύπρος Εθνική Εορτή"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "10-28" {"_name" "National Holiday", :name {:el "Επέτειος του Όχι"}},
-   "orthodox" {:name (partial get-name "easter")},
-   "01-06" {:name (partial get-name "01-06")},
-   "orthodox 1" {:name (partial get-name "easter 1")},
-   "orthodox -48"
-   {"type" "observance", :name {:el "Καθαρά Δευτέρα", :en "Ash Sunday"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "orthodox 49" {:name (partial get-name "easter 49")},
+ "01-01" {:name (partial get-name "01-01")},
+ "03-25"
+ {:name
+  {:el "Ευαγγελισμός, Εθνική Εορτή",
+   :en "Annunciation, Anniversary of 1821 Revolution"}},
+ "10-01"
+ {:name
+  {:en "Cyprus Independence Day",
+   :el "Ημέρα της Ανεξαρτησίας Κύπρος"}},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "orthodox -47" {:name {:el "Καθαρά Δευτέρα", :en "Clean Monday"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "orthodox -2" {:name (partial get-name "easter -2")},
+ "04-01"
+ {:name {:en "Cyprus National Day", :el "Κύπρος Εθνική Εορτή"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "10-28" {"_name" "National Holiday", :name {:el "Επέτειος του Όχι"}},
+ "orthodox" {:name (partial get-name "easter")},
+ "01-06" {:name (partial get-name "01-06")},
+ "orthodox 1" {:name (partial get-name "easter 1")},
+ "orthodox -48"
+ {"type" "observance", :name {:el "Καθαρά Δευτέρα", :en "Ash Sunday"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

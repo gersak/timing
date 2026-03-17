@@ -10,22 +10,23 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "09-21" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "12-13" {:name {:en "Republic Day", :mt "Jum ir-Repubblika"}},
-   "06-29" {:name (partial get-name "06-29")},
-   "06-07" {:name {:mt "Sette Giugno", :en "June 7th"}},
-   "03-19" {:name (partial get-name "03-19")},
-   "03-31" {:name {:en "Freedom Day", :mt "Jum il-Ħelsien"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "09-08" {:name {:en "Victory Day", :mt "Jum il-Vitorja"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "02-10"
-   {:name
-    {:en "Feast of Saint Paul's Shipwreck in Malta",
-     :mt "Nawfraġju ta' San Pawl"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "09-21" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "12-13" {:name {:en "Republic Day", :mt "Jum ir-Repubblika"}},
+ "06-29" {:name (partial get-name "06-29")},
+ "06-07" {:name {:mt "Sette Giugno", :en "June 7th"}},
+ "03-19" {:name (partial get-name "03-19")},
+ "03-31" {:name {:en "Freedom Day", :mt "Jum il-Ħelsien"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "09-08" {:name {:en "Victory Day", :mt "Jum il-Vitorja"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "02-10"
+ {:name
+  {:en "Feast of Saint Paul's Shipwreck in Malta",
+   :mt "Nawfraġju ta' San Pawl"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

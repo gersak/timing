@@ -10,22 +10,23 @@
 
 (def holidays
   {"06-03" {:name {:en "Martyr's Day"}},
-   "easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "10-09" {:name (partial get-name "Independence Day")},
-   "02-16" {:name {:en "Archbishop Janan Luwum Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-26" {:name {:en "Liberation Day"}},
-   "easter" {:name (partial get-name "easter")},
-   "06-09" {:name {:en "National Heroes Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-08" {:name (partial get-name "03-08")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "easter -46"
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "10-09" {:name (partial get-name "Independence Day")},
+ "02-16" {:name {:en "Archbishop Janan Luwum Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-26" {:name {:en "Liberation Day"}},
+ "easter" {:name (partial get-name "easter")},
+ "06-09" {:name {:en "National Heroes Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-08" {:name (partial get-name "03-08")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

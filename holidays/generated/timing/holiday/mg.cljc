@@ -10,35 +10,36 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah"
-   {"note" "For Muslim", :name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "05-25"
-   {:name
-    {:mg "Andron'i Afrika", :fr "Jour de l'Afrique", :en "Africa Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "03-29"
-   {:name
-    {:mg "Martioran'ny tolona tamin'ny 1947",
-     :fr "Commémoration des martyrs de l'insurrection de 1947.",
-     :en "Martyrs' Day"}},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "1 Shawwal"
-   {"note" "For Muslim", :name (partial get-name "1 Shawwal")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-08"
-   {"note" "only for women",
-    :name
-    {:mg "Andro iraisam-pirenena ho an'ny vehivavy",
-     :fr "Journée internationale de la femme",
-     :en "International Women's Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "06-26"
-   {"_name" "Independence Day",
-    :name {:mg "Fetim-pirenena", :fr "Fête Nationale"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah"
+ {"note" "For Muslim", :name (partial get-name "10 Dhu al-Hijjah")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "05-25"
+ {:name
+  {:mg "Andron'i Afrika", :fr "Jour de l'Afrique", :en "Africa Day"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "03-29"
+ {:name
+  {:mg "Martioran'ny tolona tamin'ny 1947",
+   :fr "Commémoration des martyrs de l'insurrection de 1947.",
+   :en "Martyrs' Day"}},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "1 Shawwal"
+ {"note" "For Muslim", :name (partial get-name "1 Shawwal")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-08"
+ {"note" "only for women",
+  :name
+  {:mg "Andro iraisam-pirenena ho an'ny vehivavy",
+   :fr "Journée internationale de la femme",
+   :en "International Women's Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "06-26"
+ {"_name" "Independence Day",
+  :name {:mg "Fetim-pirenena", :fr "Fête Nationale"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

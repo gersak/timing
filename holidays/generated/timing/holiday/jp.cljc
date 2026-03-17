@@ -10,198 +10,199 @@
 
 (def holidays
   {"2019-10-22" {:name {:en "Enthronement Ceremony Day", :jp "即位礼正殿の儀"}},
-   "substitutes march equinox in +09:00 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Spring Equinox Day", :jp "春分の日"}},
-   "substitutes 11-23 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Labor Thanksgiving Day", :jp "勤労感謝の日"}},
-   "substitutes 05-03 if sunday then next wednesday"
-   {"substitute" true,
-    "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
-    :name (partial get-name "Constitution Day")},
-   "substitutes 04-29 and if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1973-04-12T00:00:00.000-00:00",
-      "to" #inst "1988-12-31T00:00:00.000-00:00"}],
-    :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
-   "1993-06-09"
-   {:name {:en "Marriage of Crown Prince Naruhito", :jp "結婚の儀"}},
-   "1959-04-10"
-   {:name {:en "Marriage of Crown Prince Akihito", :jp "結婚の儀"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-02" {"type" "bank", :name {:en "January 2nd", :jp "銀行休業日"}},
-   "substitutes 02-11 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Foundation Day", :jp "建国記念の日"}},
-   "09-15"
-   {"active"
-    [{"from" #inst "1966-01-01T00:00:00.000-00:00",
-      "to" #inst "2002-12-31T00:00:00.000-00:00"}],
-    :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
-   "substitutes 08-11 and if sunday then next monday"
-   {"substitute" true,
-    "disable" ["2020-08-11" "2021-08-11"],
-    "enable" ["2020-08-10"],
-    "active" [{"from" #inst "2016-01-01T00:00:00.000-00:00"}],
-    :name {:en "Mountain Day", :jp "山の日"}},
-   "substitutes 10-10 and if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1973-04-12T00:00:00.000-00:00",
-      "to" #inst "1999-12-31T00:00:00.000-00:00"}],
-    :name {:en "Sports Day", :jp "体育の日"}},
-   "2019-04-30" {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
-   "march equinox in +09:00"
-   {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
-    :name {:en "Spring Equinox Day", :jp "春分の日"}},
-   "05-05" {:name {:en "Children's Day", :jp "こどもの日"}},
-   "05-04 and if sunday then next tuesday"
-   {"substitute" true,
-    "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
-    :name {:en "Greenery Day", :jp "みどりの日"}},
-   "10-10"
-   {"active"
-    [{"from" #inst "1966-01-01T00:00:00.000-00:00",
-      "to" #inst "1999-12-31T00:00:00.000-00:00"}],
-    :name {:en "Sports Day", :jp "体育の日"}},
-   "3rd monday in September"
-   {"active" [{"from" #inst "2003-01-01T00:00:00.000-00:00"}],
-    :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
-   "04-29 and if sunday then next monday #1"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1989-01-01T00:00:00.000-00:00",
-      "to" #inst "2006-12-31T00:00:00.000-00:00"}],
-    :name {:en "Greenery Day", :jp "みどりの日"}},
-   "september equinox in +09:00"
-   {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
-    :name {:en "Autumnal Equinox Day", :jp "秋分の日"}},
-   "substitutes 11-03 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Culture Day", :jp "文化の日"}},
-   "11-15"
-   {"type" "observance",
-    :name {:en "Seven-Five-Three Festival", :jp "七五三"}},
-   "2nd monday in October #1"
-   {"active"
-    [{"from" #inst "2000-01-01T00:00:00.000-00:00",
-      "to" #inst "2019-12-31T00:00:00.000-00:00"}],
-    :name {:en "Sports Day", :jp "体育の日"}},
-   "substitutes 01-01 if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name (partial get-name "01-01")},
-   "substitutes 05-03 if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1973-04-12T00:00:00.000-00:00",
-      "to" #inst "2006-12-31T00:00:00.000-00:00"}],
-    :name (partial get-name "Constitution Day")},
-   "2019-05-01" {:name {:en "Coronation Day", :jp "即位の日"}},
-   "substitutes 2021-08-08 and if sunday then next monday"
-   {"substitute" true, :name {:en "Mountain Day", :jp "山の日"}},
-   "04-29"
-   {"active"
-    [{"from" #inst "1948-07-20T00:00:00.000-00:00",
-      "to" #inst "1988-12-31T00:00:00.000-00:00"}],
-    :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
-   "07-20"
-   {"active"
-    [{"from" #inst "1996-01-01T00:00:00.000-00:00",
-      "to" #inst "2002-12-31T00:00:00.000-00:00"}],
-    :name {:en "Marine Day", :jp "海の日"}},
-   "01-03" {"type" "bank", :name {:en "January 3rd", :jp "銀行休業日"}},
-   "09-22 if 09-21 and 09-23 is public holiday"
-   {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
-   "04-29 and if sunday then next monday #2"
-   {"substitute" true,
-    "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
-    :name {:en "Showa Day", :jp "昭和の日"}},
-   "substitutes 01-15 and if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1973-04-12T00:00:00.000-00:00",
-      "to" #inst "1999-12-31T00:00:00.000-00:00"}],
-    :name {:en "Coming of Age Day", :jp "成人の日"}},
-   "11-03"
-   {"substitute" true,
-    "active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
-    :name {:en "Culture Day", :jp "文化の日"}},
-   "05-03" {:name (partial get-name "Constitution Day")},
-   "2nd monday in January"
-   {"active" [{"from" #inst "2000-01-01T00:00:00.000-00:00"}],
-    :name {:en "Coming of Age Day", :jp "成人の日"}},
-   "02-11"
-   {"active" [{"from" #inst "1967-01-01T00:00:00.000-00:00"}],
-    :name {:en "Foundation Day", :jp "建国記念の日"}},
-   "3rd monday in July"
-   {"disable" ["2020-07-20" "2021-07-19"],
-    "enable" ["2020-07-23" "2021-07-22"],
-    "active" [{"from" #inst "2003-01-01T00:00:00.000-00:00"}],
-    :name {:en "Marine Day", :jp "海の日"}},
-   "substitutes september equinox in +09:00 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Autumnal Equinox Day", :jp "秋分の日"}},
-   "01-15"
-   {"active"
-    [{"from" #inst "1948-07-20T00:00:00.000-00:00",
-      "to" #inst "1999-12-31T00:00:00.000-00:00"}],
-    :name {:en "Coming of Age Day", :jp "成人の日"}},
-   "11-23"
-   {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
-    :name {:en "Labor Thanksgiving Day", :jp "勤労感謝の日"}},
-   "1990-11-12"
-   {:name
-    {:en "Official Enthronement Ceremony of Emperor Heisei (Akihito)",
-     :jp "即位礼正殿の儀"}},
-   "substitutes 07-20 if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1996-01-01T00:00:00.000-00:00",
-      "to" #inst "2002-12-31T00:00:00.000-00:00"}],
-    :name {:en "Marine Day", :jp "海の日"}},
-   "substitutes 09-15 and if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1973-04-12T00:00:00.000-00:00",
-      "to" #inst "2002-12-31T00:00:00.000-00:00"}],
-    :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
-   "05-04 not on sunday, monday"
-   {"active"
-    [{"from" #inst "1986-01-01T00:00:00.000-00:00",
-      "to" #inst "2006-12-31T00:00:00.000-00:00"}],
-    :name {:en "Citizens' Holiday", :jp "国民の休日"}},
-   "2nd monday in October #2"
-   {"disable" ["2020-10-12" "2021-10-11"],
-    "enable" ["2020-07-24" "2021-07-23"],
-    "active" [{"from" #inst "2020-01-01T00:00:00.000-00:00"}],
-    :name {:en "Sports Day", :jp "スポーツの日"}},
-   "1989-02-24"
-   {:name {:en "State Funeral of Emperor Showa", :jp "大喪の礼"}},
-   "02-23 and if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "2020-01-01T00:00:00.000-00:00"}],
-    :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "substitutes 05-05 if sunday then next monday"
-   {"substitute" true,
-    "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
-    :name {:en "Children's Day", :jp "こどもの日"}},
-   "2019-05-02" {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
-   "12-23 and if sunday then next monday"
-   {"substitute" true,
-    "active"
-    [{"from" #inst "1989-01-01T00:00:00.000-00:00",
-      "to" #inst "2018-12-31T00:00:00.000-00:00"}],
-    :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
-   "12-25" {"type" "observance", :name (partial get-name "12-25")}})
+ "substitutes march equinox in +09:00 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Spring Equinox Day", :jp "春分の日"}},
+ "substitutes 11-23 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Labor Thanksgiving Day", :jp "勤労感謝の日"}},
+ "substitutes 05-03 if sunday then next wednesday"
+ {"substitute" true,
+  "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
+  :name (partial get-name "Constitution Day")},
+ "substitutes 04-29 and if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1973-04-12T00:00:00.000-00:00",
+    "to" #inst "1988-12-31T00:00:00.000-00:00"}],
+  :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
+ "1993-06-09"
+ {:name {:en "Marriage of Crown Prince Naruhito", :jp "結婚の儀"}},
+ "1959-04-10"
+ {:name {:en "Marriage of Crown Prince Akihito", :jp "結婚の儀"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-02" {"type" "bank", :name {:en "January 2nd", :jp "銀行休業日"}},
+ "substitutes 02-11 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Foundation Day", :jp "建国記念の日"}},
+ "09-15"
+ {"active"
+  [{"from" #inst "1966-01-01T00:00:00.000-00:00",
+    "to" #inst "2002-12-31T00:00:00.000-00:00"}],
+  :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
+ "substitutes 08-11 and if sunday then next monday"
+ {"substitute" true,
+  "disable" ["2020-08-11" "2021-08-11"],
+  "enable" ["2020-08-10"],
+  "active" [{"from" #inst "2016-01-01T00:00:00.000-00:00"}],
+  :name {:en "Mountain Day", :jp "山の日"}},
+ "substitutes 10-10 and if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1973-04-12T00:00:00.000-00:00",
+    "to" #inst "1999-12-31T00:00:00.000-00:00"}],
+  :name {:en "Sports Day", :jp "体育の日"}},
+ "2019-04-30" {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
+ "march equinox in +09:00"
+ {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
+  :name {:en "Spring Equinox Day", :jp "春分の日"}},
+ "05-05" {:name {:en "Children's Day", :jp "こどもの日"}},
+ "05-04 and if sunday then next tuesday"
+ {"substitute" true,
+  "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
+  :name {:en "Greenery Day", :jp "みどりの日"}},
+ "10-10"
+ {"active"
+  [{"from" #inst "1966-01-01T00:00:00.000-00:00",
+    "to" #inst "1999-12-31T00:00:00.000-00:00"}],
+  :name {:en "Sports Day", :jp "体育の日"}},
+ "3rd monday in September"
+ {"active" [{"from" #inst "2003-01-01T00:00:00.000-00:00"}],
+  :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
+ "04-29 and if sunday then next monday #1"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1989-01-01T00:00:00.000-00:00",
+    "to" #inst "2006-12-31T00:00:00.000-00:00"}],
+  :name {:en "Greenery Day", :jp "みどりの日"}},
+ "september equinox in +09:00"
+ {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
+  :name {:en "Autumnal Equinox Day", :jp "秋分の日"}},
+ "substitutes 11-03 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Culture Day", :jp "文化の日"}},
+ "11-15"
+ {"type" "observance",
+  :name {:en "Seven-Five-Three Festival", :jp "七五三"}},
+ "2nd monday in October #1"
+ {"active"
+  [{"from" #inst "2000-01-01T00:00:00.000-00:00",
+    "to" #inst "2019-12-31T00:00:00.000-00:00"}],
+  :name {:en "Sports Day", :jp "体育の日"}},
+ "substitutes 01-01 if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name (partial get-name "01-01")},
+ "substitutes 05-03 if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1973-04-12T00:00:00.000-00:00",
+    "to" #inst "2006-12-31T00:00:00.000-00:00"}],
+  :name (partial get-name "Constitution Day")},
+ "2019-05-01" {:name {:en "Coronation Day", :jp "即位の日"}},
+ "substitutes 2021-08-08 and if sunday then next monday"
+ {"substitute" true, :name {:en "Mountain Day", :jp "山の日"}},
+ "04-29"
+ {"active"
+  [{"from" #inst "1948-07-20T00:00:00.000-00:00",
+    "to" #inst "1988-12-31T00:00:00.000-00:00"}],
+  :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
+ "07-20"
+ {"active"
+  [{"from" #inst "1996-01-01T00:00:00.000-00:00",
+    "to" #inst "2002-12-31T00:00:00.000-00:00"}],
+  :name {:en "Marine Day", :jp "海の日"}},
+ "01-03" {"type" "bank", :name {:en "January 3rd", :jp "銀行休業日"}},
+ "09-22 if 09-21 and 09-23 is public holiday"
+ {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
+ "04-29 and if sunday then next monday #2"
+ {"substitute" true,
+  "active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
+  :name {:en "Showa Day", :jp "昭和の日"}},
+ "substitutes 01-15 and if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1973-04-12T00:00:00.000-00:00",
+    "to" #inst "1999-12-31T00:00:00.000-00:00"}],
+  :name {:en "Coming of Age Day", :jp "成人の日"}},
+ "11-03"
+ {"substitute" true,
+  "active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
+  :name {:en "Culture Day", :jp "文化の日"}},
+ "05-03" {:name (partial get-name "Constitution Day")},
+ "2nd monday in January"
+ {"active" [{"from" #inst "2000-01-01T00:00:00.000-00:00"}],
+  :name {:en "Coming of Age Day", :jp "成人の日"}},
+ "02-11"
+ {"active" [{"from" #inst "1967-01-01T00:00:00.000-00:00"}],
+  :name {:en "Foundation Day", :jp "建国記念の日"}},
+ "3rd monday in July"
+ {"disable" ["2020-07-20" "2021-07-19"],
+  "enable" ["2020-07-23" "2021-07-22"],
+  "active" [{"from" #inst "2003-01-01T00:00:00.000-00:00"}],
+  :name {:en "Marine Day", :jp "海の日"}},
+ "substitutes september equinox in +09:00 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Autumnal Equinox Day", :jp "秋分の日"}},
+ "01-15"
+ {"active"
+  [{"from" #inst "1948-07-20T00:00:00.000-00:00",
+    "to" #inst "1999-12-31T00:00:00.000-00:00"}],
+  :name {:en "Coming of Age Day", :jp "成人の日"}},
+ "11-23"
+ {"active" [{"from" #inst "1948-07-20T00:00:00.000-00:00"}],
+  :name {:en "Labor Thanksgiving Day", :jp "勤労感謝の日"}},
+ "1990-11-12"
+ {:name
+  {:en "Official Enthronement Ceremony of Emperor Heisei (Akihito)",
+   :jp "即位礼正殿の儀"}},
+ "substitutes 07-20 if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1996-01-01T00:00:00.000-00:00",
+    "to" #inst "2002-12-31T00:00:00.000-00:00"}],
+  :name {:en "Marine Day", :jp "海の日"}},
+ "substitutes 09-15 and if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1973-04-12T00:00:00.000-00:00",
+    "to" #inst "2002-12-31T00:00:00.000-00:00"}],
+  :name {:en "Respect-for-the-Aged Day", :jp "敬老の日"}},
+ "05-04 not on sunday, monday"
+ {"active"
+  [{"from" #inst "1986-01-01T00:00:00.000-00:00",
+    "to" #inst "2006-12-31T00:00:00.000-00:00"}],
+  :name {:en "Citizens' Holiday", :jp "国民の休日"}},
+ "2nd monday in October #2"
+ {"disable" ["2020-10-12" "2021-10-11"],
+  "enable" ["2020-07-24" "2021-07-23"],
+  "active" [{"from" #inst "2020-01-01T00:00:00.000-00:00"}],
+  :name {:en "Sports Day", :jp "スポーツの日"}},
+ "1989-02-24"
+ {:name {:en "State Funeral of Emperor Showa", :jp "大喪の礼"}},
+ "02-23 and if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "2020-01-01T00:00:00.000-00:00"}],
+  :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "substitutes 05-05 if sunday then next monday"
+ {"substitute" true,
+  "active" [{"from" #inst "1973-04-12T00:00:00.000-00:00"}],
+  :name {:en "Children's Day", :jp "こどもの日"}},
+ "2019-05-02" {:name {:en "Citizens' Holiday", :jp "国民の休日"}},
+ "12-23 and if sunday then next monday"
+ {"substitute" true,
+  "active"
+  [{"from" #inst "1989-01-01T00:00:00.000-00:00",
+    "to" #inst "2018-12-31T00:00:00.000-00:00"}],
+  :name {:en "Emperor's Birthday", :jp "天皇誕生日"}},
+ "12-25" {"type" "observance", :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

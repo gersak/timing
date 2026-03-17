@@ -10,33 +10,34 @@
 
 (def holidays
   {"easter -48"
-   {"type" "observance", :name (partial get-name "easter -48")},
-   "easter -47" {:name (partial get-name "easter -47")},
-   "12-08 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Mothers Day")},
-   "01-09 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:en "Martyrs' Day",
-     :es "Día de los Mártires Caídos en la Gesta Patriótica"}},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "11-28 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "11-03 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:en "Separation Day (from Columbia)",
-     :es "Día de la Separación (de Colombia)"}},
-   "11-10 and if sunday then next monday"
-   {"substitute" true, :name {:es "Primer Grito de Independencia"}},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "07-01 every 5 years since 2014"
-   {:name {:en "Presidential Inauguration"}}})
+ {"type" "observance", :name (partial get-name "easter -48")},
+ "easter -47" {:name (partial get-name "easter -47")},
+ "12-08 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Mothers Day")},
+ "01-09 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:en "Martyrs' Day",
+   :es "Día de los Mártires Caídos en la Gesta Patriótica"}},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "11-28 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "11-03 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:en "Separation Day (from Columbia)",
+   :es "Día de la Separación (de Colombia)"}},
+ "11-10 and if sunday then next monday"
+ {"substitute" true, :name {:es "Primer Grito de Independencia"}},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "07-01 every 5 years since 2014"
+ {:name {:en "Presidential Inauguration"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

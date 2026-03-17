@@ -10,48 +10,49 @@
 
 (def holidays
   {"09-07" {:name {:pt "Dia da Vitória", :en "Lusaka Peace Agreement"}},
-   "substitutes 09-07 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "1st sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "10-04"
-   {:name
-    {:pt "Dia da Paz e Reconciliação",
-     :en "Peace and Reconciliation Day"}},
-   "01-01"
-   {"_name" "01-01", :name {:pt "Dia da Fraternidade universal"}},
-   "substitutes 10-04 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "substitutes 02-03 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "09-25"
-   {:name
-    {:pt "Dia das Forças Armadas de Libertação Nacional",
-     :en "Defense Force’s Day"}},
-   "02-03"
-   {:name {:pt "Dia dos heróis moçambicanos", :en "Heroes’ Day"}},
-   "substitutes 05-01 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "06-25"
-   {"_name" "Independence Day",
-    :name {:pt "Dia da Independência Nacional"}},
-   "substitutes 06-25 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "substitutes 01-01 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "substitutes 09-25 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "05-01"
-   {"_name" "05-01",
-    :name
-    {:pt "Dia Internacional dos Trabalhadores", :en "Workers' Day"}},
-   "substitutes 12-25 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "substitutes 04-07 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "04-07" {:name {:pt "Dia da Mulher Moçambicana", :en "Women’s Day"}},
-   "12-25"
-   {"_name" "12-25", :name {:pt "Dia da Família", :en "Family Day"}}})
+ "substitutes 09-07 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "1st sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "10-04"
+ {:name
+  {:pt "Dia da Paz e Reconciliação",
+   :en "Peace and Reconciliation Day"}},
+ "01-01"
+ {"_name" "01-01", :name {:pt "Dia da Fraternidade universal"}},
+ "substitutes 10-04 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "substitutes 02-03 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "09-25"
+ {:name
+  {:pt "Dia das Forças Armadas de Libertação Nacional",
+   :en "Defense Force’s Day"}},
+ "02-03"
+ {:name {:pt "Dia dos heróis moçambicanos", :en "Heroes’ Day"}},
+ "substitutes 05-01 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "06-25"
+ {"_name" "Independence Day",
+  :name {:pt "Dia da Independência Nacional"}},
+ "substitutes 06-25 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "substitutes 01-01 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "substitutes 09-25 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "05-01"
+ {"_name" "05-01",
+  :name
+  {:pt "Dia Internacional dos Trabalhadores", :en "Workers' Day"}},
+ "substitutes 12-25 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "substitutes 04-07 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "04-07" {:name {:pt "Dia da Mulher Moçambicana", :en "Women’s Day"}},
+ "12-25"
+ {"_name" "12-25", :name {:pt "Dia da Família", :en "Family Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

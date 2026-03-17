@@ -10,80 +10,81 @@
 
 (def holidays
   {"08-15" {"active" [{"from" 1992}], :name (partial get-name "08-15")},
-   "05-02"
-   {"_name" "05-01", "active" [{"from" 1949}], :name {:en "Labour Day"}},
-   "10-25"
-   {"type" "observance",
-    "active" [{"from" 2015}],
-    :name {:sl "Dan suverenosti", :en "Sovereignty Day"}},
-   "04-27"
-   {:name
-    {:sl "Dan upora proti okupatorju",
-     :en "Day of Uprising Against Occupation"}},
-   "09-23"
-   {"type" "observance",
-    "active" [{"from" 2020}],
-    :name {:sl "Dan slovenskega športa", :en "Slovenian Sports Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-02"
-   {"active" [{"to" 1955} {"from" 2017}],
-    :name (partial get-name "01-01")},
-   "09-15"
-   {"type" "observance",
-    "active" [{"from" 2005}],
-    :name
-    {:sl "Vrnitev Primorske k matični domovini",
-     :en "Return of Primorska to the Motherland"}},
-   "11-01"
-   {:name
-    {:sl "Dan spomina na mrtve", :en "Day of Remembrance for the Dead"}},
-   "06-25"
-   {"active" [{"from" 1991}],
-    :name {:sl "Dan državnosti", :en "Statehood Day"}},
-   "easter -49"
-   {"type" "observance", :name {:sl "Pust", :en "Carnival"}},
-   "easter" {:name (partial get-name "easter")},
-   "12-06"
-   {"type" "observance",
-    :name {:sl "Miklavž", :en "Saint Nicholas Day"}},
-   "10-31" {:name {:sl "Dan reformacije", :en "Reformation Day"}},
-   "02-08"
-   {"active" [{"from" 1991}],
-    :name
-    {:en "Prešeren Day, the Slovenian Cultural Holiday",
-     :sl "Prešernov dan, slovenski kulturni praznik"}},
-   "12-26"
-   {:name
-    {:sl "Dan samostojnosti in enotnosti",
-     :en "Independence and Unity Day"}},
-   "11-23"
-   {"type" "observance",
-    "active" [{"from" 2015}],
-    :name {:sl "Dan Rudolfa Maistra", :en "Rudolf Maister Day"}},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-08" {"type" "observance", :name (partial get-name "03-08")},
-   "06-08"
-   {"type" "observance",
-    "active" [{"from" 2010}],
-    :name {:sl "Dan Primoža Trubarja", :en "Primož Trubar Day"}},
-   "04-23"
-   {"type" "observance",
-    :name {:sl "Jurjevanje", :en "St. George's Day"}},
-   "05-01"
-   {"_name" "05-01", "active" [{"from" 1949}], :name {:en "Labour Day"}},
-   "08-17"
-   {"type" "observance",
-    "active" [{"from" 2006}],
-    :name
-    {:sl "Združitev prekmurskih Slovencev z matičnim narodom",
-     :en "Unification of Prekmurje Slovenes with the Mother Nation"}},
-   "11-11"
-   {"type" "observance",
-    :name {:sl "Martinovanje", :en "St. Martin's Day"}},
-   "12-25"
-   {"active" [{"to" 1953} {"from" 1991}],
-    :name (partial get-name "12-25")}})
+ "05-02"
+ {"_name" "05-01", "active" [{"from" 1949}], :name {:en "Labour Day"}},
+ "10-25"
+ {"type" "observance",
+  "active" [{"from" 2015}],
+  :name {:sl "Dan suverenosti", :en "Sovereignty Day"}},
+ "04-27"
+ {:name
+  {:sl "Dan upora proti okupatorju",
+   :en "Day of Uprising Against Occupation"}},
+ "09-23"
+ {"type" "observance",
+  "active" [{"from" 2020}],
+  :name {:sl "Dan slovenskega športa", :en "Slovenian Sports Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-02"
+ {"active" [{"to" 1955} {"from" 2017}],
+  :name (partial get-name "01-01")},
+ "09-15"
+ {"type" "observance",
+  "active" [{"from" 2005}],
+  :name
+  {:sl "Vrnitev Primorske k matični domovini",
+   :en "Return of Primorska to the Motherland"}},
+ "11-01"
+ {:name
+  {:sl "Dan spomina na mrtve", :en "Day of Remembrance for the Dead"}},
+ "06-25"
+ {"active" [{"from" 1991}],
+  :name {:sl "Dan državnosti", :en "Statehood Day"}},
+ "easter -49"
+ {"type" "observance", :name {:sl "Pust", :en "Carnival"}},
+ "easter" {:name (partial get-name "easter")},
+ "12-06"
+ {"type" "observance",
+  :name {:sl "Miklavž", :en "Saint Nicholas Day"}},
+ "10-31" {:name {:sl "Dan reformacije", :en "Reformation Day"}},
+ "02-08"
+ {"active" [{"from" 1991}],
+  :name
+  {:en "Prešeren Day, the Slovenian Cultural Holiday",
+   :sl "Prešernov dan, slovenski kulturni praznik"}},
+ "12-26"
+ {:name
+  {:sl "Dan samostojnosti in enotnosti",
+   :en "Independence and Unity Day"}},
+ "11-23"
+ {"type" "observance",
+  "active" [{"from" 2015}],
+  :name {:sl "Dan Rudolfa Maistra", :en "Rudolf Maister Day"}},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "06-08"
+ {"type" "observance",
+  "active" [{"from" 2010}],
+  :name {:sl "Dan Primoža Trubarja", :en "Primož Trubar Day"}},
+ "04-23"
+ {"type" "observance",
+  :name {:sl "Jurjevanje", :en "St. George's Day"}},
+ "05-01"
+ {"_name" "05-01", "active" [{"from" 1949}], :name {:en "Labour Day"}},
+ "08-17"
+ {"type" "observance",
+  "active" [{"from" 2006}],
+  :name
+  {:sl "Združitev prekmurskih Slovencev z matičnim narodom",
+   :en "Unification of Prekmurje Slovenes with the Mother Nation"}},
+ "11-11"
+ {"type" "observance",
+  :name {:sl "Martinovanje", :en "St. Martin's Day"}},
+ "12-25"
+ {"active" [{"to" 1953} {"from" 1991}],
+  :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

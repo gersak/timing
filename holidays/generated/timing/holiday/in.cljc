@@ -9,7 +9,28 @@
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
-  nil)
+  {"01-26"
+ {"note" "Celebrates adoption of Constitution",
+  :name
+  {:en "Republic Day", :hi "गणतंत्र दिवस", :ta "குடியரசு தினம்"}},
+ "04-14"
+ {"note" "Birth anniversary of Dr. B. R. Ambedkar",
+  :name
+  {:en "Ambedkar Jayanti",
+   :hi "अम्बेडकर जयंती",
+   :ta "அம்பேத்கர் ஜெயந்தி"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "08-15"
+ {"note" "Marks freedom from British rule",
+  :name (partial get-name "Independence Day")},
+ "10-02"
+ {"note" "Birth anniversary of Mahatma Gandhi",
+  :name
+  {:en "Gandhi Jayanti", :hi "गांधी जयंती", :ta "காந்தி ஜெயந்தி"}},
+ "12-25"
+ {"note" "Recognized as a public holiday",
+  :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

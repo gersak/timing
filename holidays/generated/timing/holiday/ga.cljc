@@ -10,17 +10,18 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-17"
-   {:name {:fr "Journée des droits de la femme", :en "Women's Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "08-16 P2D" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-17"
+ {:name {:fr "Journée des droits de la femme", :en "Women's Day"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "08-16 P2D" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

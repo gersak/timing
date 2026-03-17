@@ -10,99 +10,100 @@
 
 (def holidays
   {"06-03"
-   {"type" "observance",
-    :name {:en "Opium Suppression Movement Day", :zh "禁菸節"}},
-   "09-28"
-   {"type" "observance", :name {:en "Teachers' Day", :zh "孔子誕辰紀念日"}},
-   "02-28 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Peace Memorial Day", :zh "228和平紀念日"}},
-   "chinese 07-0-15"
-   {"type" "observance", :name {:en "Ghost Festival", :zh "中元節"}},
-   "01-01 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    "_name" "01-01",
-    :name
-    {:zh "中華民國開國紀念日 / 元旦", :en "Founding of the Republic of China"}},
-   "10-25"
-   {"type" "observance",
-    :name {:en "Taiwan Retrocession Day", :zh "臺灣光復節"}},
-   "chinese 04-0-08"
-   {"type" "observance", :name {:en "Buddha's Birthday", :zh "佛誕日"}},
-   "03-12" {"type" "observance", :name {:en "Arbor Day", :zh "國父逝世紀念日"}},
-   "chinese 05-0-05 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Dragon Boat Festival", :zh "端午節"}},
-   "chinese 01-0-00" {:name {:en "Chinese New Year's Eve", :zh "農曆除夕"}},
-   "chinese 01-0-15 #1"
-   {"type" "observance", :name {:en "Tourism Day", :zh "觀光節"}},
-   "chinese 01-0-15"
-   {"type" "observance", :name {:en "Lantern Festival", :zh "元宵節"}},
-   "chinese 02-0-19"
-   {"type" "observance", :name {:en "Kuan Yin's Birthday", :zh "觀音誕辰"}},
-   "2nd Sunday in May"
-   {"_name" "Mothers Day", "type" "observance", :name {:zh "母親節"}},
-   "chinese 02-0-02"
-   {"type" "observance",
-    :name {:en "Earth God's Birthday", :zh "土地公誕辰"}},
-   "04-04 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Children's Day", :zh "兒童節"}},
-   "chinese 03-0-15"
-   {"type" "observance",
-    :name {:en "God of Medicine's Birthday", :zh "保生大帝誕辰"}},
-   "03-29" {"type" "observance", :name {:en "Youth Day", :zh "靑年節"}},
-   "10-10 and if Sunday then next Monday"
-   {"substitute" true,
-    :name {:en "National Day / Double Tenth Day", :zh "國慶日 / 雙十節"}},
-   "08-08"
-   {"_name" "Fathers Day", "type" "observance", :name {:zh "父親節"}},
-   "chinese 01-0-01 if Monday then next Friday if Tuesday then next Saturdayif Wednesday then next Sunday if Thursday then next Monday if Friday then next Tuesday if Saturday then next Wednesday if Sunday then next Thursday"
-   {:name {:en "Chinese New Year Holiday", :zh "农历新年假期"}},
-   "05-04" {"type" "observance", :name {:en "Literary Day", :zh "文藝節"}},
-   "chinese 05-0-13 #1"
-   {"type" "observance",
-    :name {:en "Cheng Huang's Birthday", :zh "城隍爺誕辰"}},
-   "chinese 01-0-01" {:name {:en "Chinese New Year", :zh "農曆年初一"}},
-   "09-01"
-   {"type" "observance", :name {:en "Journalist' Day", :zh "記者節"}},
-   "chinese 08-0-15 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Mid-Autumn Festival", :zh "中秋節"}},
-   "02-04" {"type" "observance", :name {:en "Farmer's Day", :zh "農民節"}},
-   "chinese 5-01 solarterm and if Sunday then next Monday"
-   {"substitute" true, :name {:en "Tomb Sweeping Day", :zh "淸明節"}},
-   "11-12"
-   {"note" "Also Doctors' Day and Cultural Renaissance Day",
-    "type" "observance",
-    :name {:en "Sun Yat-sen's Birthday", :zh "國父誕辰紀念日"}},
-   "chinese 01-0-02"
-   {:name {:en "The second day of the Chinese New Year", :zh "農曆年初二"}},
-   "chinese 07-0-07"
-   {"type" "observance", :name {:en "Qixi Festival", :zh "七夕"}},
-   "03-08" {"type" "observance", :name (partial get-name "03-08")},
-   "chinese 01-0-04"
-   {:name {:en "The forth day of the Chinese New Year", :zh "農曆年初四"}},
-   "chinese 05-0-13"
-   {"type" "observance", :name {:en "Kuan Kung's Birthday", :zh "關公誕辰"}},
-   "09-03"
-   {"type" "observance", :name {:en "Armed Forces Day", :zh "軍人節"}},
-   "chinese 01-0-03"
-   {:name {:en "The third day of the Chinese New Year", :zh "農曆年初三"}},
-   "chinese 10-0-15"
-   {"type" "observance", :name {:en "Saisiat Festival", :zh "賽夏節"}},
-   "05-01 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    "_name" "05-01",
-    "type" "observance",
-    "note" "private sector",
-    :name {:zh "勞動節"}},
-   "chinese 09-0-09"
-   {"type" "observance", :name {:en "Double Ninth Festival", :zh "重陽節"}},
-   "10-21"
-   {"type" "observance", :name {:en "Overseas Chinese Day", :zh "華僑節"}},
-   "december solstice"
-   {"type" "observance", :name {:en "Dongzhi Festival", :zh "冬至"}},
-   "12-25"
-   {"type" "observance", :name {:en "Constitution Day", :zh "行憲紀念日"}},
-   "chinese 03-0-23"
-   {"type" "observance", :name {:en "Matsu's Birthday", :zh "媽祖誕辰"}}})
+ {"type" "observance",
+  :name {:en "Opium Suppression Movement Day", :zh "禁菸節"}},
+ "09-28"
+ {"type" "observance", :name {:en "Teachers' Day", :zh "孔子誕辰紀念日"}},
+ "02-28 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Peace Memorial Day", :zh "228和平紀念日"}},
+ "chinese 07-0-15"
+ {"type" "observance", :name {:en "Ghost Festival", :zh "中元節"}},
+ "01-01 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  "_name" "01-01",
+  :name
+  {:zh "中華民國開國紀念日 / 元旦", :en "Founding of the Republic of China"}},
+ "10-25"
+ {"type" "observance",
+  :name {:en "Taiwan Retrocession Day", :zh "臺灣光復節"}},
+ "chinese 04-0-08"
+ {"type" "observance", :name {:en "Buddha's Birthday", :zh "佛誕日"}},
+ "03-12" {"type" "observance", :name {:en "Arbor Day", :zh "國父逝世紀念日"}},
+ "chinese 05-0-05 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Dragon Boat Festival", :zh "端午節"}},
+ "chinese 01-0-00" {:name {:en "Chinese New Year's Eve", :zh "農曆除夕"}},
+ "chinese 01-0-15 #1"
+ {"type" "observance", :name {:en "Tourism Day", :zh "觀光節"}},
+ "chinese 01-0-15"
+ {"type" "observance", :name {:en "Lantern Festival", :zh "元宵節"}},
+ "chinese 02-0-19"
+ {"type" "observance", :name {:en "Kuan Yin's Birthday", :zh "觀音誕辰"}},
+ "2nd Sunday in May"
+ {"_name" "Mothers Day", "type" "observance", :name {:zh "母親節"}},
+ "chinese 02-0-02"
+ {"type" "observance",
+  :name {:en "Earth God's Birthday", :zh "土地公誕辰"}},
+ "04-04 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Children's Day", :zh "兒童節"}},
+ "chinese 03-0-15"
+ {"type" "observance",
+  :name {:en "God of Medicine's Birthday", :zh "保生大帝誕辰"}},
+ "03-29" {"type" "observance", :name {:en "Youth Day", :zh "靑年節"}},
+ "10-10 and if Sunday then next Monday"
+ {"substitute" true,
+  :name {:en "National Day / Double Tenth Day", :zh "國慶日 / 雙十節"}},
+ "08-08"
+ {"_name" "Fathers Day", "type" "observance", :name {:zh "父親節"}},
+ "chinese 01-0-01 if Monday then next Friday if Tuesday then next Saturdayif Wednesday then next Sunday if Thursday then next Monday if Friday then next Tuesday if Saturday then next Wednesday if Sunday then next Thursday"
+ {:name {:en "Chinese New Year Holiday", :zh "农历新年假期"}},
+ "05-04" {"type" "observance", :name {:en "Literary Day", :zh "文藝節"}},
+ "chinese 05-0-13 #1"
+ {"type" "observance",
+  :name {:en "Cheng Huang's Birthday", :zh "城隍爺誕辰"}},
+ "chinese 01-0-01" {:name {:en "Chinese New Year", :zh "農曆年初一"}},
+ "09-01"
+ {"type" "observance", :name {:en "Journalist' Day", :zh "記者節"}},
+ "chinese 08-0-15 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Mid-Autumn Festival", :zh "中秋節"}},
+ "02-04" {"type" "observance", :name {:en "Farmer's Day", :zh "農民節"}},
+ "chinese 5-01 solarterm and if Sunday then next Monday"
+ {"substitute" true, :name {:en "Tomb Sweeping Day", :zh "淸明節"}},
+ "11-12"
+ {"note" "Also Doctors' Day and Cultural Renaissance Day",
+  "type" "observance",
+  :name {:en "Sun Yat-sen's Birthday", :zh "國父誕辰紀念日"}},
+ "chinese 01-0-02"
+ {:name {:en "The second day of the Chinese New Year", :zh "農曆年初二"}},
+ "chinese 07-0-07"
+ {"type" "observance", :name {:en "Qixi Festival", :zh "七夕"}},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "chinese 01-0-04"
+ {:name {:en "The forth day of the Chinese New Year", :zh "農曆年初四"}},
+ "chinese 05-0-13"
+ {"type" "observance", :name {:en "Kuan Kung's Birthday", :zh "關公誕辰"}},
+ "09-03"
+ {"type" "observance", :name {:en "Armed Forces Day", :zh "軍人節"}},
+ "chinese 01-0-03"
+ {:name {:en "The third day of the Chinese New Year", :zh "農曆年初三"}},
+ "chinese 10-0-15"
+ {"type" "observance", :name {:en "Saisiat Festival", :zh "賽夏節"}},
+ "05-01 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  "_name" "05-01",
+  "type" "observance",
+  "note" "private sector",
+  :name {:zh "勞動節"}},
+ "chinese 09-0-09"
+ {"type" "observance", :name {:en "Double Ninth Festival", :zh "重陽節"}},
+ "10-21"
+ {"type" "observance", :name {:en "Overseas Chinese Day", :zh "華僑節"}},
+ "december solstice"
+ {"type" "observance", :name {:en "Dongzhi Festival", :zh "冬至"}},
+ "12-25"
+ {"type" "observance", :name {:en "Constitution Day", :zh "行憲紀念日"}},
+ "chinese 03-0-23"
+ {"type" "observance", :name {:en "Matsu's Birthday", :zh "媽祖誕辰"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

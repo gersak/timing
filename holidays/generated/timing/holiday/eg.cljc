@@ -10,19 +10,20 @@
 
 (def holidays
   {"06-30" {:name {:ar "عيد ثورة 30 يونيو", :en "30 June Day"}},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
-   "10-06" {:name {:ar "عيد القوات المسلحة", :en "Armed Forces Day"}},
-   "01-25" {:name {:ar "عيد الشرطة", :en "National Police Day"}},
-   "10 Dhu al-Hijjah P4D" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "julian 12-25" {:name (partial get-name "12-25")},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-25" {:name {:ar "عيد تحرير سيناء", :en "Sinai Liberation Day"}},
-   "orthodox 1" {:name {:ar "شم النسيم", :en "Sham El Nessim"}},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "07-23" {:name (partial get-name "Revolution Day")},
-   "01-25 since 2011"
-   {:name {:ar "عيد ثورة 25 يناير", :en "Revolution Day 2011"}}})
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
+ "10-06" {:name {:ar "عيد القوات المسلحة", :en "Armed Forces Day"}},
+ "01-25" {:name {:ar "عيد الشرطة", :en "National Police Day"}},
+ "10 Dhu al-Hijjah P4D" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "julian 12-25" {:name (partial get-name "12-25")},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-25" {:name {:ar "عيد تحرير سيناء", :en "Sinai Liberation Day"}},
+ "orthodox 1" {:name {:ar "شم النسيم", :en "Sham El Nessim"}},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "07-23" {:name (partial get-name "Revolution Day")},
+ "01-25 since 2011"
+ {:name {:ar "عيد ثورة 25 يناير", :en "Revolution Day 2011"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,18 +10,20 @@
 
 (def holidays
   {"korean 4-0-8" {:name {:en "Buddha's Birthday", :ko "석가탄신일"}},
-   "08-15" {:name {:en "Liberation Day", :ko "광복절"}},
-   "10-09" {:name {:en "Hangul Day", :ko "한글날"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "06-06" {:name {:en "Memorial Day", :ko "현충일"}},
-   "05-05" {:name {:en "Children's Day", :ko "어린이날"}},
-   "03-01" {:name {:en "Independence Movement Day", :ko "3·1절"}},
-   "korean 8-0-15 P3D" {:name {:en "Korean Thanksgiving", :ko "추석"}},
-   "korean 01-0-01 P3D" {:name {:en "Korean New Year", :ko "설날"}},
-   "07-17"
-   {"type" "observance", :name (partial get-name "Constitution Day")},
-   "12-25" {:name (partial get-name "12-25")},
-   "10-03" {:name {:en "National Foundation Day", :ko "개천절"}}})
+ "08-15" {:name {:en "Liberation Day", :ko "광복절"}},
+ "10-09" {:name {:en "Hangul Day", :ko "한글날"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "06-06" {:name {:en "Memorial Day", :ko "현충일"}},
+ "07-17 prior to 2026"
+ {"type" "observance", :name {:en "Constitution Day", :ko "제헌절"}},
+ "05-05" {:name {:en "Children's Day", :ko "어린이날"}},
+ "korean 8-0-14 P3D" {:name {:en "Korean Thanksgiving", :ko "추석"}},
+ "07-17 since 2026" {:name {:en "Constitution Day", :ko "제헌절"}},
+ "03-01" {:name {:en "Independence Movement Day", :ko "3·1절"}},
+ "korean 01-0-01 P3D" {:name {:en "Korean New Year", :ko "설날"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "10-03" {:name {:en "National Foundation Day", :ko "개천절"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

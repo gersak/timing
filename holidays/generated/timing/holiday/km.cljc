@@ -10,18 +10,19 @@
 
 (def holidays
   {"03-18"
-   {:name
-    {:fr "Journée de Cheikh Al Maarouf", :en "Cheikh Al Maarouf Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "27 Rajab" {:name (partial get-name "27 Rajab")},
-   "10 Dhu al-Hijjah P2DT0H0M"
-   {:name (partial get-name "10 Dhu al-Hijjah")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "07-06" {:name (partial get-name "Independence Day")},
-   "11-12" {:name {:fr "Journée Maoré", :en "Maore Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "1 Shawwal P3DT0H0M" {:name (partial get-name "1 Shawwal")}})
+ {:name
+  {:fr "Journée de Cheikh Al Maarouf", :en "Cheikh Al Maarouf Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "27 Rajab" {:name (partial get-name "27 Rajab")},
+ "10 Dhu al-Hijjah P2DT0H0M"
+ {:name (partial get-name "10 Dhu al-Hijjah")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "07-06" {:name (partial get-name "Independence Day")},
+ "11-12" {:name {:fr "Journée Maoré", :en "Maore Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "1 Shawwal P3DT0H0M" {:name (partial get-name "1 Shawwal")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

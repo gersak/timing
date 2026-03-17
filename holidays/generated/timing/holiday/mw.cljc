@@ -10,26 +10,27 @@
 
 (def holidays
   {"07-06 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "01-15 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "John Chilembwe Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "05-14 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "Kamuzu Day"}},
-   "05-01 and if saturday,sunday then next monday"
-   {:name (partial get-name "05-01")},
-   "01-01 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "03-03 and if saturday,sunday then next monday"
-   {:name {:en "Martyrs' Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1 Shawwal and if saturday,sunday then next monday"
-   {"substitute" true, "_name" "1 Shawwal", :name {:en "Eid al Fitri"}},
-   "12-25 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "10-15 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "Mothers Day")}})
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "01-15 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "John Chilembwe Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "05-14 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "Kamuzu Day"}},
+ "05-01 and if saturday,sunday then next monday"
+ {:name (partial get-name "05-01")},
+ "01-01 and if saturday,sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "03-03 and if saturday,sunday then next monday"
+ {:name {:en "Martyrs' Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1 Shawwal and if saturday,sunday then next monday"
+ {"substitute" true, "_name" "1 Shawwal", :name {:en "Eid al Fitri"}},
+ "12-25 and if saturday,sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "10-15 and if saturday,sunday then next monday"
+ {"substitute" true, :name (partial get-name "Mothers Day")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

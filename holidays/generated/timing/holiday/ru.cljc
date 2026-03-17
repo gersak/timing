@@ -10,20 +10,22 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "05-09" {:name {:ru "День Победы", :en "Victory Day"}},
-   "11-04" {:name {:ru "День народного единства", :en "Unity Day"}},
-   "01-08" {:name {:ru "Новогодние каникулы", :en "New Year Holiday"}},
-   "06-12" {:name {:ru "День России", :en "Russia Day"}},
-   "03-08" {:name (partial get-name "03-08")},
-   "julian 12-25" {:name (partial get-name "12-25")},
-   "05-01"
-   {:name {:ru "День весны и труда", :en "Spring and Labour Day"}},
-   "01-02 P5D"
-   {:name {:ru "Новогодние каникулы", :en "New Year Holiday"}},
-   "02-23"
-   {:name
-    {:ru "День защитника Отечества",
-     :en "Defender of the Fatherland Day"}}})
+ "05-09" {:name {:ru "День Победы", :en "Victory Day"}},
+ "11-04" {:name {:ru "День народного единства", :en "Unity Day"}},
+ "01-08" {:name {:ru "Новогодние каникулы", :en "New Year Holiday"}},
+ "06-12" {:name {:ru "День России", :en "Russia Day"}},
+ "julian 12-25" {:name (partial get-name "12-25")},
+ "03-08 and if sunday then next monday"
+ {:name (partial get-name "03-08")},
+ "05-01"
+ {:name {:ru "День весны и труда", :en "Spring and Labour Day"}},
+ "01-02 P5D"
+ {:name {:ru "Новогодние каникулы", :en "New Year Holiday"}},
+ "02-23"
+ {:name
+  {:ru "День защитника Отечества",
+   :en "Defender of the Fatherland Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

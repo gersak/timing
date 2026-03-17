@@ -10,56 +10,57 @@
 
 (def holidays
   {"05-09 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:az "Faşizm üzərində qələbə günü",
-     :en "Day of Victory over Fascism"}},
-   "11-17"
-   {:name {:az "Milli Dirçəliş günü", :en "National Revival Day"}},
-   "01-20"
-   {"type" "observance", :name {:az "Qara Yanvar", :en "Martyrs' Day"}},
-   "11 Dhu al-Hijjah and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "2 Shawwal and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "1 Shawwal")},
-   "06-15 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:az "Azərbaycan xalqının Milli Qurtuluş günü",
-     :en "National Salvation Day"}},
-   "03-20"
-   {"active" [{"from" 2011}],
-    :name {:az "Novruz", :en "Spring Festival"}},
-   "01-02 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "10 Dhu al-Hijjah and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "10 Dhu al-Hijjah")},
-   "1 Shawwal and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "1 Shawwal")},
-   "11-12" {:name {:az "Konstitusiya günü", :en "Constitution Day"}},
-   "10-18 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name {:az "Dövlət Müstəqilliyi günü", :en "Independence Day"}},
-   "06-26 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:az "Azərbaycan Respublikasının Silahlı Qüvvələri günü",
-     :en "Azerbaijan Armed Forces Day"}},
-   "11-09 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name {:az "Dövlət Bayrağı günü", :en "Flag Day"}},
-   "03-08 and if saturday,sunday then next monday"
-   {"substitute" true, :name (partial get-name "03-08")},
-   "05-28 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name {:az "Respublika günü", :en "Republic Day"}},
-   "12-31 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:az "Dünya azərbaycanlıların həmrəyliyi günü",
-     :en "International Solidarity Day of Azerbaijanis"}}})
+ {"substitute" true,
+  :name
+  {:az "Faşizm üzərində qələbə günü",
+   :en "Day of Victory over Fascism"}},
+ "11-17"
+ {:name {:az "Milli Dirçəliş günü", :en "National Revival Day"}},
+ "01-20"
+ {"type" "observance", :name {:az "Qara Yanvar", :en "Martyrs' Day"}},
+ "11 Dhu al-Hijjah and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "10 Dhu al-Hijjah")},
+ "01-01 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "2 Shawwal and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "1 Shawwal")},
+ "06-15 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name
+  {:az "Azərbaycan xalqının Milli Qurtuluş günü",
+   :en "National Salvation Day"}},
+ "03-20"
+ {"active" [{"from" 2011}],
+  :name {:az "Novruz", :en "Spring Festival"}},
+ "01-02 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "10 Dhu al-Hijjah and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "10 Dhu al-Hijjah")},
+ "1 Shawwal and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "1 Shawwal")},
+ "11-12" {:name {:az "Konstitusiya günü", :en "Constitution Day"}},
+ "10-18 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name {:az "Dövlət Müstəqilliyi günü", :en "Independence Day"}},
+ "06-26 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name
+  {:az "Azərbaycan Respublikasının Silahlı Qüvvələri günü",
+   :en "Azerbaijan Armed Forces Day"}},
+ "11-09 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name {:az "Dövlət Bayrağı günü", :en "Flag Day"}},
+ "03-08 and if saturday,sunday then next monday"
+ {"substitute" true, :name (partial get-name "03-08")},
+ "05-28 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name {:az "Respublika günü", :en "Republic Day"}},
+ "12-31 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name
+  {:az "Dünya azərbaycanlıların həmrəyliyi günü",
+   :en "International Solidarity Day of Azerbaijanis"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

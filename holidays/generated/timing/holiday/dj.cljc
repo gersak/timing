@@ -10,15 +10,16 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "27 Rajab" {:name (partial get-name "27 Rajab")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "9 Dhu al-Hijjah" {:name (partial get-name "9 Dhu al-Hijjah")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "06-27 since 1977" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "27 Rajab" {:name (partial get-name "27 Rajab")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "9 Dhu al-Hijjah" {:name (partial get-name "9 Dhu al-Hijjah")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "06-27 since 1977" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

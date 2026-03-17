@@ -10,9 +10,10 @@
 
 (def holidays
   {"02-22 since 2022" {:name {:ar "يوم التأسيس", :en "Founding Day"}},
-   "09-23 since 2005" {:name {:ar "اليوم الوطني", :en "National Day"}},
-   "29 Ramadan P4D" {:name (partial get-name "1 Shawwal")},
-   "9 Dhu al-Hijjah P4D" {:name (partial get-name "10 Dhu al-Hijjah")}})
+ "09-23 since 2005" {:name {:ar "اليوم الوطني", :en "National Day"}},
+ "30 Ramadan P4D" {:name (partial get-name "1 Shawwal")},
+ "9 Dhu al-Hijjah P4D" {:name (partial get-name "10 Dhu al-Hijjah")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

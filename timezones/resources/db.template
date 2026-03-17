@@ -11,18 +11,45 @@
   (get-in db [:rules rule]))
 
 
+(defn- normalize-zone-name
+  "Normalizes zone name for comparison: lowercase, remove underscores/hyphens"
+  [s]
+  (-> s
+      clojure.string/lower-case
+      (clojure.string/replace #"[_\-]" "")))
+
+(defn- similar-zones
+  "Returns up to n zone names similar to the given zone-name.
+   Uses case-insensitive matching with underscore/hyphen normalization."
+  [zone-name n]
+  (let [zone-normalized (normalize-zone-name zone-name)
+        all-zones (keys (:zones db))
+        ;; Exact normalized match (e.g., NewYork -> New_York)
+        exact (filter #(= (normalize-zone-name %) zone-normalized) all-zones)
+        ;; Prefix matches after normalization
+        prefix (filter #(clojure.string/starts-with?
+                          (normalize-zone-name %) zone-normalized) all-zones)
+        ;; Contains matches after normalization
+        contains (filter #(clojure.string/includes?
+                            (normalize-zone-name %) zone-normalized) all-zones)
+        ;; Combine and dedupe, prioritizing exact > prefix > contains
+        suggestions (distinct (concat exact prefix contains))]
+    (take n suggestions)))
+
 (defn get-timezone [zone-name]
   (if-let [zone' (get-in db [:zones zone-name])]
     (if (string? zone') (get-timezone zone')
-      zone')
-    (throw
-      (ex-info "No such zone."
-      {:timezone zone-name
-       :available-timezones (keys (:zones db))}))))
-
-
-(def available-zones
-  (sort (keys (:zones db))))
+        zone')
+    (let [suggestions (similar-zones zone-name 5)
+          msg (if (seq suggestions)
+                (str "No such zone '" zone-name "'. Did you mean: "
+                     (clojure.string/join ", " suggestions) "?")
+                (str "No such zone '" zone-name "'."))]
+      (throw
+       (ex-info msg
+                {:timezone zone-name
+                 :suggestions suggestions
+                 :available-timezones (keys (:zones db))})))))
 
 
 (def locales
@@ -58,7 +85,10 @@
     {:offset 0, :rule "-" , :format "GMT", :from 0}}})
 
 (def db
-  (merge-with 
+  (merge-with
     merge
     db-extensions
     <<zones>>))
+
+(def available-zones
+  (sort (keys (:zones db))))

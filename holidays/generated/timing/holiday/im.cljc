@@ -10,7 +10,8 @@
 
 (def holidays
   {"2nd friday in June" {:name {:en "Tourist Trophy, Senior Race Day"}},
-   "07-05" {:name {:en "Tynwald Day"}}})
+ "07-05" {:name {:en "Tynwald Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -9,7 +9,8 @@
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
-  {"05-09" {:name {:en "Liberation Day"}}})
+  {"05-09" {:name {:en "Liberation Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

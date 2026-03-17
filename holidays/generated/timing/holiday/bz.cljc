@@ -10,27 +10,28 @@
 
 (def holidays
   {"05-24 if friday,saturday,sunday then next monday if tuesday,wednesday,thursday then previous monday"
-   {:name {:en "Commonwealth Day, Sovereign's Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "12-25 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "easter -1" {:name (partial get-name "easter -1")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "10-12 if friday,saturday,sunday then next monday if tuesday,wednesday,thursday then previous monday"
-   {:name {:en "Day of the Americas"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01 if sunday then next monday" {:name (partial get-name "05-01")},
-   "12-26 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "03-09 if friday,saturday,sunday then next monday if tuesday,wednesday,thursday then previous monday"
-   {:name {:en "Baron Bliss Day"}},
-   "09-21 if sunday then next monday"
-   {:name (partial get-name "Independence Day")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "09-10 if sunday then next monday"
-   {:name {:en "Saint George's Caye Day, National Day"}},
-   "11-19 if sunday then next monday"
-   {:name {:en "Garifuna Settlement Day"}}})
+ {:name {:en "Commonwealth Day, Sovereign's Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "12-25 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "easter -1" {:name (partial get-name "easter -1")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "10-12 if friday,saturday,sunday then next monday if tuesday,wednesday,thursday then previous monday"
+ {:name {:en "Day of the Americas"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-01 if sunday then next monday" {:name (partial get-name "05-01")},
+ "12-26 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "03-09 if friday,saturday,sunday then next monday if tuesday,wednesday,thursday then previous monday"
+ {:name {:en "Baron Bliss Day"}},
+ "09-21 if sunday then next monday"
+ {:name (partial get-name "Independence Day")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "09-10 if sunday then next monday"
+ {:name {:en "Saint George's Caye Day, National Day"}},
+ "11-19 if sunday then next monday"
+ {:name {:en "Garifuna Settlement Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,49 +10,50 @@
 
 (def holidays
   {"easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "easter -48" {"type" "observance", :name {:is "Bolludagur"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "easter -47" {"type" "observance", :name {:is "Sprengidagur"}},
-   "12-24 13:00 if sunday then 00:00" {:name (partial get-name "12-24")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "12-23"
-   {"type" "observance",
-    :name {:is "Þorláksmessa", :en "St Þorlákur's Day"}},
-   "11-16"
-   {"type" "observance",
-    :name {:is "Dagur íslenskrar tungu", :en "Icelandic Language Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "02-18"
-   {"type" "observance", :name {:is "Konudagur", :en "Woman's Day"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "friday after 01-18" {"type" "observance", :name {:is "Bóndadagur"}},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1st sunday in June"
-   {"type" "observance",
-    :name {:is "Sjómannadagurinn", :en "The Seamen's Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "thursday after 04-18"
-   {:name {:is "Sumardagurinn fyrsti", :en "First Day of Summer"}},
-   "01-06" {"type" "observance", :name (partial get-name "01-06")},
-   "12-31 13:00 if sunday then 00:00" {:name (partial get-name "12-31")},
-   "1st monday in August"
-   {:name {:is "Frídagur verslunarmanna", :en "Commerce Day"}},
-   "saturday after 10-21"
-   {"type" "observance",
-    :name {:is "Fyrsti vetrardagur", :en "First Day of Winter"}},
-   "easter -7"
-   {"type" "observance", :name (partial get-name "easter -7")},
-   "12-25" {:name (partial get-name "12-25")},
-   "06-17"
-   {:name
-    {:is "Íslenski þjóðhátíðardagurinn", :en "Icelandic National Day"}}})
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "easter -48" {"type" "observance", :name {:is "Bolludagur"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "easter -47" {"type" "observance", :name {:is "Sprengidagur"}},
+ "12-24 13:00 if sunday then 00:00" {:name (partial get-name "12-24")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "12-23"
+ {"type" "observance",
+  :name {:is "Þorláksmessa", :en "St Þorlákur's Day"}},
+ "11-16"
+ {"type" "observance",
+  :name {:is "Dagur íslenskrar tungu", :en "Icelandic Language Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "02-18"
+ {"type" "observance", :name {:is "Konudagur", :en "Woman's Day"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "friday after 01-18" {"type" "observance", :name {:is "Bóndadagur"}},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1st sunday in June"
+ {"type" "observance",
+  :name {:is "Sjómannadagurinn", :en "The Seamen's Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "thursday after 04-18"
+ {:name {:is "Sumardagurinn fyrsti", :en "First Day of Summer"}},
+ "01-06" {"type" "observance", :name (partial get-name "01-06")},
+ "12-31 13:00 if sunday then 00:00" {:name (partial get-name "12-31")},
+ "1st monday in August"
+ {:name {:is "Frídagur verslunarmanna", :en "Commerce Day"}},
+ "saturday after 10-21"
+ {"type" "observance",
+  :name {:is "Fyrsti vetrardagur", :en "First Day of Winter"}},
+ "easter -7"
+ {"type" "observance", :name (partial get-name "easter -7")},
+ "12-25" {:name (partial get-name "12-25")},
+ "06-17"
+ {:name
+  {:is "Íslenski þjóðhátíðardagurinn", :en "Icelandic National Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

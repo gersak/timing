@@ -5,66 +5,67 @@
    [clojure.string]
    [timing.holiday :refer [is-holiday?]]
    [timing.holiday.util :refer [parse-definition
-                                get-name]]
+                              get-name]]
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
   {"1st monday in September" {:name (partial get-name "05-01")},
-   "3rd sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "monday before 06-01"
-   {:name
-    {:en "Memorial Day", :es "Recordación de los Muertos de la Guerra"}},
-   "wednesday before 04-28"
-   {"type" "observance", :name {:en "Administrative Professionals Day"}},
-   "3rd monday in January"
-   {:name
-    {:en "Martin Luther King Jr. Day",
-     :es "Natalicio de Martin Luther King, Jr."}},
-   "06-19 and if sunday then next monday if saturday then previous friday since 2021"
-   {"substitute" true, :name {:en "Juneteenth"}},
-   "02-14" {"type" "observance", :name (partial get-name "02-14")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "substitutes 11-11 if sunday then next monday if saturday then previous friday"
-   {"substitute" true,
-    "type" "bank",
-    "note" "Federal Government offices are closed",
-    :name {:en "Veterans Day", :es "Día del Veterano"}},
-   "12-24" {"type" "optional", :name (partial get-name "12-24")},
-   "04-15 if friday then next monday if saturday,sunday then next tuesday"
-   {"type" "observance", :name {:en "Tax Day"}},
-   "4th thursday in November"
-   {:name {:en "Thanksgiving Day", :es "Acción de Gracias"}},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "07-04 and if sunday then next monday if saturday then previous friday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "10-31 18:00" {"type" "observance", :name {:en "Halloween"}},
-   "3rd monday in February"
-   {:name {:en "Washington's Birthday", :es "Día de los Presidentes"}},
-   "friday after 4th thursday in November"
-   {"type" "observance",
-    :name
-    {:en "Day after Thanksgiving Day",
-     :es "Dia despues Acción de Gracias"}},
-   "01-01 and if sunday then next monday if saturday then previous friday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "03-17" {"type" "observance", :name {:en "St. Patrick's Day"}},
-   "2nd monday in October"
-   {:name {:en "Columbus Day", :es "Descubrimiento de América"}},
-   "12-31" {"type" "observance", :name (partial get-name "12-31")},
-   "12-25 and if sunday then next monday if saturday then previous friday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "11-11" {:name {:en "Veterans Day", :es "Día del Veterano"}},
-   "tuesday after 1st monday in November every 4 years since 1848"
-   {"type" "observance", :name {:en "Election Day"}}})
+ "3rd sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "monday before 06-01"
+ {:name
+  {:en "Memorial Day", :es "Recordación de los Muertos de la Guerra"}},
+ "wednesday before 04-28"
+ {"type" "observance", :name {:en "Administrative Professionals Day"}},
+ "3rd monday in January"
+ {:name
+  {:en "Martin Luther King Jr. Day",
+   :es "Natalicio de Martin Luther King, Jr."}},
+ "06-19 and if sunday then next monday if saturday then previous friday since 2021"
+ {"substitute" true, :name {:en "Juneteenth"}},
+ "02-14" {"type" "observance", :name (partial get-name "02-14")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "substitutes 11-11 if sunday then next monday if saturday then previous friday"
+ {"substitute" true,
+  "type" "bank",
+  "note" "Federal Government offices are closed",
+  :name {:en "Veterans Day", :es "Día del Veterano"}},
+ "12-24" {"type" "optional", :name (partial get-name "12-24")},
+ "04-15 if friday then next monday if saturday,sunday then next tuesday"
+ {"type" "observance", :name {:en "Tax Day"}},
+ "4th thursday in November"
+ {:name {:en "Thanksgiving Day", :es "Acción de Gracias"}},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "07-04 and if sunday then next monday if saturday then previous friday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "10-31 18:00" {"type" "observance", :name {:en "Halloween"}},
+ "3rd monday in February"
+ {:name {:en "Washington's Birthday", :es "Día de los Presidentes"}},
+ "friday after 4th thursday in November"
+ {"type" "observance",
+  :name
+  {:en "Day after Thanksgiving Day",
+   :es "Dia despues Acción de Gracias"}},
+ "01-01 and if sunday then next monday if saturday then previous friday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "03-17" {"type" "observance", :name {:en "St. Patrick's Day"}},
+ "2nd monday in October"
+ {:name {:en "Columbus Day", :es "Descubrimiento de América"}},
+ "12-31" {"type" "observance", :name (partial get-name "12-31")},
+ "12-25 and if sunday then next monday if saturday then previous friday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "11-11" {:name {:en "Veterans Day", :es "Día del Veterano"}},
+ "tuesday after 1st monday in November every 4 years since 1848"
+ {"type" "observance", :name {:en "Election Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv
    (fn [result definition name-mapping]
      (assoc result
-       (compiler/compile-type (parse-definition definition))
-       name-mapping))
+            (compiler/compile-type (parse-definition definition))
+            name-mapping))
    {}
    holidays))
 

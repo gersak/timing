@@ -10,25 +10,26 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "12-01 and if sunday then next monday"
-   {:name
-    {:fr "Journée de la libération et de la démocratie",
-     :en "Freedom and Democracy Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "08-11 and if sunday then next monday"
-   {:name {:fr "Fête Nationale (Indépendance)", :en "Independence Day"}},
-   "01-01 and if sunday then next monday"
-   {:name (partial get-name "01-01")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "11-28"
-   {:name
-    {:fr "Anniversaire de la Proclamation de la République",
-     :en "Proclamation of the Republic"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01 and if sunday then next monday"
-   {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "12-01 and if sunday then next monday"
+ {:name
+  {:fr "Journée de la libération et de la démocratie",
+   :en "Freedom and Democracy Day"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "08-11 and if sunday then next monday"
+ {:name {:fr "Fête Nationale (Indépendance)", :en "Independence Day"}},
+ "01-01 and if sunday then next monday"
+ {:name (partial get-name "01-01")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "11-28"
+ {:name
+  {:fr "Anniversaire de la Proclamation de la République",
+   :en "Proclamation of the Republic"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01 and if sunday then next monday"
+ {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

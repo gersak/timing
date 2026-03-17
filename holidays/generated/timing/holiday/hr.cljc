@@ -10,96 +10,97 @@
 
 (def holidays
   {"08-15" {"type" "public", :name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah"
-   {"type" "optional",
-    "note" "Muslim believers",
-    :name (partial get-name "10 Dhu al-Hijjah")},
-   "easter 60" {"type" "public", :name (partial get-name "easter 60")},
-   "01-01" {"type" "public", :name (partial get-name "01-01")},
-   "easter -47"
-   {"type" "observance", :name (partial get-name "easter -47")},
-   "11-01" {"type" "public", :name (partial get-name "11-01")},
-   "06-25"
-   {"type" "observance",
-    "active" [{"from" "2020-01-01"}],
-    :name {:hr "Dan neovisnosti", :en "Independence Day"}},
-   "10-08"
-   {"type" "observence",
-    "active" [{"from" "2020-01-01"}],
-    :name
-    {:hr "Dan Hrvatskoga sabora", :en "Day of the Croatian Parliament"}},
-   "easter" {"type" "public", :name (partial get-name "easter")},
-   "1 Tishrei"
-   {"type" "optional",
-    "note" "Jewish believers",
-    :name (partial get-name "10 Tishrei")},
-   "05-30"
-   {"type" "public",
-    "active" [{"from" "2020-01-01"}],
-    :name {:hr "Dan državnosti", :en "National Day"}},
-   "06-25 #1"
-   {"type" "public",
-    "active" [{"to" "2020-01-01"}],
-    :name {:hr "Dan državnosti", :en "Statehood Day"}},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "1 Shawwal"
-   {"type" "optional",
-    "note" "Muslim believers",
-    :name (partial get-name "1 Shawwal")},
-   "10-08 #1"
-   {"type" "public",
-    "active" [{"to" "2020-01-01"}],
-    :name {:hr "Dan neovisnosti", :en "Independence Day"}},
-   "12-26" {"type" "public", :name (partial get-name "12-26")},
-   "easter 1" {"type" "public", :name (partial get-name "easter 1")},
-   "03-08" {"type" "observance", :name (partial get-name "03-08")},
-   "julian 12-25"
-   {"type" "optional",
-    "note"
-    "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
-    :name (partial get-name "julian 12-25")},
-   "05-01" {"type" "public", :name (partial get-name "05-01")},
-   "orthodox"
-   {"type" "optional",
-    "note"
-    "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
-    :name (partial get-name "orthodox")},
-   "11-18 #1"
-   {"type" "observance",
-    "active" [{"to" "2020-01-01"}],
-    :name
-    {:hr "Dan sjećanja na žrtvu Vukovara i Škabrnje",
-     :en "Remembrance Day"}},
-   "01-06" {"type" "public", :name (partial get-name "01-06")},
-   "11-18"
-   {"type" "public",
-    "active" [{"from" "2020-01-01"}],
-    :name
-    {:hr
-     "Dan sjećanja na žrtve Domovinskog rata i Dan sjećanja na žrtvu Vukovara i Škabrnje",
-     :en "Remembrance Day"}},
-   "10 Tishrei"
-   {"type" "optional",
-    "note" "Jewish believers",
-    :name (partial get-name "10 Tishrei")},
-   "orthodox 1"
-   {"type" "optional",
-    "note"
-    "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
-    :name (partial get-name "orthodox 1")},
-   "06-22"
-   {"type" "public",
-    :name
-    {:hr "Dan antifašističke borbe", :en "Anti-Fascist Struggle Day"}},
-   "08-05"
-   {"type" "public",
-    :name
-    {:hr
-     "Dan pobjede i domovinske zahvalnosti i Dan hrvatskih branitelja",
-     :en
-     "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"}},
-   "12-25" {"type" "public", :name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah"
+ {"type" "optional",
+  "note" "Muslim believers",
+  :name (partial get-name "10 Dhu al-Hijjah")},
+ "easter 60" {"type" "public", :name (partial get-name "easter 60")},
+ "01-01" {"type" "public", :name (partial get-name "01-01")},
+ "easter -47"
+ {"type" "observance", :name (partial get-name "easter -47")},
+ "11-01" {"type" "public", :name (partial get-name "11-01")},
+ "06-25"
+ {"type" "observance",
+  "active" [{"from" "2020-01-01"}],
+  :name {:hr "Dan neovisnosti", :en "Independence Day"}},
+ "10-08"
+ {"type" "observence",
+  "active" [{"from" "2020-01-01"}],
+  :name
+  {:hr "Dan Hrvatskoga sabora", :en "Day of the Croatian Parliament"}},
+ "easter" {"type" "public", :name (partial get-name "easter")},
+ "1 Tishrei"
+ {"type" "optional",
+  "note" "Jewish believers",
+  :name (partial get-name "10 Tishrei")},
+ "05-30"
+ {"type" "public",
+  "active" [{"from" "2020-01-01"}],
+  :name {:hr "Dan državnosti", :en "National Day"}},
+ "06-25 #1"
+ {"type" "public",
+  "active" [{"to" "2020-01-01"}],
+  :name {:hr "Dan državnosti", :en "Statehood Day"}},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "1 Shawwal"
+ {"type" "optional",
+  "note" "Muslim believers",
+  :name (partial get-name "1 Shawwal")},
+ "10-08 #1"
+ {"type" "public",
+  "active" [{"to" "2020-01-01"}],
+  :name {:hr "Dan neovisnosti", :en "Independence Day"}},
+ "12-26" {"type" "public", :name (partial get-name "12-26")},
+ "easter 1" {"type" "public", :name (partial get-name "easter 1")},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "julian 12-25"
+ {"type" "optional",
+  "note"
+  "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
+  :name (partial get-name "julian 12-25")},
+ "05-01" {"type" "public", :name (partial get-name "05-01")},
+ "orthodox"
+ {"type" "optional",
+  "note"
+  "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
+  :name (partial get-name "orthodox")},
+ "11-18 #1"
+ {"type" "observance",
+  "active" [{"to" "2020-01-01"}],
+  :name
+  {:hr "Dan sjećanja na žrtvu Vukovara i Škabrnje",
+   :en "Remembrance Day"}},
+ "01-06" {"type" "public", :name (partial get-name "01-06")},
+ "11-18"
+ {"type" "public",
+  "active" [{"from" "2020-01-01"}],
+  :name
+  {:hr
+   "Dan sjećanja na žrtve Domovinskog rata i Dan sjećanja na žrtvu Vukovara i Škabrnje",
+   :en "Remembrance Day"}},
+ "10 Tishrei"
+ {"type" "optional",
+  "note" "Jewish believers",
+  :name (partial get-name "10 Tishrei")},
+ "orthodox 1"
+ {"type" "optional",
+  "note"
+  "Orthodox believers (legally defined as Christians who follow the Julian Calender)",
+  :name (partial get-name "orthodox 1")},
+ "06-22"
+ {"type" "public",
+  :name
+  {:hr "Dan antifašističke borbe", :en "Anti-Fascist Struggle Day"}},
+ "08-05"
+ {"type" "public",
+  :name
+  {:hr
+   "Dan pobjede i domovinske zahvalnosti i Dan hrvatskih branitelja",
+   :en
+   "Victory and Homeland Thanksgiving Day and the Day of Croatian defenders"}},
+ "12-25" {"type" "public", :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

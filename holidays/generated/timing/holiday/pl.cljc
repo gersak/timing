@@ -10,146 +10,147 @@
 
 (def holidays
   {"easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "08-15" {:name (partial get-name "08-15")},
-   "06-01"
-   {"type" "observance",
-    :name {:pl "Dzień Dziecka", :en "Children's Day"}},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-22"
-   {"type" "observance",
-    :name {:pl "Dzień Ziemi", :en "International Mother Earth Day"}},
-   "01-22"
-   {"type" "observance",
-    :name {:pl "Dzień Dziadka", :en "Grandfather's Day"}},
-   "easter -47"
-   {"type" "observance", :name (partial get-name "easter -47")},
-   "05-09" {"type" "observance", :name (partial get-name "05-09")},
-   "05-02 since 2004"
-   {"type" "optional",
-    "note" "Declared by statue",
-    :name {:pl "Dzień Flagi Rzeczypospolitej Polskiej", :en "Flag Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter -1"
-   {"type" "observance", :name (partial get-name "easter -1")},
-   "09-30"
-   {"type" "observance", :name {:pl "Dzień Chłopaka", :en "Boy's Day"}},
-   "05-26" {"type" "observance", :name (partial get-name "Mothers Day")},
-   "02-14" {"type" "observance", :name (partial get-name "02-14")},
-   "easter" {:name (partial get-name "easter")},
-   "01-21"
-   {"type" "observance",
-    :name {:pl "Dzień Babci", :en "Grandmother's Day"}},
-   "06-23" {"type" "observance", :name (partial get-name "Fathers Day")},
-   "09-01"
-   {"type" "observance",
-    :name
-    {:pl "Rocznica wybuchu II wojny światowej",
-     :en
-     "Anniversary of the outbreak of the Second World War in Poland"}},
-   "10-19 since 2018"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Narodowy Dzień Pamięci Duchownych Niezłomnych",
-     :en "National Day of Remembrance for Steadfast Clergy"}},
-   "12-24 since 2025" {:name (partial get-name "12-24")},
-   "easter -2"
-   {"type" "school",
-    "note" "Religious holiday - a working day, but schools are closed",
-    :name (partial get-name "easter -2")},
-   "12-06" {"type" "observance", :name (partial get-name "12-06")},
-   "05-03"
-   {:name
-    {:pl "Święto Narodowe Trzeciego Maja", :en "Constitution Day"}},
-   "01-06 since 2011" {:name (partial get-name "01-06")},
-   "04-19"
-   {"type" "observance",
-    :name
-    {:pl
-     "Dzień Pamięci Ofiar Holocaustu i Powstania w Getcie Warszawskim",
-     :en "Warsaw Ghetto Uprising Remembrance Day"}},
-   "03-24 since 2018"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl
-     "Narodowy Dzień Pamięci Polaków ratujących Żydów pod okupacją niemiecką",
-     :en
-     "National Day for the Remembrance of Poles Rescuing Jews under German Occupation"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-08" {"type" "observance", :name (partial get-name "03-08")},
-   "08-31 since 2005"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Dzień Solidarności i Wolności",
-     :en "Day of Solidarity and Freedom"}},
-   "06-12 since 2017"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Dzień Walki i Męczeństwa Wsi Polskiej",
-     :en "Day of Struggle and Martyrdom of the Polish Villages"}},
-   "05-01"
-   {"_name" "05-01", :name {:pl "Święto Państwowe; Święto Pracy"}},
-   "easter -3"
-   {"type" "school",
-    "note" "Religious holiday - a working day, but schools are closed",
-    :name (partial get-name "easter -3")},
-   "05-08 since 2015"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name {:pl "Narodowy Dzień Zwycięstwa", :en "National Victory Day"}},
-   "03-10"
-   {"type" "observance", :name {:pl "Dzień Mężczyzny", :en "Men's Day"}},
-   "12-27 since 2021"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Narodowy Dzień Pamięci Zwycięskiego Powstania Wielkopolskiego",
-     :en "Greater Poland Uprising Remebrence Day"}},
-   "03-21"
-   {"type" "observance",
-    :name
-    {:pl "Pierwszy Dzień Wiosny / Dzień Wagarowicza",
-     :en "First Day of Spring / Truant's Day"}},
-   "04-14 since 2019"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name {:pl "Święto Chrztu Polski", :en "Baptism of Poland Day"}},
-   "12-31" {"type" "observance", :name (partial get-name "12-31")},
-   "09-17"
-   {"type" "observance",
-    :name
-    {:pl "Rocznica agresji ZSRR na Polskę",
-     :en "Anniversary of the Soviet invasion of Poland"}},
-   "08-01 since 2009"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Narodowy Dzień Pamięci Powstania Warszawskiego",
-     :en "National Warsaw Uprising Remembrance Day"}},
-   "03-01 since 2011"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name
-    {:pl "Narodowy Dzień Pamięci „Żołnierzy Wyklętych”",
-     :en "National Cursed Soldiers Remembrance Day"}},
-   "11-11" {:name (partial get-name "Independence Day")},
-   "Thursday before easter -46"
-   {"type" "observance",
-    :name {:pl "Tłusty Czwartek", :en "Fat Thursday"}},
-   "easter -7"
-   {"type" "observance", :name (partial get-name "easter -7")},
-   "12-25" {:name (partial get-name "12-25")},
-   "02-19 since 2020"
-   {"type" "observance",
-    "note" "National holiday, although not a public holiday",
-    :name {:pl "Dzień Nauki Polskiej", :en "Polish Science Day"}}})
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "08-15" {:name (partial get-name "08-15")},
+ "06-01"
+ {"type" "observance",
+  :name {:pl "Dzień Dziecka", :en "Children's Day"}},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-22"
+ {"type" "observance",
+  :name {:pl "Dzień Ziemi", :en "International Mother Earth Day"}},
+ "01-22"
+ {"type" "observance",
+  :name {:pl "Dzień Dziadka", :en "Grandfather's Day"}},
+ "easter -47"
+ {"type" "observance", :name (partial get-name "easter -47")},
+ "05-09" {"type" "observance", :name (partial get-name "05-09")},
+ "05-02 since 2004"
+ {"type" "optional",
+  "note" "Declared by statue",
+  :name {:pl "Dzień Flagi Rzeczypospolitej Polskiej", :en "Flag Day"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter -1"
+ {"type" "observance", :name (partial get-name "easter -1")},
+ "09-30"
+ {"type" "observance", :name {:pl "Dzień Chłopaka", :en "Boy's Day"}},
+ "05-26" {"type" "observance", :name (partial get-name "Mothers Day")},
+ "02-14" {"type" "observance", :name (partial get-name "02-14")},
+ "easter" {:name (partial get-name "easter")},
+ "01-21"
+ {"type" "observance",
+  :name {:pl "Dzień Babci", :en "Grandmother's Day"}},
+ "06-23" {"type" "observance", :name (partial get-name "Fathers Day")},
+ "09-01"
+ {"type" "observance",
+  :name
+  {:pl "Rocznica wybuchu II wojny światowej",
+   :en
+   "Anniversary of the outbreak of the Second World War in Poland"}},
+ "10-19 since 2018"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Narodowy Dzień Pamięci Duchownych Niezłomnych",
+   :en "National Day of Remembrance for Steadfast Clergy"}},
+ "12-24 since 2025" {:name (partial get-name "12-24")},
+ "easter -2"
+ {"type" "school",
+  "note" "Religious holiday - a working day, but schools are closed",
+  :name (partial get-name "easter -2")},
+ "12-06" {"type" "observance", :name (partial get-name "12-06")},
+ "05-03"
+ {:name
+  {:pl "Święto Narodowe Trzeciego Maja", :en "Constitution Day"}},
+ "01-06 since 2011" {:name (partial get-name "01-06")},
+ "04-19"
+ {"type" "observance",
+  :name
+  {:pl
+   "Dzień Pamięci Ofiar Holocaustu i Powstania w Getcie Warszawskim",
+   :en "Warsaw Ghetto Uprising Remembrance Day"}},
+ "03-24 since 2018"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl
+   "Narodowy Dzień Pamięci Polaków ratujących Żydów pod okupacją niemiecką",
+   :en
+   "National Day for the Remembrance of Poles Rescuing Jews under German Occupation"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "08-31 since 2005"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Dzień Solidarności i Wolności",
+   :en "Day of Solidarity and Freedom"}},
+ "06-12 since 2017"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Dzień Walki i Męczeństwa Wsi Polskiej",
+   :en "Day of Struggle and Martyrdom of the Polish Villages"}},
+ "05-01"
+ {"_name" "05-01", :name {:pl "Święto Państwowe; Święto Pracy"}},
+ "easter -3"
+ {"type" "school",
+  "note" "Religious holiday - a working day, but schools are closed",
+  :name (partial get-name "easter -3")},
+ "05-08 since 2015"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name {:pl "Narodowy Dzień Zwycięstwa", :en "National Victory Day"}},
+ "03-10"
+ {"type" "observance", :name {:pl "Dzień Mężczyzny", :en "Men's Day"}},
+ "12-27 since 2021"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Narodowy Dzień Pamięci Zwycięskiego Powstania Wielkopolskiego",
+   :en "Greater Poland Uprising Remebrence Day"}},
+ "03-21"
+ {"type" "observance",
+  :name
+  {:pl "Pierwszy Dzień Wiosny / Dzień Wagarowicza",
+   :en "First Day of Spring / Truant's Day"}},
+ "04-14 since 2019"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name {:pl "Święto Chrztu Polski", :en "Baptism of Poland Day"}},
+ "12-31" {"type" "observance", :name (partial get-name "12-31")},
+ "09-17"
+ {"type" "observance",
+  :name
+  {:pl "Rocznica agresji ZSRR na Polskę",
+   :en "Anniversary of the Soviet invasion of Poland"}},
+ "08-01 since 2009"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Narodowy Dzień Pamięci Powstania Warszawskiego",
+   :en "National Warsaw Uprising Remembrance Day"}},
+ "03-01 since 2011"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name
+  {:pl "Narodowy Dzień Pamięci „Żołnierzy Wyklętych”",
+   :en "National Cursed Soldiers Remembrance Day"}},
+ "11-11" {:name (partial get-name "Independence Day")},
+ "Thursday before easter -46"
+ {"type" "observance",
+  :name {:pl "Tłusty Czwartek", :en "Fat Thursday"}},
+ "easter -7"
+ {"type" "observance", :name (partial get-name "easter -7")},
+ "12-25" {:name (partial get-name "12-25")},
+ "02-19 since 2020"
+ {"type" "observance",
+  "note" "National holiday, although not a public holiday",
+  :name {:pl "Dzień Nauki Polskiej", :en "Polish Science Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

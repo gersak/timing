@@ -10,117 +10,118 @@
 
 (def holidays
   {"2019-04-09" {:name {:en "Election Day", :he "יום הבחירות"}},
-   "12 Cheshvan if Friday,Saturday then previous Thursday since 1997"
-   {"type" "observance",
-    "note" "National remembrance day, business as usual",
-    :name {:he "יום רבין", :en "Rabin Day"}},
-   "2015-03-17" {:name {:en "Election Day", :he "יום הבחירות"}},
-   "05-09"
-   {"type" "observance",
-    :name
-    {:en "Victory in Europe Day", :he "יום הניצחון על גרמניה הנאצית"}},
-   "2021-03-23" {:name {:en "Election Day", :he "יום הבחירות"}},
-   "4 Iyyar if Thursday,Friday then previous Wednesday if Sunday then next Monday"
-   {"type" "observance",
-    "note"
-    "National remembrance day, business as usual except places of public entertainment",
-    :name
-    {:en
-     "Fallen Soldiers and Victims of Terrorism Remembrance Day (Yom HaZikaron)",
-     :he "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"}},
-   "5 Iyyar if Friday,Saturday then previous Thursday if Monday then next Tuesday"
-   {:name {:en "Independence Day (Yom HaAtzmaut)", :he "יום העצמאות"}},
-   "6 Kislev if Saturday then next Sunday"
-   {"type" "observance",
-    "note" "Day marked by the Knesset",
-    :name {:en "Ben-Gurion Day", :he "יום בן-גוריון"}},
-   "9 Av if Saturday then next Sunday"
-   {"type" "observance",
-    "note"
-    "Optional paid leave, business as usual except places of public entertainment",
-    :name {:en "Tisha B'Av, fast", :he "תשעה באב"}},
-   "16 Tishrei P6D"
-   {"type" "school",
-    "note"
-    "Collective paid leave in many businesses and government offices",
-    :name {:he "חול המועד סוכות", :en "The week of Sukkot"}},
-   "10 Nisan"
-   {"type" "observance",
-    "note" "Official holiday, business as usual",
-    :name {:en "Aliyah Day", :he "יום העלייה"}},
-   "22 Tishrei"
-   {:name
-    {:he "שמחת תורה/שמיני עצרת", :en "Simchat Torah/ Shmini Atzeret"}},
-   "15 Av"
-   {"type" "observance",
-    :name {:en "Tu B'Av (Fifteenth of Av)", :he "ט\"ו באב"}},
-   "27 Nisan if Friday then previous Thursday if Sunday then next Monday"
-   {"type" "observance",
-    "note"
-    "National remembrance day, business as usual except places of public entertainment",
-    :name
-    {:en "Holocaust Remembrance Day (Yom HaShoah)",
-     :he "יום הזיכרון לשואה ולגבורה"}},
-   "15 Nisan" {:name {:en "Passover (Pesach)", :he "פסח"}},
-   "15 Shvat"
-   {"type" "observance",
-    :name {:en "Tu Bishvat (Arbor Day)", :he "ט\"ו בשבט"}},
-   "16 Nisan P5D"
-   {"type" "school",
-    "note"
-    "School holiday, collective paid leave in many businesses and government offices",
-    :name {:en "Passover (intermediate days)", :he "חול המועד פסח"}},
-   "18 Iyyar"
-   {"type" "school", :name {:en "Lag BaOmer", :he "ל\"ג בעומר"}},
-   "21 Nisan"
-   {:name
-    {:en "Mimouna, Seventh day of Passover",
-     :he "מימונה, שביעי של פסח"}},
-   "2020-03-02" {:name {:en "Election Day", :he "יום הבחירות"}},
-   "1 Tishrei"
-   {:name {:he "ראש השנה", :en "Rosh Hashanah (Yom Teruah)"}},
-   "2019-09-17" {:name {:en "Election Day", :he "יום הבחירות"}},
-   "15 Tishrei"
-   {:name {:he "סוכות", :en "Feast of Tabernacles (Sukkot)"}},
-   "6 Sivan" {:name {:en "Shavuot (Feast of Weeks)", :he "שבועות"}},
-   "10 Tevet"
-   {"type" "observance",
-    :name {:en "Tenth of Tevet", :he "צום עשרה בטבת"}},
-   "13 AdarII if Saturday then previous Thursday"
-   {"type" "school", :name {:en "Fast of Esther", :he "תענית אסתר"}},
-   "10 Iyyar if Saturday then next Sunday since 2004"
-   {"type" "observance",
-    "note" "Day marked by the Knesset",
-    :name {:en "Herzl Day", :he "יום הרצל"}},
-   "29 Tamuz if Saturday then next Sunday"
-   {"type" "observance",
-    "note" "Day marked by the Knesset",
-    :name {:en "Jabotinsky Day", :he "יום ז'בוטינסקי"}},
-   "28 Iyyar"
-   {"type" "observance",
-    "note" "Optional paid leave",
-    :name {:en "Jerusalem Day (Yom Yerushalayim)", :he "יום ירושלים"}},
-   "17 Tamuz if Saturday then next Sunday"
-   {"type" "observance",
-    :name {:en "Seventeenth of Tamuz, fast", :he "שבעה עשר בתמוז"}},
-   "25 Kislev P8D"
-   {"type" "school", :name {:en "Hanukkah", :he "חנוכה"}},
-   "2 Tishrei"
-   {:name {:he "ראש השנה יום 2", :en "Rosh Hashanah (Day 2)"}},
-   "10 Tishrei"
-   {:name {:he "יום כיפור", :en "Day of Atonement (Yom Kippur)"}},
-   "29 Cheshvan"
-   {"type" "observance",
-    "note"
-    "Festival of the Ethiopian Jews, optional paid leave, business as usual",
-    :name {:he "סיגד", :en "Sigd"}},
-   "3 Tishrei if Saturday then next Sunday"
-   {"type" "observance",
-    :name {:he "צום גדליה", :en "Fast of Gedaliah (Tzom Gedalya)"}},
-   "14 AdarII P2D"
-   {"type" "school",
-    "note" "optional paid leave",
-    :name {:en "Purim", :he "פורים"}}})
+ "12 Cheshvan if Friday,Saturday then previous Thursday since 1997"
+ {"type" "observance",
+  "note" "National remembrance day, business as usual",
+  :name {:he "יום רבין", :en "Rabin Day"}},
+ "2015-03-17" {:name {:en "Election Day", :he "יום הבחירות"}},
+ "05-09"
+ {"type" "observance",
+  :name
+  {:en "Victory in Europe Day", :he "יום הניצחון על גרמניה הנאצית"}},
+ "2021-03-23" {:name {:en "Election Day", :he "יום הבחירות"}},
+ "4 Iyyar if Thursday,Friday then previous Wednesday if Sunday then next Monday"
+ {"type" "observance",
+  "note"
+  "National remembrance day, business as usual except places of public entertainment",
+  :name
+  {:en
+   "Fallen Soldiers and Victims of Terrorism Remembrance Day (Yom HaZikaron)",
+   :he "יום הזיכרון לחללי מערכות ישראל ונפגעי פעולות האיבה"}},
+ "5 Iyyar if Friday,Saturday then previous Thursday if Monday then next Tuesday"
+ {:name {:en "Independence Day (Yom HaAtzmaut)", :he "יום העצמאות"}},
+ "6 Kislev if Saturday then next Sunday"
+ {"type" "observance",
+  "note" "Day marked by the Knesset",
+  :name {:en "Ben-Gurion Day", :he "יום בן-גוריון"}},
+ "9 Av if Saturday then next Sunday"
+ {"type" "observance",
+  "note"
+  "Optional paid leave, business as usual except places of public entertainment",
+  :name {:en "Tisha B'Av, fast", :he "תשעה באב"}},
+ "16 Tishrei P6D"
+ {"type" "school",
+  "note"
+  "Collective paid leave in many businesses and government offices",
+  :name {:he "חול המועד סוכות", :en "The week of Sukkot"}},
+ "10 Nisan"
+ {"type" "observance",
+  "note" "Official holiday, business as usual",
+  :name {:en "Aliyah Day", :he "יום העלייה"}},
+ "22 Tishrei"
+ {:name
+  {:he "שמחת תורה/שמיני עצרת", :en "Simchat Torah/ Shmini Atzeret"}},
+ "15 Av"
+ {"type" "observance",
+  :name {:en "Tu B'Av (Fifteenth of Av)", :he "ט\"ו באב"}},
+ "27 Nisan if Friday then previous Thursday if Sunday then next Monday"
+ {"type" "observance",
+  "note"
+  "National remembrance day, business as usual except places of public entertainment",
+  :name
+  {:en "Holocaust Remembrance Day (Yom HaShoah)",
+   :he "יום הזיכרון לשואה ולגבורה"}},
+ "15 Nisan" {:name {:en "Passover (Pesach)", :he "פסח"}},
+ "15 Shvat"
+ {"type" "observance",
+  :name {:en "Tu Bishvat (Arbor Day)", :he "ט\"ו בשבט"}},
+ "16 Nisan P5D"
+ {"type" "school",
+  "note"
+  "School holiday, collective paid leave in many businesses and government offices",
+  :name {:en "Passover (intermediate days)", :he "חול המועד פסח"}},
+ "18 Iyyar"
+ {"type" "school", :name {:en "Lag BaOmer", :he "ל\"ג בעומר"}},
+ "21 Nisan"
+ {:name
+  {:en "Mimouna, Seventh day of Passover",
+   :he "מימונה, שביעי של פסח"}},
+ "2020-03-02" {:name {:en "Election Day", :he "יום הבחירות"}},
+ "1 Tishrei"
+ {:name {:he "ראש השנה", :en "Rosh Hashanah (Yom Teruah)"}},
+ "2019-09-17" {:name {:en "Election Day", :he "יום הבחירות"}},
+ "15 Tishrei"
+ {:name {:he "סוכות", :en "Feast of Tabernacles (Sukkot)"}},
+ "6 Sivan" {:name {:en "Shavuot (Feast of Weeks)", :he "שבועות"}},
+ "10 Tevet"
+ {"type" "observance",
+  :name {:en "Tenth of Tevet", :he "צום עשרה בטבת"}},
+ "13 AdarII if Saturday then previous Thursday"
+ {"type" "school", :name {:en "Fast of Esther", :he "תענית אסתר"}},
+ "10 Iyyar if Saturday then next Sunday since 2004"
+ {"type" "observance",
+  "note" "Day marked by the Knesset",
+  :name {:en "Herzl Day", :he "יום הרצל"}},
+ "29 Tamuz if Saturday then next Sunday"
+ {"type" "observance",
+  "note" "Day marked by the Knesset",
+  :name {:en "Jabotinsky Day", :he "יום ז'בוטינסקי"}},
+ "28 Iyyar"
+ {"type" "observance",
+  "note" "Optional paid leave",
+  :name {:en "Jerusalem Day (Yom Yerushalayim)", :he "יום ירושלים"}},
+ "17 Tamuz if Saturday then next Sunday"
+ {"type" "observance",
+  :name {:en "Seventeenth of Tamuz, fast", :he "שבעה עשר בתמוז"}},
+ "25 Kislev P8D"
+ {"type" "school", :name {:en "Hanukkah", :he "חנוכה"}},
+ "2 Tishrei"
+ {:name {:he "ראש השנה יום 2", :en "Rosh Hashanah (Day 2)"}},
+ "10 Tishrei"
+ {:name {:he "יום כיפור", :en "Day of Atonement (Yom Kippur)"}},
+ "29 Cheshvan"
+ {"type" "observance",
+  "note"
+  "Festival of the Ethiopian Jews, optional paid leave, business as usual",
+  :name {:he "סיגד", :en "Sigd"}},
+ "3 Tishrei if Saturday then next Sunday"
+ {"type" "observance",
+  :name {:he "צום גדליה", :en "Fast of Gedaliah (Tzom Gedalya)"}},
+ "14 AdarII P2D"
+ {"type" "school",
+  "note" "optional paid leave",
+  :name {:en "Purim", :he "פורים"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

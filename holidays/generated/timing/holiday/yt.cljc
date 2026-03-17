@@ -9,7 +9,8 @@
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
-  {"04-27" {:name (partial get-name "Abolition of Slavery")}})
+  {"04-27" {:name (partial get-name "Abolition of Slavery")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

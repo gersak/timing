@@ -10,30 +10,31 @@
 
 (def holidays
   {"07-25"
-   {:name
-    {:es "Conmemoración del asalto a Moncada",
-     :en
-     "Day before the Commemoration of the Assault of the Moncada garrison"}},
-   "07-26"
-   {:name
-    {:es "Día de la Rebeldía Nacional",
-     :en "Commemoration of the Assault of the Moncada garrison"}},
-   "01-01"
-   {:name
-    {:es "Triunfo de la Revolución", :en "Triumph of the Revolution"}},
-   "01-02"
-   {:name
-    {:es "Día de Victoria de las Fuerzas Armadas",
-     :en "Victory of Armed Forces Day"}},
-   "07-27"
-   {:name
-    {:es "Conmemoración del asalto a Moncada",
-     :en
-     "Day after the Commemoration of the Assault of the Moncada garrison"}},
-   "10-10" {:name (partial get-name "Independence Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {:name
+  {:es "Conmemoración del asalto a Moncada",
+   :en
+   "Day before the Commemoration of the Assault of the Moncada garrison"}},
+ "07-26"
+ {:name
+  {:es "Día de la Rebeldía Nacional",
+   :en "Commemoration of the Assault of the Moncada garrison"}},
+ "01-01"
+ {:name
+  {:es "Triunfo de la Revolución", :en "Triumph of the Revolution"}},
+ "01-02"
+ {:name
+  {:es "Día de Victoria de las Fuerzas Armadas",
+   :en "Victory of Armed Forces Day"}},
+ "07-27"
+ {:name
+  {:es "Conmemoración del asalto a Moncada",
+   :en
+   "Day after the Commemoration of the Assault of the Moncada garrison"}},
+ "10-10" {:name (partial get-name "Independence Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

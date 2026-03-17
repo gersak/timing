@@ -10,55 +10,56 @@
 
 (def holidays
   {"easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "easter -48"
-   {"type" "observance", :name {:de "Rosenmontag", :en "Shrove Monday"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "1st sunday before 12-25"
-   {"type" "observance", :name {:de "4. Advent"}},
-   "easter -52"
-   {"type" "observance",
-    :name {:de "Weiberfastnacht", :en "Women's Carnival Day"}},
-   "11-01" {"type" "observance", :name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "02-14" {"type" "observance", :name (partial get-name "02-14")},
-   "2017-10-31" {:name (partial get-name "Reformation Day")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-31 14:00 if sunday then 00:00"
-   {"type" "bank", :name (partial get-name "12-31")},
-   "3th sunday before 12-25"
-   {"type" "observance", :name {:de "2. Advent"}},
-   "2nd sunday before 12-25"
-   {"type" "observance", :name {:de "3. Advent"}},
-   "12-24 14:00 if sunday then 00:00"
-   {"type" "bank", :name (partial get-name "12-24")},
-   "4th sunday before 12-25"
-   {"type" "observance", :name {:de "1. Advent"}},
-   "6th sunday before 12-25"
-   {"type" "observance",
-    :name {:de "Volkstrauertag", :en "Memorial Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "5th sunday before 12-25"
-   {"type" "observance", :name {:de "Totensonntag"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "wednesday before 11-23"
-   {"type" "observance", :name (partial get-name "Buß- und Bettag")},
-   "11-02" {"type" "observance", :name (partial get-name "11-02")},
-   "05-01" {"_name" "05-01", :name {:de "Maifeiertag"}},
-   "easter -3"
-   {"type" "observance", :name (partial get-name "easter -3")},
-   "11-11" {"type" "observance", :name (partial get-name "11-11")},
-   "easter -47 14:00"
-   {"type" "observance", :name (partial get-name "easter -47")},
-   "12-25" {"_name" "12-25", :name {:de "1. Weihnachtstag"}},
-   "10-03"
-   {"_name" "National Holiday", :name {:de "Tag der Deutschen Einheit"}}})
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "easter -48"
+ {"type" "observance", :name {:de "Rosenmontag", :en "Shrove Monday"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "1st sunday before 12-25"
+ {"type" "observance", :name {:de "4. Advent"}},
+ "easter -52"
+ {"type" "observance",
+  :name {:de "Weiberfastnacht", :en "Women's Carnival Day"}},
+ "11-01" {"type" "observance", :name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "02-14" {"type" "observance", :name (partial get-name "02-14")},
+ "2017-10-31" {:name (partial get-name "Reformation Day")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "12-31 14:00 if sunday then 00:00"
+ {"type" "bank", :name (partial get-name "12-31")},
+ "3th sunday before 12-25"
+ {"type" "observance", :name {:de "2. Advent"}},
+ "2nd sunday before 12-25"
+ {"type" "observance", :name {:de "3. Advent"}},
+ "12-24 14:00 if sunday then 00:00"
+ {"type" "bank", :name (partial get-name "12-24")},
+ "4th sunday before 12-25"
+ {"type" "observance", :name {:de "1. Advent"}},
+ "6th sunday before 12-25"
+ {"type" "observance",
+  :name {:de "Volkstrauertag", :en "Memorial Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "5th sunday before 12-25"
+ {"type" "observance", :name {:de "Totensonntag"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "wednesday before 11-23"
+ {"type" "observance", :name (partial get-name "Buß- und Bettag")},
+ "11-02" {"type" "observance", :name (partial get-name "11-02")},
+ "05-01" {"_name" "05-01", :name {:de "Maifeiertag"}},
+ "easter -3"
+ {"type" "observance", :name (partial get-name "easter -3")},
+ "11-11" {"type" "observance", :name (partial get-name "11-11")},
+ "easter -47 14:00"
+ {"type" "observance", :name (partial get-name "easter -47")},
+ "12-25" {"_name" "12-25", :name {:de "1. Weihnachtstag"}},
+ "10-03"
+ {"_name" "National Holiday", :name {:de "Tag der Deutschen Einheit"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

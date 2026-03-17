@@ -10,19 +10,20 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "06-10"
-   {:name
-    {:fr
-     "Fête de la commémoration de la conférence nationale souveraine"}},
-   "11-28" {:name {:fr "Journée nationale de la République"}},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "06-10"
+ {:name
+  {:fr
+   "Fête de la commémoration de la conférence nationale souveraine"}},
+ "11-28" {:name {:fr "Journée nationale de la République"}},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,21 +10,22 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "06-21"
-   {:name {:kl "ullortuneq", :da "Nationaldag", :en "National Day"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "easter 26"
-   {:name {:kl "tussiarfissuaq", :da "Store Bededag", :en "Prayer Day"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "easter 39" {:name (partial get-name "easter 39")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "06-21"
+ {:name {:kl "ullortuneq", :da "Nationaldag", :en "National Day"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "easter 26"
+ {:name {:kl "tussiarfissuaq", :da "Store Bededag", :en "Prayer Day"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

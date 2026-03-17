@@ -10,28 +10,29 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter -47" {:name (partial get-name "easter -47")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter -3 14:00"
-   {"type" "bank", :name (partial get-name "easter -3")},
-   "easter" {:name (partial get-name "easter")},
-   "12-24" {"type" "bank", :name (partial get-name "12-24")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "09-08"
-   {:name
-    {:en "Our Lady of Meritxell",
-     :es "Nuestra Sra. De Meritxell",
-     :ca "Mare de Déu de Meritxell"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-14" {:name (partial get-name "Constitution Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "01-06" {:name (partial get-name "01-06")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter -47" {:name (partial get-name "easter -47")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter -3 14:00"
+ {"type" "bank", :name (partial get-name "easter -3")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24" {"type" "bank", :name (partial get-name "12-24")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "09-08"
+ {:name
+  {:en "Our Lady of Meritxell",
+   :es "Nuestra Sra. De Meritxell",
+   :ca "Mare de Déu de Meritxell"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-14" {:name (partial get-name "Constitution Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "01-06" {:name (partial get-name "01-06")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

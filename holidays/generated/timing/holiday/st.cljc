@@ -10,25 +10,26 @@
 
 (def holidays
   {"01-01 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "02-03 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    :name {:en "Martyrs' Day", :pt "Dia dos Mártires"}},
-   "05-01 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "07-12 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "09-06 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    :name {:en "Armed Forces Day", :pt "Dia das Forças Armadas"}},
-   "09-30 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    :name {:en "Agricultural Reform Day", :pt "Dia da Reforma Agrária"}},
-   "12-21 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true,
-    :name {:en "São Tomé Day", :pt "Dia de São Tomé"}},
-   "12-25 and if Saturday then previous Friday if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "12-25")}})
+ {"substitute" true, :name (partial get-name "01-01")},
+ "02-03 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  :name {:en "Martyrs' Day", :pt "Dia dos Mártires"}},
+ "05-01 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "07-12 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "09-06 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  :name {:en "Armed Forces Day", :pt "Dia das Forças Armadas"}},
+ "09-30 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  :name {:en "Agricultural Reform Day", :pt "Dia da Reforma Agrária"}},
+ "12-21 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true,
+  :name {:en "São Tomé Day", :pt "Dia de São Tomé"}},
+ "12-25 and if Saturday then previous Friday if Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

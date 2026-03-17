@@ -10,34 +10,35 @@
 
 (def holidays
   {"easter -48" {:name {:en "Carnival", :es "Carnaval"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter -47" {:name (partial get-name "easter -47")},
-   "07-24"
-   {"type" "observance",
-    :name
-    {:en "The Birthday of Simón Bolívar",
-     :es "El Natalicio de Simón Bolívar"}},
-   "05-24"
-   {:name {:en "The Battle of Pichincha", :es "Batalla del Pichincha"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "11-03"
-   {:name {:en "Independence of Cuenca", :es "Independencia de Cuenca"}},
-   "10-31"
-   {"type" "observance",
-    :name {:en "Flag Day", :es "Dia de La Bandera"}},
-   "08-10"
-   {:name
-    {:en "Declaration of Independence of Quito",
-     :es "Día del Primer Grito de Independencia de Quito"}},
-   "09-10"
-   {:name
-    {:en "Independence of Guayaquil", :es "Independencia de Guayaquil"}},
-   "11-02" {:name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "12-31" {"type" "observance", :name (partial get-name "12-31")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter -47" {:name (partial get-name "easter -47")},
+ "07-24"
+ {"type" "observance",
+  :name
+  {:en "The Birthday of Simón Bolívar",
+   :es "El Natalicio de Simón Bolívar"}},
+ "05-24"
+ {:name {:en "The Battle of Pichincha", :es "Batalla del Pichincha"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "11-03"
+ {:name {:en "Independence of Cuenca", :es "Independencia de Cuenca"}},
+ "10-31"
+ {"type" "observance",
+  :name {:en "Flag Day", :es "Dia de La Bandera"}},
+ "08-10"
+ {:name
+  {:en "Declaration of Independence of Quito",
+   :es "Día del Primer Grito de Independencia de Quito"}},
+ "09-10"
+ {:name
+  {:en "Independence of Guayaquil", :es "Independencia de Guayaquil"}},
+ "11-02" {:name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "12-31" {"type" "observance", :name (partial get-name "12-31")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

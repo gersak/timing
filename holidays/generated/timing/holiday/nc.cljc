@@ -10,8 +10,9 @@
 
 (def holidays
   {"01-01" {:name {:fr "Jour de l'an"}},
-   "09-24"
-   {:name {:fr "Fête de la Citonneyeté", :en "New Caledonia Day"}}})
+ "09-24"
+ {:name {:fr "Fête de la Citonneyeté", :en "New Caledonia Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

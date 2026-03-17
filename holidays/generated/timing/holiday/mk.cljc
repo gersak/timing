@@ -10,112 +10,113 @@
 
 (def holidays
   {"09-28"
-   {"type" "optional",
-    "note" "For Members of the Bosniak community.",
-    :name
-    {:mk "Меѓународен ден на Бошњаците",
-     :en "International Day of Bosniaks"}},
-   "10-11 and if sunday then next monday"
-   {"substitute" true,
-    :name {:mk "Ден на востанието", :en "Revolution Day"}},
-   "10 Dhu al-Hijjah"
-   {"type" "optional",
-    "note" "Muslim believers",
-    :name (partial get-name "10 Dhu al-Hijjah")},
-   "1 Shawwal and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "1 Shawwal")},
-   "orthodox 49"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name (partial get-name "easter 49")},
-   "12-08 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:mk "Св. Климент Охридски", :en "Saint Clement of Ohrid Day"}},
-   "11-01"
-   {"type" "optional",
-    "note" "Catholic believers",
-    :name (partial get-name "11-01")},
-   "08-02 and if sunday then next monday"
-   {"substitute" true,
-    :name {:mk "Ден на Републиката", :en "Day of the Republic"}},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "orthodox 47"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name {:mk "петок пред Духовден", :en "Friday before Pentecost"}},
-   "11-22"
-   {"type" "optional",
-    "note" "For members of the Albanian community",
-    :name
-    {:mk "Ден на Албанската азбука",
-     :en "Day of the Albanian Alphabet"}},
-   "julian 12-24"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name (partial get-name "julian 12-24")},
-   "04-08"
-   {"type" "optional",
-    "note" "For members of the the Roma community",
-    :name
-    {:mk "Меѓународен ден на Ромите", :en "International Roma Day"}},
-   "10-23 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:mk "Ден на македонската револуционерна борба",
-     :en "Day of the Macedonian Revolutionary Struggle"}},
-   "julian 08-15"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name (partial get-name "08-15")},
-   "05-24 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:mk "Св. Кирил и Методиј", :en "Saints Cyril and Methodius Day"}},
-   "09-08 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "12-21"
-   {"type" "optional",
-    "note" "For members of the the Turkish community",
-    :name
-    {:mk "Ден на настава на турски јазик", :en "Turkish Language Day"}},
-   "julian 12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "julian 12-25")},
-   "easter 1"
-   {"type" "optional",
-    "note" "Catholic believers",
-    :name (partial get-name "easter 1")},
-   "orthodox -2"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name (partial get-name "orthodox -2")},
-   "05-23"
-   {"type" "optional",
-    "note" "For members of the Vlach community",
-    :name
-    {:mk "Национален ден на Властите",
-     :en "National Day of Authorities"}},
-   "orthodox" {:name (partial get-name "orthodox")},
-   "julian 01-06"
-   {"type" "optional",
-    "note" "Orthodox believers",
-    :name (partial get-name "01-06")},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "10 Tishrei"
-   {"type" "optional",
-    "note" "Jewish believers",
-    :name (partial get-name "10 Tishrei")},
-   "orthodox 1" {:name (partial get-name "orthodox 1")},
-   "01-27"
-   {"type" "optional",
-    "note" "For members of the Serbian community",
-    :name {:mk "Свети Сава", :en "St. Sava"}},
-   "12-25"
-   {"type" "optional",
-    "note" "Catholic believers",
-    :name (partial get-name "12-25")}})
+ {"type" "optional",
+  "note" "For Members of the Bosniak community.",
+  :name
+  {:mk "Меѓународен ден на Бошњаците",
+   :en "International Day of Bosniaks"}},
+ "10-11 and if sunday then next monday"
+ {"substitute" true,
+  :name {:mk "Ден на востанието", :en "Revolution Day"}},
+ "10 Dhu al-Hijjah"
+ {"type" "optional",
+  "note" "Muslim believers",
+  :name (partial get-name "10 Dhu al-Hijjah")},
+ "1 Shawwal and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "1 Shawwal")},
+ "orthodox 49"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name (partial get-name "easter 49")},
+ "12-08 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:mk "Св. Климент Охридски", :en "Saint Clement of Ohrid Day"}},
+ "11-01"
+ {"type" "optional",
+  "note" "Catholic believers",
+  :name (partial get-name "11-01")},
+ "08-02 and if sunday then next monday"
+ {"substitute" true,
+  :name {:mk "Ден на Републиката", :en "Day of the Republic"}},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "orthodox 47"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name {:mk "петок пред Духовден", :en "Friday before Pentecost"}},
+ "11-22"
+ {"type" "optional",
+  "note" "For members of the Albanian community",
+  :name
+  {:mk "Ден на Албанската азбука",
+   :en "Day of the Albanian Alphabet"}},
+ "julian 12-24"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name (partial get-name "julian 12-24")},
+ "04-08"
+ {"type" "optional",
+  "note" "For members of the the Roma community",
+  :name
+  {:mk "Меѓународен ден на Ромите", :en "International Roma Day"}},
+ "10-23 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:mk "Ден на македонската револуционерна борба",
+   :en "Day of the Macedonian Revolutionary Struggle"}},
+ "julian 08-15"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name (partial get-name "08-15")},
+ "05-24 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:mk "Св. Кирил и Методиј", :en "Saints Cyril and Methodius Day"}},
+ "09-08 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "12-21"
+ {"type" "optional",
+  "note" "For members of the the Turkish community",
+  :name
+  {:mk "Ден на настава на турски јазик", :en "Turkish Language Day"}},
+ "julian 12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "julian 12-25")},
+ "easter 1"
+ {"type" "optional",
+  "note" "Catholic believers",
+  :name (partial get-name "easter 1")},
+ "orthodox -2"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name (partial get-name "orthodox -2")},
+ "05-23"
+ {"type" "optional",
+  "note" "For members of the Vlach community",
+  :name
+  {:mk "Национален ден на Властите",
+   :en "National Day of Authorities"}},
+ "orthodox" {:name (partial get-name "orthodox")},
+ "julian 01-06"
+ {"type" "optional",
+  "note" "Orthodox believers",
+  :name (partial get-name "01-06")},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "10 Tishrei"
+ {"type" "optional",
+  "note" "Jewish believers",
+  :name (partial get-name "10 Tishrei")},
+ "orthodox 1" {:name (partial get-name "orthodox 1")},
+ "01-27"
+ {"type" "optional",
+  "note" "For members of the Serbian community",
+  :name {:mk "Свети Сава", :en "St. Sava"}},
+ "12-25"
+ {"type" "optional",
+  "note" "Catholic believers",
+  :name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,35 +10,36 @@
 
 (def holidays
   {"substitutes 01-01 if saturday, sunday then next monday"
-   {"substitute" true,
-    "type" "bank",
-    "note" "Goverment offices close",
-    :name (partial get-name "01-01")},
-   "substitutes 12-25 if saturday then next monday if sunday then next tuesday"
-   {"substitute" true,
-    "type" "bank",
-    "note" "Goverment offices close",
-    :name (partial get-name "12-25")},
-   "01-01" {:name (partial get-name "01-01")},
-   "3nd monday in June" {:name {:en "National Heroes Day"}},
-   "substitutes 11-11 if saturday, sunday then next monday"
-   {"substitute" true,
-    "type" "bank",
-    "note" "Goverment offices close",
-    :name {:en "Remembrance Day"}},
-   "thursday before 08-04" {:name {:en "Emancipation Day"}},
-   "friday before 06-01" {:name {:en "Bermuda Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "monday after 09-01" {:name {:en "Labour Day"}},
-   "friday before 08-05" {:name {:en "Somers' Day"}},
-   "11-11" {:name {:en "Remembrance Day"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "substitutes 12-26 if saturday then next monday if sunday then next tuesday"
-   {"substitute" true,
-    "type" "bank",
-    "note" "Goverment offices close",
-    :name (partial get-name "12-26")}})
+ {"substitute" true,
+  "type" "bank",
+  "note" "Goverment offices close",
+  :name (partial get-name "01-01")},
+ "substitutes 12-25 if saturday then next monday if sunday then next tuesday"
+ {"substitute" true,
+  "type" "bank",
+  "note" "Goverment offices close",
+  :name (partial get-name "12-25")},
+ "01-01" {:name (partial get-name "01-01")},
+ "3nd monday in June" {:name {:en "National Heroes Day"}},
+ "substitutes 11-11 if saturday, sunday then next monday"
+ {"substitute" true,
+  "type" "bank",
+  "note" "Goverment offices close",
+  :name {:en "Remembrance Day"}},
+ "thursday before 08-04" {:name {:en "Emancipation Day"}},
+ "friday before 06-01" {:name {:en "Bermuda Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "monday after 09-01" {:name {:en "Labour Day"}},
+ "friday before 08-05" {:name {:en "Somers' Day"}},
+ "11-11" {:name {:en "Remembrance Day"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "substitutes 12-26 if saturday then next monday if sunday then next tuesday"
+ {"substitute" true,
+  "type" "bank",
+  "note" "Goverment offices close",
+  :name (partial get-name "12-26")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

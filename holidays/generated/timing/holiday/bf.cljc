@@ -10,25 +10,26 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter" {:name (partial get-name "easter")},
-   "12-11"
-   {:name {:fr "Fête nationale", :en "Proclamation of the Republic"}},
-   "01-03"
-   {:name
-    {:fr "Soulèvement populaire",
-     :en "Anniversary of the 1966 Upper Voltan coup d'état"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "03-08" {:name (partial get-name "03-08")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "08-05" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter" {:name (partial get-name "easter")},
+ "12-11"
+ {:name {:fr "Fête nationale", :en "Proclamation of the Republic"}},
+ "01-03"
+ {:name
+  {:fr "Soulèvement populaire",
+   :en "Anniversary of the 1966 Upper Voltan coup d'état"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "03-08" {:name (partial get-name "03-08")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "08-05" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

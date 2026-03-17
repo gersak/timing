@@ -10,72 +10,81 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {"_name" "08-15", :name {:it "Assunzione di Maria in Cielo"}},
-   "easter 60"
-   {"active" [{"to" 2009}], :name (partial get-name "easter 60")},
-   "05-08 since 2026"
-   {:name
-    {:en "Anniversary of the election of Pope Leo XIV",
-     :it "Anniversario dell'Elezione del Santo Padre"}},
-   "01-01"
-   {:name
-    {:en "Solemnity of Mary, Mother of God",
-     :it "Maria Santissima Madre di Dio"}},
-   "easter 39"
-   {"active" [{"to" 2009}], :name (partial get-name "easter 39")},
-   "09-17 since 2025"
-   {"note" "Name day of Pope Leo XIV (Robert Francis Prevost)",
-    :name
-    {:en "Saint Robert Bellarmine - Name day of the Holy Father",
-     :it "San Roberto Bellarmino - Onomastico del Santo Padre"}},
-   "06-29" {:name (partial get-name "06-29")},
-   "11-04"
-   {"note" "Name day of Pope John Paul II (Karol Józef Wojtyła)",
-    "active" [{"from" 1978, "to" 2005}],
-    :name
-    {:en "Saint Charles Borromeo - Name day of the Holy Father",
-     :it "San Carlo Borromeo - Onomastico del Santo Padre"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "04-19 since 2005 and prior to 2013"
-   {:name
-    {:en "Anniversary of the election of Pope Benedict XVI",
-     :it "Anniversario dell'Elezione del Santo Padre"}},
-   "03-19" {:name (partial get-name "03-19")},
-   "09-08"
-   {:name
-    {:en "Nativity of Mary", :it "Festa della natività della madonna"}},
-   "02-11"
-   {:name
-    {:en "Anniversary of the foundation of Vatican City",
-     :it
-     "Anniversario della istituzione dello Stato della Città del Vaticano"}},
-   "03-19 since 2005 and prior to 2013"
-   {"note" "Name day of Pope Benedict XVI (Josef Ratzinger)",
-    :name
-    {:en "Saint Joseph - Name day of the Holy Father",
-     :it "San Giuseppe - Onomastico del Santo Padre"}},
-   "04-23 since 2013 and prior to 2026"
-   {"note" "Name day of Pope Francis (Jorge Mario Bergoglio)",
-    :name
-    {:en "Saint George - Name day of the Holy Father",
-     :it "San Giorgio - Onomastico del Santo Padre"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01"
-   {"_name" "05-01",
-    :name
-    {:en "Saint Joseph the Worker", :it "San Giuseppe lavoratore"}},
-   "03-13 since 2013 and prior to 2026"
-   {:name
-    {:en "Anniversary of the election of Pope Francis",
-     :it "Anniversario dell'Elezione del Santo Padre"}},
-   "01-06" {:name {:en "Epiphany", :it "Epifania del Signore"}},
-   "10-16"
-   {"active" [{"from" 1978, "to" 2005}],
-    :name
-    {:en "Anniversary of the election of Pope John Paul II",
-     :it "Anniversario dell'Elezione del Santo Padre"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {"_name" "08-15", :name {:it "Assunzione di Maria in Cielo"}},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "05-08 since 2026"
+ {:name
+  {:en "Anniversary of the election of Pope Leo XIV",
+   :it "Anniversario dell'Elezione del Santo Padre"}},
+ "01-01"
+ {:name
+  {:en "Solemnity of Mary, Mother of God",
+   :it "Maria Santissima Madre di Dio"}},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "09-17 since 2025"
+ {"note" "Name day of Pope Leo XIV (Robert Francis Prevost)",
+  :name
+  {:en "Saint Robert Bellarmine - Name day of the Holy Father",
+   :it "San Roberto Bellarmino - Onomastico del Santo Padre"}},
+ "06-29" {:name (partial get-name "06-29")},
+ "11-04"
+ {"note" "Name day of Pope John Paul II (Karol Józef Wojtyła)",
+  "active" [{"from" 1978, "to" 2005}],
+  :name
+  {:en "Saint Charles Borromeo - Name day of the Holy Father",
+   :it "San Carlo Borromeo - Onomastico del Santo Padre"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "08-14" {:name {:en "Summer holiday", :it "Pausa estiva"}},
+ "easter -1" {:name (partial get-name "easter -1")},
+ "04-19 since 2005 and prior to 2013"
+ {:name
+  {:en "Anniversary of the election of Pope Benedict XVI",
+   :it "Anniversario dell'Elezione del Santo Padre"}},
+ "easter" {:name (partial get-name "easter")},
+ "03-19" {:name (partial get-name "03-19")},
+ "12-27" {:name {:en "St. John", :it "San Giovanni"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "02-11"
+ {:name
+  {:en "Anniversary of the foundation of Vatican City",
+   :it
+   "Anniversario della istituzione dello Stato della Città del Vaticano"}},
+ "08-16" {:name {:en "Summer holiday", :it "Pausa estiva"}},
+ "03-19 since 2005 and prior to 2013"
+ {"note" "Name day of Pope Benedict XVI (Josef Ratzinger)",
+  :name
+  {:en "Saint Joseph - Name day of the Holy Father",
+   :it "San Giuseppe - Onomastico del Santo Padre"}},
+ "04-23 since 2013 and prior to 2026"
+ {"note" "Name day of Pope Francis (Jorge Mario Bergoglio)",
+  :name
+  {:en "Saint George - Name day of the Holy Father",
+   :it "San Giorgio - Onomastico del Santo Padre"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "11-02"
+ {:name
+  {:it "Commemorazione dei fedeli defunti", :en "All Souls' Day"}},
+ "05-01"
+ {"_name" "05-01",
+  :name
+  {:en "Saint Joseph the Worker", :it "San Giuseppe lavoratore"}},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "easter 2" {:name {:en "In Albis Tuesday", :it "Martedì in Albis"}},
+ "03-13 since 2013 and prior to 2026"
+ {:name
+  {:en "Anniversary of the election of Pope Francis",
+   :it "Anniversario dell'Elezione del Santo Padre"}},
+ "01-06" {:name {:en "Epiphany", :it "Epifania del Signore"}},
+ "12-31" {:name (partial get-name "12-31")},
+ "10-16"
+ {"active" [{"from" 1978, "to" 2005}],
+  :name
+  {:en "Anniversary of the election of Pope John Paul II",
+   :it "Anniversario dell'Elezione del Santo Padre"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

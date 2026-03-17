@@ -10,23 +10,24 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "01-21" {:name {:en "Errol Barrow Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01 if sunday then next monday" {:name {:en "May Day"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "08-01" {:name {:en "Emancipation Day"}},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "04-28" {:name {:en "National Heroes Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "11-30" {:name (partial get-name "Independence Day")},
-   "substitutes 12-25 if sunday then next tuesday"
-   {:name (partial get-name "Public Holiday")},
-   "substitutes 12-26 if sunday then next monday"
-   {:name (partial get-name "Public Holiday")},
-   "1st monday in August" {:name {:en "Kadooment Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "01-21" {:name {:en "Errol Barrow Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-01 if sunday then next monday" {:name {:en "May Day"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "08-01" {:name {:en "Emancipation Day"}},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "04-28" {:name {:en "National Heroes Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "11-30" {:name (partial get-name "Independence Day")},
+ "substitutes 12-25 if sunday then next tuesday"
+ {:name (partial get-name "Public Holiday")},
+ "substitutes 12-26 if sunday then next monday"
+ {:name (partial get-name "Public Holiday")},
+ "1st monday in August" {:name {:en "Kadooment Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,26 +10,27 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "09-12 in leap years"
-   {:name {:en "Geez New Year", :ti "ግዕዝ አዲስ ዓመት"}},
-   "09-28 in leap years" {:name {:en "Meskel"}},
-   "09-27 in non-leap years" {:name {:en "Meskel"}},
-   "05-24" {:name (partial get-name "Independence Day")},
-   "09-01" {:name (partial get-name "Revolution Day")},
-   "09-11 in non-leap years"
-   {:name {:en "Geez New Year", :ti "ግዕዝ አዲስ ዓመት"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "orthodox -2" {:name (partial get-name "orthodox -2")},
-   "03-08" {:name (partial get-name "03-08")},
-   "julian 12-25" {:name (partial get-name "julian 12-25")},
-   "06-20" {:name {:en "Martyrs' Day", :ti "መዓልቲ ስውኣት"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "02-10" {:name {:ti "ፈንቅል", :en "Fenkil Day"}},
-   "orthodox" {:name (partial get-name "orthodox")},
-   "julian 01-06" {:name (partial get-name "01-06")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "09-12 in leap years"
+ {:name {:en "Geez New Year", :ti "ግዕዝ አዲስ ዓመት"}},
+ "09-28 in leap years" {:name {:en "Meskel"}},
+ "09-27 in non-leap years" {:name {:en "Meskel"}},
+ "05-24" {:name (partial get-name "Independence Day")},
+ "09-01" {:name (partial get-name "Revolution Day")},
+ "09-11 in non-leap years"
+ {:name {:en "Geez New Year", :ti "ግዕዝ አዲስ ዓመት"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "orthodox -2" {:name (partial get-name "orthodox -2")},
+ "03-08" {:name (partial get-name "03-08")},
+ "julian 12-25" {:name (partial get-name "julian 12-25")},
+ "06-20" {:name {:en "Martyrs' Day", :ti "መዓልቲ ስውኣት"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "02-10" {:name {:ti "ፈንቅል", :en "Fenkil Day"}},
+ "orthodox" {:name (partial get-name "orthodox")},
+ "julian 01-06" {:name (partial get-name "01-06")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

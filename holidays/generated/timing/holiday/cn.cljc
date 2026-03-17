@@ -10,55 +10,56 @@
 
 (def holidays
   {"06-01"
-   {"note" "Children below the age of 14",
-    :name {:en "Children's Day", :zh "六一儿童节"}},
-   "2021-04-03" {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
-   "10-02" {:name {:en "National Day", :zh "国庆节"}},
-   "2021-09-20" {:name {:en "Mid-Autumn Festival", :zh "中秋节"}},
-   "2021-04-05" {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
-   "2021-10-05" {:name {:en "National Day", :zh "国庆节"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "chinese 01-0-00" {:name {:en "Spring Festival", :zh "春节"}},
-   "2021-06-12" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
-   "2021-02-17" {:name {:en "Spring Festival", :zh "春节"}},
-   "2021-09-19"
-   {"note" "Work on Sat September 18.",
-    :name {:en "Mid-Autumn Festival", :zh "中秋节"}},
-   "2021-10-04"
-   {"note" "Work on Sun September 26 and Sat October 9.",
-    :name {:en "National Day", :zh "国庆节"}},
-   "03-08 12:00" {"note" "Women", :name (partial get-name "03-08")},
-   "2021-10-07" {:name {:en "National Day", :zh "国庆节"}},
-   "2021-05-03" {:name (partial get-name "05-01")},
-   "2021-02-15" {:name {:en "Spring Festival", :zh "春节"}},
-   "08-01 12:00"
-   {"note" "Military personnel in active service",
-    :name {:en "Army Day", :zh "建军节"}},
-   "2021-05-05" {:name (partial get-name "05-01")},
-   "2021-05-04" {:name (partial get-name "05-01")},
-   "chinese 01-0-01" {:name {:en "Spring Festival", :zh "春节"}},
-   "2021-02-14"
-   {"note" "Work on Sun February 7 and Sat February 20.",
-    :name {:en "Spring Festival", :zh "春节"}},
-   "2021-06-13" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
-   "chinese 5-01 solarterm"
-   {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
-   "2021-02-16" {:name {:en "Spring Festival", :zh "春节"}},
-   "10-01" {:name {:en "National Day", :zh "国庆节"}},
-   "2021-01-02" {:name (partial get-name "01-01")},
-   "2021-05-02"
-   {"note" "Work on Sun April 25 and Sat May 8.",
-    :name (partial get-name "05-01")},
-   "chinese 01-0-02" {:name {:en "Spring Festival", :zh "春节"}},
-   "2021-10-06" {:name {:en "National Day", :zh "国庆节"}},
-   "chinese 08-0-15" {:name {:en "Mid-Autumn Festival", :zh "中秋节"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "05-04 12:00"
-   {"note" "Youth from the age of 14 to 28",
-    :name {:en "Youth Day", :zh "青年节"}},
-   "2021-01-03" {:name (partial get-name "01-01")},
-   "chinese 05-0-05" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
-   "10-03" {:name {:en "National Day", :zh "国庆节"}}})
+ {"note" "Children below the age of 14",
+  :name {:en "Children's Day", :zh "六一儿童节"}},
+ "2021-04-03" {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
+ "10-02" {:name {:en "National Day", :zh "国庆节"}},
+ "2021-09-20" {:name {:en "Mid-Autumn Festival", :zh "中秋节"}},
+ "2021-04-05" {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
+ "2021-10-05" {:name {:en "National Day", :zh "国庆节"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "chinese 01-0-00" {:name {:en "Spring Festival", :zh "春节"}},
+ "2021-06-12" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
+ "2021-02-17" {:name {:en "Spring Festival", :zh "春节"}},
+ "2021-09-19"
+ {"note" "Work on Sat September 18.",
+  :name {:en "Mid-Autumn Festival", :zh "中秋节"}},
+ "2021-10-04"
+ {"note" "Work on Sun September 26 and Sat October 9.",
+  :name {:en "National Day", :zh "国庆节"}},
+ "03-08 12:00" {"note" "Women", :name (partial get-name "03-08")},
+ "2021-10-07" {:name {:en "National Day", :zh "国庆节"}},
+ "2021-05-03" {:name (partial get-name "05-01")},
+ "2021-02-15" {:name {:en "Spring Festival", :zh "春节"}},
+ "08-01 12:00"
+ {"note" "Military personnel in active service",
+  :name {:en "Army Day", :zh "建军节"}},
+ "2021-05-05" {:name (partial get-name "05-01")},
+ "2021-05-04" {:name (partial get-name "05-01")},
+ "chinese 01-0-01" {:name {:en "Spring Festival", :zh "春节"}},
+ "2021-02-14"
+ {"note" "Work on Sun February 7 and Sat February 20.",
+  :name {:en "Spring Festival", :zh "春节"}},
+ "2021-06-13" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
+ "chinese 5-01 solarterm"
+ {:name {:en "Qingming Festival", :zh "清明节 清明節"}},
+ "2021-02-16" {:name {:en "Spring Festival", :zh "春节"}},
+ "10-01" {:name {:en "National Day", :zh "国庆节"}},
+ "2021-01-02" {:name (partial get-name "01-01")},
+ "2021-05-02"
+ {"note" "Work on Sun April 25 and Sat May 8.",
+  :name (partial get-name "05-01")},
+ "chinese 01-0-02" {:name {:en "Spring Festival", :zh "春节"}},
+ "2021-10-06" {:name {:en "National Day", :zh "国庆节"}},
+ "chinese 08-0-15" {:name {:en "Mid-Autumn Festival", :zh "中秋节"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "05-04 12:00"
+ {"note" "Youth from the age of 14 to 28",
+  :name {:en "Youth Day", :zh "青年节"}},
+ "2021-01-03" {:name (partial get-name "01-01")},
+ "chinese 05-0-05" {:name {:en "Dragon Boat Festival", :zh "端午节"}},
+ "10-03" {:name {:en "National Day", :zh "国庆节"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

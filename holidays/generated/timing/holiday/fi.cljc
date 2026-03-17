@@ -10,30 +10,31 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "2nd sunday in November"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "easter" {:name (partial get-name "easter")},
-   "12-24" {"type" "bank", :name (partial get-name "12-24")},
-   "friday after 06-19"
-   {"type" "bank",
-    :name
-    {:fi "Juhannusaatto", :en "Midsummer Eve", :sv "Midsommarafton"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-06" {:name (partial get-name "Independence Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "saturday after 06-20"
-   {:name
-    {:fi "Juhannuspäivä", :en "Midsummer Day", :sv "Midsommardagen"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "saturday after 10-31" {:name (partial get-name "11-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "easter 39" {:name (partial get-name "easter 39")},
+ "2nd sunday in November"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24" {"type" "bank", :name (partial get-name "12-24")},
+ "friday after 06-19"
+ {"type" "bank",
+  :name
+  {:fi "Juhannusaatto", :en "Midsummer Eve", :sv "Midsommarafton"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-06" {:name (partial get-name "Independence Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "saturday after 06-20"
+ {:name
+  {:fi "Juhannuspäivä", :en "Midsummer Day", :sv "Midsommardagen"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "saturday after 10-31" {:name (partial get-name "11-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

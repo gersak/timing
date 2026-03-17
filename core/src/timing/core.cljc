@@ -1,8 +1,8 @@
 (ns timing.core
   #?(:cljs (:require-macros [timing.core :refer [with-time-configuration]]))
-  (:require [timing.timezones.db :refer [get-timezone get-rule]]
+  (:require #?(:cljs [goog.object])
             clojure.string
-            #?(:cljs [goog.object]))
+            [timing.timezones.db :refer [get-timezone get-rule]])
   (:refer-clojure :exclude [second]))
 
 (def get-locale-timezone timing.timezones.db/get-locale-timezone)
@@ -29,8 +29,8 @@
   ([number target-number round-how] (round-number number target-number round-how false))
   ([number target-number round-how? symetric?]
    {:pre [(or
-           (zero? target-number)
-           (pos? target-number))]}
+            (zero? target-number)
+            (pos? target-number))]}
    (case target-number
      0 0
      ;; First normalize numbers to floating point or integer
@@ -122,7 +122,13 @@
   :holiday?     - (fn [day-context] true | false)
   :timezone     - timezone-name
   :weekend-days - (fn [number] true | false)
-  :calendar     - :gregorian, :julian, :islamic, :hebrew"
+  :calendar     - :gregorian, :julian, :islamic, :hebrew
+
+  WARNING: Lazy sequences may be realized outside this binding scope.
+  Use (doall ...) or (vec ...) to force evaluation within the binding:
+
+    (with-time-configuration {:timezone \"UTC\"}
+      (vec (map day-time-context values)))  ; Force evaluation here"
   [{:keys [timezone
            holiday?
            offset
@@ -134,12 +140,18 @@
          calendar :gregorian
          offset nil}}
    & body]
-  ;;`(let [] ~@body)
   `(binding [timing.core/*timezone* ~timezone
              timing.core/*offset* ~offset
              timing.core/*weekend-days* ~weekend-days
              timing.core/*holiday?* ~holiday?
              timing.core/*calendar* ~calendar]
+     ~@body))
+
+(defmacro with-utc
+  "Convenience macro for UTC timezone context. Equivalent to:
+  (with-time-configuration {:timezone \"UTC\" :offset 0} ...)"
+  [& body]
+  `(with-time-configuration {:timezone "UTC" :offset 0}
      ~@body))
 
 ;; TODO - enable this to conform with history rules not just current one
@@ -172,7 +184,8 @@
   (.getTime date))
 
 (defn ^:no-doc until-value
-  [{:keys [year month day-in-month floating-day] :as until
+  [{:keys [year month day-in-month floating-day]
+    :as until
     :or {month 1
          day-in-month 1}}]
   ;; Find calendar frame for this month
@@ -186,19 +199,20 @@
            "Sat" 6
            "Sun" 7}
           {:keys [hour minute]
-           :or {hour 0 minute 0}} (:time until)]
+           :or {hour 0
+                minute 0}} (:time until)]
       (if floating-day
         (if (clojure.string/starts-with? floating-day "last")
           ;; Floating day is last something
           (let [day' (days-mapping (subs floating-day 4))
                 value (:value
-                       (last
-                        (filter
-                         #(= day' (:day %))
-                         (->
-                          (utc-date year month)
-                          date->utc-value
-                          (calendar-frame :month)))))]
+                        (last
+                          (filter
+                            #(= day' (:day %))
+                            (->
+                              (utc-date year month)
+                              date->utc-value
+                              (calendar-frame :month)))))]
             value
             (+ value (minutes minute) (hours hour)))
           ;; Floating day is higher than
@@ -211,21 +225,21 @@
                                  :cljs (js/parseInt (subs floating-day 5)))
                 limit (date->utc-value (utc-date year month day-in-month'))
                 value (:value
-                       (first
-                        (filter
-                         #(and
-                           (= day' (:day %))
-                           (operator (:value %) limit))
-                         (take 100
-                               (map day-time-context
-                                    (iterate
-                                     (fn [v]
-                                       ((case operator-def
-                                          ">=" +
-                                          "<=" -)
-                                        v
-                                        day))
-                                     limit))))))]
+                        (first
+                          (filter
+                            #(and
+                               (= day' (:day %))
+                               (operator (:value %) limit))
+                            (take 100
+                                  (map day-time-context
+                                       (iterate
+                                         (fn [v]
+                                           ((case operator-def
+                                              ">=" +
+                                              "<=" -)
+                                            v
+                                            day))
+                                         limit))))))]
             (+ value (hours hour) (minutes minute))))
         (date->utc-value (utc-date year month day-in-month hour minute))))))
 
@@ -250,25 +264,25 @@
                       (cond
                         ;; Standard time use timezone offset
                         (and
-                         (< month (:month s-rule))
-                         (> month (:month dst-rule))) (:save dst-rule)
+                          (< month (:month s-rule))
+                          (> month (:month dst-rule))) (:save dst-rule)
                         (or
-                         (< month (:month dst-rule))
-                         (> month (:month s-rule))) 0
+                          (< month (:month dst-rule))
+                          (> month (:month s-rule))) 0
                         :else
                         (let [month-frame (calendar-frame value "month")
                               save-light? (= month (:month dst-rule))
                               limit (+
-                                     (if-not save-light?
-                                       (:save dst-rule)
-                                       0)
-                                     (binding [*offset* 0]
-                                       (until-value
-                                        (assoc
-                                         (if save-light?
-                                           dst-rule
-                                           s-rule)
-                                          :year (:year (first month-frame))))))
+                                      (if-not save-light?
+                                        (:save dst-rule)
+                                        0)
+                                      (binding [*offset* 0]
+                                        (until-value
+                                          (assoc
+                                            (if save-light?
+                                              dst-rule
+                                              s-rule)
+                                            :year (:year (first month-frame))))))
                               save (:save dst-rule)
                               hour (-hour? value)
                               save-offset (if ((if save-light? < >=) value limit)
@@ -282,25 +296,25 @@
                       (cond
                         ;; Standard time use timezone offset
                         (and
-                         (> month (:month s-rule))
-                         (< month (:month dst-rule))) 0
+                          (> month (:month s-rule))
+                          (< month (:month dst-rule))) 0
                         (or
-                         (> month (:month dst-rule))
-                         (< month (:month s-rule))) (:save dst-rule)
+                          (> month (:month dst-rule))
+                          (< month (:month s-rule))) (:save dst-rule)
                         :else
                         (let [month-frame (calendar-frame value "month")
                               save-light? (= month (:month dst-rule))
                               limit (+
-                                     (if-not save-light?
-                                       (:save dst-rule)
-                                       0)
-                                     (binding [*offset* 0]
-                                       (until-value
-                                        (assoc
-                                         (if save-light?
-                                           dst-rule
-                                           s-rule)
-                                          :year (:year (first month-frame))))))]
+                                      (if-not save-light?
+                                        (:save dst-rule)
+                                        0)
+                                      (binding [*offset* 0]
+                                        (until-value
+                                          (assoc
+                                            (if save-light?
+                                              dst-rule
+                                              s-rule)
+                                            :year (:year (first month-frame))))))]
                           (if ((if save-light? < >=) value limit)
                             0
                             (:save dst-rule)))))))
@@ -320,41 +334,41 @@
 (defn ^:no-doc <-local
   "Given a local timestamp value function normalizes datetime to Greenwich timezone value"
   ([value] (<-local
-            value
-            (if (number? *offset*) *offset*
-                (if (string? *timezone*)
-                  (let [tz-offset (get-timezone-offset *timezone*)]
+             value
+             (if (number? *offset*) *offset*
+                 (if (string? *timezone*)
+                   (let [tz-offset (get-timezone-offset *timezone*)]
                     ;; HERE.... i should check if it is leap hour
                     ;; or minute or whatever and than apply dst offset
                     ;; properly
-                    (+
+                     (+
                      ;; move to standard time
-                     (get-dst-offset value)
-                     tz-offset))
+                       (get-dst-offset value)
+                       tz-offset))
                   ;; Fallback to deprecated getTimeZoneOffset
-                  (* -1 (minutes (.getTimezoneOffset (value->utc-date value))))))))
+                   (* -1 (minutes (.getTimezoneOffset (value->utc-date value))))))))
   ([value offset] (+ value offset)))
 
 (defn ^:no-doc ->local
   "Given a Greenwich timestamp value function normalizes datetime to local timezone value"
   ([value]
    (->local
-    value
-    (if (number? *offset*)
-      *offset*
-      (if (string? *timezone*)
-        (let [tz-offset (get-timezone-offset *timezone*)
-              dst-current (get-dst-offset (- value tz-offset))
-              dst-before (get-dst-offset (- value tz-offset hour))
-              dst-offset (if (= dst-before dst-current)
-                           dst-current
-                           dst-before)]
-          (+
+     value
+     (if (number? *offset*)
+       *offset*
+       (if (string? *timezone*)
+         (let [tz-offset (get-timezone-offset *timezone*)
+               dst-current (get-dst-offset (- value tz-offset))
+               dst-before (get-dst-offset (- value tz-offset hour))
+               dst-offset (if (= dst-before dst-current)
+                            dst-current
+                            dst-before)]
+           (+
            ;; remove timezone offset to move to standard time 
-           dst-offset
-           tz-offset))
+             dst-offset
+             tz-offset))
                 ;; Fallback to deprecated getTimeZoneOffset
-        (* -1 (minutes (.getTimezoneOffset (value->utc-date value))))))))
+         (* -1 (minutes (.getTimezoneOffset (value->utc-date value))))))))
   ([value offset] (- value offset)))
 
 (defn milliseconds
@@ -424,13 +438,13 @@
     (let [J (value->jcdn value)
           [x3 r3] (div (- (* 4 J) 6884477) 146097)
           [x2 r2] (div
-                   (+
-                    (* 100 (round-number (/ r3 4) 1 :floor))
-                    99)
-                   36525)
+                    (+
+                      (* 100 (round-number (/ r3 4) 1 :floor))
+                      99)
+                    36525)
           [x1 r1] (div
-                   (+ (* 5 (round-number (/ r2 100) 1 :floor)) 2)
-                   153)
+                    (+ (* 5 (round-number (/ r2 100) 1 :floor)) 2)
+                    153)
           d (inc (round-number (/ r1 5) 1 :floor))
           c0 (round-number (/ (+ x1 2) 12) 1 :floor)
           j (long (+ (* 100 x3) x2 c0))
@@ -462,18 +476,19 @@
        :last-day-in-month? (== days-in-month d)})))
 
 (defn ^:no-doc gregorian-date->value [{:keys [day-in-month month year]
-                                       :or {month 1 day-in-month 1}}]
+                                       :or {month 1
+                                            day-in-month 1}}]
   (let [c0 (round-number (/ (- month 3) 12) 1 :floor)
         x4 (+ year c0)
         x3 (quot x4 100)
         x2 (rem x4 100)
         x1 (- month (* 12 c0) 3)
         J (+
-           (round-number (/ (* 146097 x3) 4) 1 :floor)
-           (round-number (/ (* 36525 x2) 100) 1 :floor)
-           (round-number (/ (+ 2 (* 153 x1)) 5) 1 :floor)
-           day-in-month
-           1721119)]
+            (round-number (/ (* 146097 x3) 4) 1 :floor)
+            (round-number (/ (* 36525 x2) 100) 1 :floor)
+            (round-number (/ (+ 2 (* 153 x1)) 5) 1 :floor)
+            day-in-month
+            1721119)]
     (jcdn->value J)))
 
 (defn ^:no-doc value->julian-date [value]
@@ -510,17 +525,18 @@
      :last-day-in-month? (== d days-in-month)}))
 
 (defn ^:no-doc julian-date->value [{:keys [day-in-month month year]
-                                    :or {month 1 day-in-month 1}}]
+                                    :or {month 1
+                                         day-in-month 1}}]
   (let [J0 1721117
         c0 (round-number (/ (- month 3) 12) 1 :floor)
         J1 (round-number
-            (/ (* 1461 (+ year c0)) 4)
-            1
-            :floor)
+             (/ (* 1461 (+ year c0)) 4)
+             1
+             :floor)
         J2 (round-number
-            (/ (- (* 153 month) (* 1836 c0) 457) 5)
-            1
-            :floor)]
+             (/ (- (* 153 month) (* 1836 c0) 457) 5)
+             1
+             :floor)]
     (jcdn->value (+ J1 J2 day-in-month J0))))
 
 ;;  Type   r   J0
@@ -542,10 +558,10 @@
           J (value->jcdn value)
           y2 (- J J0)
           [x2 r2] (div
-                   (-
-                    (+ (* 30 y2) 29)
-                    r)
-                   10631)
+                    (-
+                      (+ (* 30 y2) 29)
+                      r)
+                    10631)
           z2 (round-number (/ r2 30) 1 :floor)
           [x1 r1] (div (+ (* 11 z2) 5) 325)
           z1 (round-number (/ r1 11) 1 :floor)
@@ -556,10 +572,10 @@
           J' (value->jcdn value')
           y2' (- J' J0)
           [x2' r2'] (div
-                     (-
-                      (+ (* 30 y2') 29)
-                      r)
-                     10631)
+                      (-
+                        (+ (* 30 y2') 29)
+                        r)
+                      10631)
           z2' (round-number (/ r2' 30) 1 :floor)
           [x1' r1'] (div (+ (* 11 z2') 5) 325)
           m' (inc x1')
@@ -579,26 +595,27 @@
        :last-day-in-month? (== days-in-month d)})))
 
 (defn ^:no-doc islamic-date->value [{:keys [day-in-month month year]
-                                     :or {month 1 day-in-month 1}}]
+                                     :or {month 1
+                                          day-in-month 1}}]
   (let [J0 1948440
         r 14]
     (jcdn->value
-     (+
-      (round-number
-       (/ (+ (- (* 10631 year) 10631) r) 30)
-       1
-       :floor)
-      (round-number
-       (/ (- (* 325 month) 320) 11)
-       1
-       :floor)
-      day-in-month
-      (dec J0)))))
+      (+
+        (round-number
+          (/ (+ (- (* 10631 year) 10631) r) 30)
+          1
+          :floor)
+        (round-number
+          (/ (- (* 325 month) 320) 11)
+          1
+          :floor)
+        day-in-month
+        (dec J0)))))
 
 (defn- ^:no-doc hebrew-c1 [x]
   (round-number
-   (/ (inc (* 235 x)) 19)
-   1 :floor))
+    (/ (inc (* 235 x)) 19)
+    1 :floor))
 
 ; (defn- ^:no-doc hebrew-q [x]
 ;   (round-number
@@ -609,30 +626,30 @@
 
 (defn- ^:no-doc hebrew-v1 [x]
   (+
-   (* 29 (hebrew-c1 x))
-   (round-number (/ (+ 12084 (* 13753 (hebrew-c1 x))) 25920) 1 :floor)))
+    (* 29 (hebrew-c1 x))
+    (round-number (/ (+ 12084 (* 13753 (hebrew-c1 x))) 25920) 1 :floor)))
 
 (defn- ^:no-doc hebrew-v2 [x]
   (+
-   (hebrew-v1 x)
-   (mod
-    (round-number
-     (/ (* 6 (mod (hebrew-v1 x) 7)) 7)
-     1 :floor)
-    2)))
+    (hebrew-v1 x)
+    (mod
+      (round-number
+        (/ (* 6 (mod (hebrew-v1 x) 7)) 7)
+        1 :floor)
+      2)))
 
 (defn- ^:no-doc hebrew-L2 [x] (- (hebrew-v2 (inc x)) (hebrew-v2 x)))
 
 (defn- ^:no-doc hebrew-v3 [x]
   (* 2
      (mod
-      (round-number (/ (+ (hebrew-L2 x) 19) 15) 1 :floor)
-      2)))
+       (round-number (/ (+ (hebrew-L2 x) 19) 15) 1 :floor)
+       2)))
 
 (defn- ^:no-doc hebrew-v4 [x]
   (mod
-   (round-number (/ (+ 7 (hebrew-L2 (dec x))) 15) 1 :floor)
-   2))
+    (round-number (/ (+ 7 (hebrew-L2 (dec x))) 15) 1 :floor)
+    2))
 
 (defn- ^:no-doc hebrew-c2 [x] (+ (hebrew-v2 x) (hebrew-v3 x) (hebrew-v4 x)))
 (defn- ^:no-doc hebrew-L [x] (- (hebrew-c2 (inc x)) (hebrew-c2 x)))
@@ -641,30 +658,31 @@
 
 (defn- ^:no-doc hebrew-c3 [x m]
   (+
-   (round-number
-    (/ (+ 7 (* 384 m)) 13)
-    1 :floor)
-   (*
-    (hebrew-c8 x)
-    (round-number (/ (+ m 4) 12) 1 :floor))
-   (*
-    (hebrew-c9 x)
-    (round-number (/ (+ m 3) 12) 1 :floor))))
+    (round-number
+      (/ (+ 7 (* 384 m)) 13)
+      1 :floor)
+    (*
+      (hebrew-c8 x)
+      (round-number (/ (+ m 4) 12) 1 :floor))
+    (*
+      (hebrew-c9 x)
+      (round-number (/ (+ m 3) 12) 1 :floor))))
 
 (defn- ^:no-doc hebrew-c4 [x m] (+ (hebrew-c2 x) (hebrew-c3 x m)))
 
 (defn hebrew-date->value
   [{:keys [day-in-month month year]
-    :or {month 1 day-in-month 1}}]
+    :or {month 1
+         day-in-month 1}}]
   (let [c0 (round-number
-            (/ (- 13 month) 7)
-            1 :floor)
+             (/ (- 13 month) 7)
+             1 :floor)
         x1 (+ c0 (dec year))
         z4 (dec day-in-month)
         J (+
-           347821
-           (hebrew-c4 x1 (dec month))
-           z4)]
+            347821
+            (hebrew-c4 x1 (dec month))
+            z4)]
     (jcdn->value J)))
 ;;
 (defn ^:no-doc value->hebrew-date
@@ -735,27 +753,27 @@
   for date 15.02.2015 it will return number 0"
   [value]
   (long
-   (mod
-    (/ (round-number value second :floor) second)
-    60)))
+    (mod
+      (/ (round-number value second :floor) second)
+      60)))
 
 (defn minute?
   "Returns which hour in day does input value belongs to. For example
   for date 15.02.2015 it will return number 0"
   [value]
   (long
-   (mod
-    (/ (round-number value minute :floor) minute)
-    60)))
+    (mod
+      (/ (round-number value minute :floor) minute)
+      60)))
 
 (defn- -hour?
   "Returns which hour in day does input value belongs to. For example
   for date 15.02.2015 it will return number 0"
   [value]
   (long
-   (mod
-    (/ (round-number value hour :floor) hour)
-    24)))
+    (mod
+      (/ (round-number value hour :floor) hour)
+      24)))
 
 (defn hour?
   "Returns which hour in day does input value belongs to. For example
@@ -777,7 +795,10 @@
 
 (defn- ^:no-doc date-map->value
   [{:keys [hour minute second millisecond]
-    :or {hour 0 minute 0 second 0 millisecond 0}
+    :or {hour 0
+         minute 0
+         second 0
+         millisecond 0}
     :as date}]
   (let [_time (reduce + [(hours hour) (minutes minute) (seconds second) (milliseconds millisecond)])
         date-value ((case *calendar*
@@ -791,12 +812,12 @@
 (defn- ^:no-doc value->date-map
   [value]
   (assoc
-   ((case *calendar*
-      :gregorian value->gregorian-date
-      :julian value->julian-date
-      :islamic value->islamic-date
-      :hebrew value->hebrew-date)
-    value)
+    ((case *calendar*
+       :gregorian value->gregorian-date
+       :julian value->julian-date
+       :islamic value->islamic-date
+       :hebrew value->hebrew-date)
+     value)
     :hour (-hour? value)
     :minute (minute? value)
     :second (second? value)
@@ -829,14 +850,15 @@
   "Returns day in year period (1 - 366)"
   [value]
   (long
-   (quot
-    (value-in-year? value)
-    day)))
+    (quot
+      (value-in-year? value)
+      day)))
 
 (defn value-in-month?
   "Returns value relative to current month"
   [value]
-  (let [start-month-value (date-map->value {:year (year? value) :month (month? value)})]
+  (let [start-month-value (date-map->value {:year (year? value)
+                                            :month (month? value)})]
     (- value start-month-value)))
 
 (defn week-in-year?
@@ -846,9 +868,9 @@
   (let [year-start (date-map->value {:year (year? value)})
         value (midnight value)
         first-monday (first
-                      (filter
-                       #(#{1} (day? %))
-                       (iterate (partial + day) year-start)))
+                       (filter
+                         #(#{1} (day? %))
+                         (iterate (partial + day) year-start)))
         time-difference (- value first-monday)
         week-in-year (round-number time-difference week :floor)]
     (if (== first-monday year-start)
@@ -888,8 +910,8 @@
 (defn utc-date-value
   "Computes value for given arguments depending with respect to *calendar* binding"
   ([] (date->utc-value
-       #?(:cljs (js/Date.)
-          :clj (java.util.Date.))))
+        #?(:cljs (js/Date.)
+           :clj (java.util.Date.))))
   ([year] (utc-date-value year 1))
   ([year month] (utc-date-value year month 1))
   ([year month day] (utc-date-value year month day 0))
@@ -898,8 +920,13 @@
   ([year month day hour minute second] (utc-date-value year month day hour minute second 0))
   ([year month day' hour' minute' second' millisecond']
    (date-map->value
-    {:year year :month month :day-in-month day' :hour hour'
-     :minute minute' :second second' :millisecond millisecond'})))
+     {:year year
+      :month month
+      :day-in-month day'
+      :hour hour'
+      :minute minute'
+      :second second'
+      :millisecond millisecond'})))
 
 (def utc-date (comp value->utc-date utc-date-value))
 
@@ -953,7 +980,12 @@
           [r m] (round-period r minute)
           [r s] (round-period r second)
           [r ms] (round-period r millisecond)]
-      {:weeks w :hours h :days d :minutes m :seconds s :milliseconds ms})))
+      {:weeks w
+       :hours h
+       :days d
+       :minutes m
+       :seconds s
+       :milliseconds ms})))
 
 (defn value->date
   "Returns Date instance for value in seconds for current. Function first
@@ -961,9 +993,9 @@
   ([value]
    (let [value (->local value)]
      (new
-      #?(:clj java.util.Date
-         :cljs js/Date)
-      (long value)))))
+       #?(:clj java.util.Date
+          :cljs js/Date)
+       (long value)))))
 
 (defn date->value
   "Returns value of Date instance in seconds. Value is localized to offset"
@@ -1061,8 +1093,8 @@
   value in milliseconds"
   [& timestamps]
   (assert
-   (every? #(satisfies? TimeValueProtocol %) timestamps)
-   (str "Wrong input value."))
+    (every? #(satisfies? TimeValueProtocol %) timestamps)
+    (str "Wrong input value."))
   (let [timestamps' (map time->value timestamps)
         t1 (rest timestamps')
         t2 (butlast timestamps')]
@@ -1086,19 +1118,19 @@
   "Returns Date object that was before some time value"
   [date value]
   (->
-   date
-   time->value
-   (- value)
-   value->time))
+    date
+    time->value
+    (- value)
+    value->time))
 
 (defn after
   "Returns Date object that was after some time value"
   [date value]
   (->
-   date
-   time->value
-   (+ value)
-   value->time))
+    date
+    time->value
+    (+ value)
+    value->time))
 
 ;; TIME FRAMES
 (defmulti calendar-frame
@@ -1123,9 +1155,9 @@
   (fn [value frame-type & options] frame-type))
 
 (defn day-time-context
-  "Returns day context for given value in Gregorian calendar. 
+  "Returns day context for given value in Gregorian calendar.
 
-  Returnes hash-map with keys: 
+  Returnes hash-map with keys:
     :value
     :millisecond
     :second
@@ -1138,26 +1170,31 @@
     :weekend?
     :holiday?
     :first-day-in-month?
-    :last-day-in-month?"
+    :last-day-in-month?
+
+  Note: For DST-accurate hour values, use day-context instead."
   [value]
   (let [day (day? value)
         context (value->date-map value)]
     (as-> context context
       (assoc
-       context
+        context
         :value value
         :day day
         :weekend? (boolean (*weekend-days* day))
         :week (week-in-year? value))
       (assoc
-       context
+        context
         :holiday? (if (fn? *holiday?*)
                     (*holiday?* context)
                     false)))))
 
-(defn day-context [value]
+(defn day-context
+  "Returns day context with DST-accurate hour value.
+   Use this instead of day-time-context when you need accurate :hour during DST transitions."
+  [value]
   (assoc (day-time-context value)
-    :hour (hour? value)))
+         :hour (hour? value)))
 
 (defn calendar-period-context
   "Computes interval statistics based on start Date and end Date
@@ -1179,11 +1216,11 @@
          end (time->value end)
          delta day
          marks (conj
-                (vec
-                 (take-while
-                  #(comparator % end)
-                  (iterate #(+ % delta) start)))
-                end)
+                 (vec
+                   (take-while
+                     #(comparator % end)
+                     (iterate #(+ % delta) start)))
+                 end)
          milliseconds (- end start)
          seconds (/ milliseconds second)
          minutes (/ seconds 60)
@@ -1192,36 +1229,39 @@
          contexts (map day-time-context marks)
          {:keys [weekends in/days holidays]
           :as result} (update
-                       (reduce
-                        (fn [r {:keys [day day-in-month month year] :as context}]
-                          (let [weekend? (and (ifn? *weekend-days*) (*weekend-days* day))]
-                            (cond->
-                             (->
-                              r
-                              (update :months conj [year month])
-                              (update :years conj year))
+                        (reduce
+                          (fn [r {:keys [day day-in-month month year]
+                                  :as context}]
+                            (let [weekend? (and (ifn? *weekend-days*) (*weekend-days* day))]
+                              (cond->
+                                (->
+                                  r
+                                  (update :months conj [year month])
+                                  (update :years conj year))
                                 ;;
-                              (and (ifn? *holiday?*) (*holiday?* context))
-                              (update :holidays conj [year month day-in-month weekend?])
+                                (and (ifn? *holiday?*) (*holiday?* context))
+                                (update :holidays conj [year month day-in-month weekend?])
                                 ;;
-                              weekend?
-                              (update :weekends conj [year month day-in-month]))))
-                        {:start start
-                         :end end
-                         :months (sorted-set)
-                         :years (sorted-set)
-                         :holidays (sorted-set)
-                         :weekends #{}
-                         :in/days days
-                         :in/hours hours
-                         :in/minutes minutes
-                         :in/seconds seconds
-                         :in/milliseconds milliseconds}
-                        contexts)
-                       :weekends count)
+                                weekend?
+                                (update :weekends conj [year month day-in-month]))))
+                          {:start start
+                           :end end
+                           :months (sorted-set)
+                           :years (sorted-set)
+                           :holidays (sorted-set)
+                           :weekends #{}
+                           :in/days days
+                           :in/hours hours
+                           :in/minutes minutes
+                           :in/seconds seconds
+                           :in/milliseconds milliseconds}
+                          contexts)
+                        :weekends count)
          ;;
-         {start-year-days :days-in-year :as start-context} (first contexts)
-         {end-year-days :days-in-year :as end-context} (last contexts)
+         {start-year-days :days-in-year
+          :as start-context} (first contexts)
+         {end-year-days :days-in-year
+          :as end-context} (last contexts)
          from-start-year-value (value-in-year? start)
          to-end-year-value (value-in-year? end)
          ;;
@@ -1233,25 +1273,25 @@
                  from-start-year-part
                  (if-not (> year-count 1) 0
                          (/
-                          (- start-year-days (/ from-start-year-value day))
-                          start-year-days))
+                           (- start-year-days (/ from-start-year-value day))
+                           start-year-days))
                       ;;
                  to-end-year-part
                  (if-not (> year-count 1) 0
                          (/
-                          (/ to-end-year-value day)
-                          end-year-days))
+                           (/ to-end-year-value day)
+                           end-year-days))
                       ;;
                  same-year-part
                  (if (not= year-count 1) 0
                      (/
-                      (/ (- end start) day)
-                      start-year-days))]
+                       (/ (- end start) day)
+                       start-year-days))]
              (+
-              (count (drop 2 years))
-              from-start-year-part
-              to-end-year-part
-              same-year-part))
+               (count (drop 2 years))
+               from-start-year-part
+               to-end-year-part
+               same-year-part))
                 ;;
            :in/months
            (let [{:keys [months]} result
@@ -1260,8 +1300,8 @@
                  month-count (count months)
                  start-month-part (if-not (> month-count 1) 0
                                           (/
-                                           (- (:days-in-month start-context) (/ start-month-value day))
-                                           (:days-in-month start-context)))
+                                            (- (:days-in-month start-context) (/ start-month-value day))
+                                            (:days-in-month start-context)))
                  end-month-part (if-not (> month-count 1) 0
                                         (/ (/ end-month-value day) (:days-in-month end-context)))
                  same-month-part (if-not (= 1 month-count) 0
@@ -1272,20 +1312,20 @@
                 ;;
            :working-days
            (max
-            (-
-             days weekends
-             (count
-              (filter
-               (fn [[_ _ w]] (nil? w))
-               holidays)))
-            0))]
+             (-
+               days weekends
+               (count
+                 (filter
+                   (fn [[_ _ w]] (nil? w))
+                   holidays)))
+             0))]
      #?(:clj (reduce-kv
-              (fn [r k _]
-                (case (namespace k)
-                  "in" (update r k double)
-                  r))
-              result
-              result)
+               (fn [r k _]
+                 (case (namespace k)
+                   "in" (update r k double)
+                   r))
+               result
+               result)
         :cljs result))))
 
 (defmethod calendar-frame :year [value _]
@@ -1296,9 +1336,9 @@
            r []]
       (if (> m 12) r
           (recur
-           (+ cd (days days-in-month))
-           (inc m)
-           (concat r (calendar-frame cd :month)))))))
+            (+ cd (days days-in-month))
+            (inc m)
+            (concat r (calendar-frame cd :month)))))))
 
 (defmethod calendar-frame "year" [value _]
   (calendar-frame value :year))
@@ -1308,8 +1348,8 @@
                 day-in-month]} (day-time-context value)
         current-day (midnight value)
         first-day (-
-                   current-day
-                   (days (dec day-in-month)))
+                    current-day
+                    (days (dec day-in-month)))
         first-week (week-in-year? first-day)
         first-day-in-week (day? first-day)]
     (for [d (range days-in-month)
@@ -1317,10 +1357,10 @@
                 day (mod (+ first-day-in-week d) 7)
                 day (if (zero? day) 7 day)
                 week' (+
-                       first-week
-                       (quot
-                        (dec (+ d first-day-in-week))
-                        7))]]
+                        first-week
+                        (quot
+                          (dec (+ d first-day-in-week))
+                          7))]]
 
       {:value v
        :month month
@@ -1359,33 +1399,33 @@
      (cond
        (= (count bindings) 0) `(do ~@body)
        (symbol? (bindings 0)) (let [bindings (reduce
-                                              (fn [r [s v]]
-                                                (conj r s (list 'timing.core/time->value v)))
-                                              []
-                                              (partition 2 bindings))]
+                                               (fn [r [s v]]
+                                                 (conj r s (list 'timing.core/time->value v)))
+                                               []
+                                               (partition 2 bindings))]
                                 `(let ~bindings
                                    ~@body))
        :else (throw
-              #?(:clj
-                 (IllegalArgumentException.
-                  "time-as-value only allows Symbols in bindings")
-                 :cljs
-                 (js/Error.
+               #?(:clj
+                  (IllegalArgumentException.
+                    "time-as-value only allows Symbols in bindings")
+                  :cljs
+                  (js/Error.
 
-                  "time-as-value allows only Symbols in bindings"))))))
+                    "time-as-value allows only Symbols in bindings"))))))
 
 (comment
   (time (count (take 100 (map day-time-context (iterate #(+ day %) (time->value (date)))))))
   (+ 1 1)
   (time (time->value (date 2019 1 7)))
   (time
-   (clojure.pprint/pprint
+    (clojure.pprint/pprint
+      (let [value (time->value (date 2019 1 7))]
+        (with-time-configuration {:calendar :julian}
+          (calendar-frame value :month)))))
+  (time
     (let [value (time->value (date 2019 1 7))]
       (with-time-configuration {:calendar :julian}
-        (calendar-frame value :month)))))
-  (time
-   (let [value (time->value (date 2019 1 7))]
-     (with-time-configuration {:calendar :julian}
-       (day-time-context value))))
+        (day-time-context value))))
   (def date2 (time->value (date 1582 10 15)))
   (= date1 date2))

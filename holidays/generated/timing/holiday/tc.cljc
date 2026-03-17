@@ -10,21 +10,22 @@
 
 (def holidays
   {"1st Monday before 06-01" {:name {:en "National Heroes' Day"}},
-   "12-26 and if Saturday then next Monday if Sunday then next Tuesday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "1st Friday before 10-01" {:name {:en "National Youth Day"}},
-   "2nd Monday in October" {:name {:en "National Heritage Day"}},
-   "2nd Monday after 06-02" {:name {:en "Queen's Birthday"}},
-   "01-01 and if Saturday, Sunday then next Monday"
-   {:name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "2nd Monday in March" {:name {:en "Commonwealth Day"}},
-   "1st Monday in August" {:name {:en "Emancipation Day"}},
-   "12-25 and if Saturday then next Monday if Sunday then next Tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "4th Friday in November" {:name {:en "National Day of Thanksgiving"}}})
+ "12-26 and if Saturday then next Monday if Sunday then next Tuesday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "1st Friday before 10-01" {:name {:en "National Youth Day"}},
+ "2nd Monday in October" {:name {:en "National Heritage Day"}},
+ "2nd Monday after 06-02" {:name {:en "Queen's Birthday"}},
+ "01-01 and if Saturday, Sunday then next Monday"
+ {:name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "2nd Monday in March" {:name {:en "Commonwealth Day"}},
+ "1st Monday in August" {:name {:en "Emancipation Day"}},
+ "12-25 and if Saturday then next Monday if Sunday then next Tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "4th Friday in November" {:name {:en "National Day of Thanksgiving"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

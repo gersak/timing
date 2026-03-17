@@ -10,21 +10,22 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "07-14"
-   {:name {:fr "Fête Nationale de la France", :en "Bastille Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "sunday before 06-01"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "05-08" {:name {:fr "Fête de la Victoire 1945", :en "Victory Day"}},
-   "11-11" {:name {:fr "Armistice 1918", :en "Armistice Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "07-14"
+ {:name {:fr "Fête Nationale de la France", :en "Bastille Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "sunday before 06-01"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "05-08" {:name {:fr "Fête de la Victoire 1945", :en "Victory Day"}},
+ "11-11" {:name {:fr "Armistice 1918", :en "Armistice Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

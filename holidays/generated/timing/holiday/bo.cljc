@@ -10,83 +10,84 @@
 
 (def holidays
   {"substitutes 08-06 if sunday then next monday"
-   {:name
-    {:en "Independence Day (substitutes)",
-     :es "Día de la Independencia (substituto)"}},
-   "09-21"
-   {"type" "observance",
-    :name {:en "Student's Day", :es "Día del Estudiante"}},
-   "08-06" {:name (partial get-name "Independence Day")},
-   "easter -48" {"_name" "easter -48", :name {:es "Lunes de Carnaval"}},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-22"
-   {:name
-    {:en "Plurinational State Foundation Day",
-     :es "Día de la Creación del Estado Plurinacional de Bolivia"}},
-   "05-27"
-   {"type" "observance",
-    :name {:en "Mother's Day", :es "Día de la Madre"}},
-   "easter -47" {"_name" "easter -47", :name {:es "Martes de Carnaval"}},
-   "10-11"
-   {"type" "observance",
-    :name {:es "Día de la Mujer Boliviana", :en "Bolivian Woman's Day"}},
-   "substitutes 01-22 if sunday then next monday"
-   {:name
-    {:en "Plurinational State Foundation Day (substitutes)",
-     :es
-     "Día de la Creación del Estado Plurinacional de Bolivia (substituto)"}},
-   "11-01"
-   {"_name" "11-01", "type" "observance", :name {:es "Todos Santos"}},
-   "06-06"
-   {"type" "observance",
-    :name {:en "Teacher's Day", :es "Día del Maestro"}},
-   "substitutes 05-01 if sunday then next monday"
-   {"_name" "05-01",
-    :name
-    {:en "Labour Day (substitutes)",
-     :es "Día del Trabajo (substituto)"}},
-   "06-21"
-   {:name
-    {:en "Andean Amazonian Chaqueño New Year",
-     :ay "Willkakuti",
-     :es "Año Nuevo Andino Amazónico Chaqueño"}},
-   "substitutes 01-01 if sunday then next monday"
-   {:name
-    {:en "New Year's Day (substitutes)", :es "Año Nuevo (substituto)"}},
-   "03-19"
-   {"type" "observance",
-    :name {:en "Father's Day", :es "Día del Padre"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "03-23"
-   {"type" "observance",
-    :name {:en "Day of the Sea", :es "Día del Mar"}},
-   "substitutes 06-21 if sunday then next monday"
-   {:name
-    {:en "Andean Amazonic Chacoan New Year (substitutes)",
-     :ay "Willkakuti (substituto)",
-     :es "Año Nuevo Andino Amazónico Chaqueño (substituto)"}},
-   "11-02" {"_name" "11-02", :name {:es "Todos Santos"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3"
-   {"type" "observance", :name (partial get-name "easter -3")},
-   "04-12"
-   {"type" "observance",
-    :name {:en "Children's Day", :es "Día del Niño"}},
-   "substitutes 12-25 if sunday then next monday"
-   {"_name" "12-25",
-    :name
-    {:en "Christmas Day (substitutes)", :es "Navidad (substituto)"}},
-   "08-17"
-   {"type" "observance",
-    :name {:en "Flag Day", :es "Día de la Bandera"}},
-   "02-02"
-   {"type" "observance",
-    :name
-    {:en "Feast of the Virgin of Candelaria",
-     :qu "Mamacha Candelaria",
-     :es "Fiesta de la Virgen de Candelaria"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {:name
+  {:en "Independence Day (substitutes)",
+   :es "Día de la Independencia (substituto)"}},
+ "09-21"
+ {"type" "observance",
+  :name {:en "Student's Day", :es "Día del Estudiante"}},
+ "08-06" {:name (partial get-name "Independence Day")},
+ "easter -48" {"_name" "easter -48", :name {:es "Lunes de Carnaval"}},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-22"
+ {:name
+  {:en "Plurinational State Foundation Day",
+   :es "Día de la Creación del Estado Plurinacional de Bolivia"}},
+ "05-27"
+ {"type" "observance",
+  :name {:en "Mother's Day", :es "Día de la Madre"}},
+ "easter -47" {"_name" "easter -47", :name {:es "Martes de Carnaval"}},
+ "10-11"
+ {"type" "observance",
+  :name {:es "Día de la Mujer Boliviana", :en "Bolivian Woman's Day"}},
+ "substitutes 01-22 if sunday then next monday"
+ {:name
+  {:en "Plurinational State Foundation Day (substitutes)",
+   :es
+   "Día de la Creación del Estado Plurinacional de Bolivia (substituto)"}},
+ "11-01"
+ {"_name" "11-01", "type" "observance", :name {:es "Todos Santos"}},
+ "06-06"
+ {"type" "observance",
+  :name {:en "Teacher's Day", :es "Día del Maestro"}},
+ "substitutes 05-01 if sunday then next monday"
+ {"_name" "05-01",
+  :name
+  {:en "Labour Day (substitutes)",
+   :es "Día del Trabajo (substituto)"}},
+ "06-21"
+ {:name
+  {:en "Andean Amazonian Chaqueño New Year",
+   :ay "Willkakuti",
+   :es "Año Nuevo Andino Amazónico Chaqueño"}},
+ "substitutes 01-01 if sunday then next monday"
+ {:name
+  {:en "New Year's Day (substitutes)", :es "Año Nuevo (substituto)"}},
+ "03-19"
+ {"type" "observance",
+  :name {:en "Father's Day", :es "Día del Padre"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "03-23"
+ {"type" "observance",
+  :name {:en "Day of the Sea", :es "Día del Mar"}},
+ "substitutes 06-21 if sunday then next monday"
+ {:name
+  {:en "Andean Amazonic Chacoan New Year (substitutes)",
+   :ay "Willkakuti (substituto)",
+   :es "Año Nuevo Andino Amazónico Chaqueño (substituto)"}},
+ "11-02" {"_name" "11-02", :name {:es "Todos Santos"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3"
+ {"type" "observance", :name (partial get-name "easter -3")},
+ "04-12"
+ {"type" "observance",
+  :name {:en "Children's Day", :es "Día del Niño"}},
+ "substitutes 12-25 if sunday then next monday"
+ {"_name" "12-25",
+  :name
+  {:en "Christmas Day (substitutes)", :es "Navidad (substituto)"}},
+ "08-17"
+ {"type" "observance",
+  :name {:en "Flag Day", :es "Día de la Bandera"}},
+ "02-02"
+ {"type" "observance",
+  :name
+  {:en "Feast of the Virgin of Candelaria",
+   :qu "Mamacha Candelaria",
+   :es "Fiesta de la Virgen de Candelaria"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

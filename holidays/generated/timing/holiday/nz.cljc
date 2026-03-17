@@ -10,56 +10,57 @@
 
 (def holidays
   {"2035-06-29" {:name {:en "Matariki"}},
-   "04-25 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "ANZAC Day"}},
-   "2022-09-26"
-   {:name {:en "National Day of Mourning for Queen Elizabeth II"}},
-   "2042-07-11" {:name {:en "Matariki"}},
-   "2038-06-25" {:name {:en "Matariki"}},
-   "4th monday in October" {:name (partial get-name "05-01")},
-   "2028-07-14" {:name {:en "Matariki"}},
-   "12-26 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "2026-07-10" {:name {:en "Matariki"}},
-   "2052-06-21" {:name {:en "Matariki"}},
-   "2025-06-20" {:name {:en "Matariki"}},
-   "2043-07-03" {:name {:en "Matariki"}},
-   "2022-06-24" {:name {:en "Matariki"}},
-   "2029-07-06" {:name {:en "Matariki"}},
-   "2040-07-06" {:name {:en "Matariki"}},
-   "01-01 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "01-02 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name {:en "Day after New Year's Day"}},
-   "2049-06-25" {:name {:en "Matariki"}},
-   "2051-06-30" {:name {:en "Matariki"}},
-   "2045-07-07" {:name {:en "Matariki"}},
-   "1st monday in June prior to 2023" {:name {:en "Queen's Birthday"}},
-   "2044-06-24" {:name {:en "Matariki"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "2041-07-19" {:name {:en "Matariki"}},
-   "2036-07-18" {:name {:en "Matariki"}},
-   "2039-07-15" {:name {:en "Matariki"}},
-   "2037-07-10" {:name {:en "Matariki"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2030-06-21" {:name {:en "Matariki"}},
-   "2027-06-25" {:name {:en "Matariki"}},
-   "12-25 and if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "2046-06-29" {:name {:en "Matariki"}},
-   "2031-07-11" {:name {:en "Matariki"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "2024-06-28" {:name {:en "Matariki"}},
-   "2033-06-24" {:name {:en "Matariki"}},
-   "2032-07-02" {:name {:en "Matariki"}},
-   "2048-07-03" {:name {:en "Matariki"}},
-   "2023-07-14" {:name {:en "Matariki"}},
-   "2047-07-19" {:name {:en "Matariki"}},
-   "2050-07-15" {:name {:en "Matariki"}},
-   "1st monday in June since 2023" {:name {:en "King's Birthday"}},
-   "02-06 and if saturday,sunday then next monday"
-   {"substitute" true, :name {:en "Waitangi Day"}},
-   "2034-07-07" {:name {:en "Matariki"}}})
+ "04-25 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "ANZAC Day"}},
+ "2022-09-26"
+ {:name {:en "National Day of Mourning for Queen Elizabeth II"}},
+ "2042-07-11" {:name {:en "Matariki"}},
+ "2038-06-25" {:name {:en "Matariki"}},
+ "4th monday in October" {:name (partial get-name "05-01")},
+ "2028-07-14" {:name {:en "Matariki"}},
+ "12-26 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "2026-07-10" {:name {:en "Matariki"}},
+ "2052-06-21" {:name {:en "Matariki"}},
+ "2025-06-20" {:name {:en "Matariki"}},
+ "2043-07-03" {:name {:en "Matariki"}},
+ "2022-06-24" {:name {:en "Matariki"}},
+ "2029-07-06" {:name {:en "Matariki"}},
+ "2040-07-06" {:name {:en "Matariki"}},
+ "01-01 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "01-02 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name {:en "Day after New Year's Day"}},
+ "2049-06-25" {:name {:en "Matariki"}},
+ "2051-06-30" {:name {:en "Matariki"}},
+ "2045-07-07" {:name {:en "Matariki"}},
+ "1st monday in June prior to 2023" {:name {:en "Queen's Birthday"}},
+ "2044-06-24" {:name {:en "Matariki"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "2041-07-19" {:name {:en "Matariki"}},
+ "2036-07-18" {:name {:en "Matariki"}},
+ "2039-07-15" {:name {:en "Matariki"}},
+ "2037-07-10" {:name {:en "Matariki"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2030-06-21" {:name {:en "Matariki"}},
+ "2027-06-25" {:name {:en "Matariki"}},
+ "12-25 and if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "2046-06-29" {:name {:en "Matariki"}},
+ "2031-07-11" {:name {:en "Matariki"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "2024-06-28" {:name {:en "Matariki"}},
+ "2033-06-24" {:name {:en "Matariki"}},
+ "2032-07-02" {:name {:en "Matariki"}},
+ "2048-07-03" {:name {:en "Matariki"}},
+ "2023-07-14" {:name {:en "Matariki"}},
+ "2047-07-19" {:name {:en "Matariki"}},
+ "2050-07-15" {:name {:en "Matariki"}},
+ "1st monday in June since 2023" {:name {:en "King's Birthday"}},
+ "02-06 and if saturday,sunday then next monday"
+ {"substitute" true, :name {:en "Waitangi Day"}},
+ "2034-07-07" {:name {:en "Matariki"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

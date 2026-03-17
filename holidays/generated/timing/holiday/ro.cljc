@@ -10,45 +10,46 @@
 
 (def holidays
   {"12-08"
-   {"type" "observance", :name (partial get-name "Constitution Day")},
-   "08-15" {:name (partial get-name "08-15")},
-   "06-01" {:name {:ro "Ziua Copilului", :en "Children's Day"}},
-   "orthodox 49" {:name (partial get-name "easter 49")},
-   "orthodox 39"
-   {"type" "observance", :name (partial get-name "easter 39")},
-   "01-24"
-   {:name
-    {:ro "Ziua Unirii Principatelor Române",
-     :en "Day of the Unification of the Romanian Principalities"}},
-   "Sunday before 06-01"
-   {"type" "observance",
-    :name
-    {:ro
-     "Ziua Românilor de Pretutindeni, Ziua Românului de Pretutindeni",
-     :en
-     "Day of the Romanians Everywhere, Romanian Businessperson Day"}},
-   "orthodox 50" {:name (partial get-name "easter 50")},
-   "01-01 P2DT" {:name {:ro "Anul nou", :en "New Year's Day"}},
-   "12-01"
-   {:name
-    {:ro "Ziua națională, Ziua Marii Uniri", :en "National holiday"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "01-07" {:name {:ro "Sfântul Ion", :en "Saint John the Baptist"}},
-   "orthodox -2" {:name (partial get-name "easter -2")},
-   "03-08"
-   {"type" "observance", :name {:ro "Ziua Mamei", :en "Mother's Day"}},
-   "11-30" {:name {:ro "Sfântul Andrei", :en "St Andrew's Day"}},
-   "07-29"
-   {"type" "observance",
-    :name {:ro "Ziua Imnului național", :en "National Anthem Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "orthodox" {:name (partial get-name "easter")},
-   "01-06" {:name {:ro "Bobotează", :en "Epiphany"}},
-   "06-26"
-   {"type" "observance",
-    :name {:ro "Ziua drapelului national", :en "Flag Day"}},
-   "orthodox 1" {:name (partial get-name "easter 1")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"type" "observance", :name (partial get-name "Constitution Day")},
+ "08-15" {:name (partial get-name "08-15")},
+ "06-01" {:name {:ro "Ziua Copilului", :en "Children's Day"}},
+ "orthodox 49" {:name (partial get-name "easter 49")},
+ "orthodox 39"
+ {"type" "observance", :name (partial get-name "easter 39")},
+ "01-24"
+ {:name
+  {:ro "Ziua Unirii Principatelor Române",
+   :en "Day of the Unification of the Romanian Principalities"}},
+ "Sunday before 06-01"
+ {"type" "observance",
+  :name
+  {:ro
+   "Ziua Românilor de Pretutindeni, Ziua Românului de Pretutindeni",
+   :en
+   "Day of the Romanians Everywhere, Romanian Businessperson Day"}},
+ "orthodox 50" {:name (partial get-name "easter 50")},
+ "01-01 P2DT" {:name {:ro "Anul nou", :en "New Year's Day"}},
+ "12-01"
+ {:name
+  {:ro "Ziua națională, Ziua Marii Uniri", :en "National holiday"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "01-07" {:name {:ro "Sfântul Ion", :en "Saint John the Baptist"}},
+ "orthodox -2" {:name (partial get-name "easter -2")},
+ "03-08"
+ {"type" "observance", :name {:ro "Ziua Mamei", :en "Mother's Day"}},
+ "11-30" {:name {:ro "Sfântul Andrei", :en "St Andrew's Day"}},
+ "07-29"
+ {"type" "observance",
+  :name {:ro "Ziua Imnului național", :en "National Anthem Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "orthodox" {:name (partial get-name "easter")},
+ "01-06" {:name {:ro "Bobotează", :en "Epiphany"}},
+ "06-26"
+ {"type" "observance",
+  :name {:ro "Ziua drapelului national", :en "Flag Day"}},
+ "orthodox 1" {:name (partial get-name "easter 1")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

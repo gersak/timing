@@ -10,37 +10,38 @@
 
 (def holidays
   {"12-08"
-   {"_name" "12-08",
-    :name {:en "Virgin of Caacupe", :es "Virgen de Caacupé"}},
-   "08-15"
-   {"disable" ["2017-08-15"],
-    "enable" ["2017-08-14"],
-    :name (partial get-name "08-15")},
-   "05-15" {:name (partial get-name "Independence Day")},
-   "04-30"
-   {"type" "optional",
-    "note" "Affects educational institutions",
-    :name {:en "Teacher's Day", :es "Día del Maestro"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "03-01"
-   {"disable" ["2017-03-01"],
-    "enable" ["2017-02-27"],
-    :name {:en "Heroes' Day", :es "Dia de los héroes"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "06-12"
-   {"disable" ["2020-06-12"],
-    "enable" ["2020-06-15"],
-    :name {:en "Chaco Armistice", :es "Día de la Paz del Chaco"}},
-   "05-14" {:name (partial get-name "Independence Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "09-29"
-   {"disable" ["2017-09-29"],
-    "enable" ["2017-10-02"],
-    :name
-    {:en "Boqueron Battle Victory Day", :es "Victoria de Boquerón"}},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"_name" "12-08",
+  :name {:en "Virgin of Caacupe", :es "Virgen de Caacupé"}},
+ "08-15"
+ {"disable" ["2017-08-15"],
+  "enable" ["2017-08-14"],
+  :name (partial get-name "08-15")},
+ "05-15" {:name (partial get-name "Independence Day")},
+ "04-30"
+ {"type" "optional",
+  "note" "Affects educational institutions",
+  :name {:en "Teacher's Day", :es "Día del Maestro"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "03-01"
+ {"disable" ["2017-03-01"],
+  "enable" ["2017-02-27"],
+  :name {:en "Heroes' Day", :es "Dia de los héroes"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "06-12"
+ {"disable" ["2020-06-12"],
+  "enable" ["2020-06-15"],
+  :name {:en "Chaco Armistice", :es "Día de la Paz del Chaco"}},
+ "05-14" {:name (partial get-name "Independence Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "09-29"
+ {"disable" ["2017-09-29"],
+  "enable" ["2017-10-02"],
+  :name
+  {:en "Boqueron Battle Victory Day", :es "Victoria de Boquerón"}},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

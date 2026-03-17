@@ -10,21 +10,22 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "07-01" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "2015-07-24"
-   {"_name" "Public Holiday",
-    :name {:fr "Jour l'élection des Sénateurs"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "02-05" {:name {:fr "Jour de l'Unité", :en "Unity Day"}},
-   "10-13" {:name {:fr "Jour de Rwagasore", :en "Rwagasore Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-06" {:name {:fr "Jour de Ntaryamira", :en "Ntaryamira Day"}},
-   "10-21" {:name {:fr "Jour de Ndadaye", :en "Ndadaye Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "07-01" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "2015-07-24"
+ {"_name" "Public Holiday",
+  :name {:fr "Jour l'élection des Sénateurs"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "02-05" {:name {:fr "Jour de l'Unité", :en "Unity Day"}},
+ "10-13" {:name {:fr "Jour de Rwagasore", :en "Rwagasore Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-06" {:name {:fr "Jour de Ntaryamira", :en "Ntaryamira Day"}},
+ "10-21" {:name {:fr "Jour de Ndadaye", :en "Ndadaye Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

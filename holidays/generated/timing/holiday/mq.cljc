@@ -10,9 +10,12 @@
 
 (def holidays
   {"easter -2" {:name (partial get-name "easter -2")},
-   "05-22" {:name (partial get-name "Abolition of Slavery")},
-   "07-21"
-   {:name {:fr "Jour de Victor Schoelcher", :en "Victor Shoelcher Day"}}})
+ "05-22" {:name (partial get-name "Abolition of Slavery")},
+ "07-21"
+ {"type" "optional",
+  "note" "Government offices closed",
+  :name {:fr "Jour de Victor Schoelcher", :en "Victor Schoelcher Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

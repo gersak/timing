@@ -38,7 +38,7 @@
     "0 0 0 * 13 ?" ; Invalid month (13)
     "0 0 0 ? * 8" ; Invalid day of week (8)
     "" ; Empty expression
-    "0 0 0" ; Too few fields
+    ;; Note: "0 0 0" is valid - short forms are auto-padded to "0 0 0 * * *"
     ]})
 
 (deftest cron-parsing-tests
@@ -61,13 +61,18 @@
 
   (testing "Edge case parsing"
     (testing "Whitespace handling"
-      ;; Test expressions with extra whitespace
+      ;; Test expressions with extra whitespace produce same behavior
+      ;; Note: Can't compare parsed results directly as they contain function objects
       (let [normal-expr "0 0 12 * * ?"
-            spaced-expr "  0   0   12   *   *   ?  "]
+            spaced-expr "  0   0   12   *   *   ?  "
+            test-time (v/time->value (v/date 2023 6 15 12 0 0 0))]
         (try
-          (let [normal-parsed (cron/parse-cron-string normal-expr)
-                spaced-parsed (cron/parse-cron-string spaced-expr)]
-            (is (= normal-parsed spaced-parsed) "Whitespace should be normalized"))
+          (is (= (cron/valid-timestamp? test-time normal-expr)
+                 (cron/valid-timestamp? test-time spaced-expr))
+              "Whitespace should be normalized - same validation result")
+          (is (= (cron/next-timestamp test-time normal-expr)
+                 (cron/next-timestamp test-time spaced-expr))
+              "Whitespace should be normalized - same next timestamp")
           (catch Exception e
             (is true "Whitespace normalization not implemented")))))
 

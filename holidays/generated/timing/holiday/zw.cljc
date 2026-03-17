@@ -10,21 +10,22 @@
 
 (def holidays
   {"2nd monday in August" {:name {:en "Heroes' Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "3rd sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "05-25" {:name {:en "Africa Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-18" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")},
-   "12-22" {:name {:en "Unity Day"}},
-   "2nd tuesday in August" {:name {:en "Defence Forces Day"}}})
+ "01-01" {:name (partial get-name "01-01")},
+ "3rd sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "05-25" {:name {:en "Africa Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-18" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")},
+ "12-22" {:name {:en "Unity Day"}},
+ "2nd tuesday in August" {:name {:en "Defence Forces Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

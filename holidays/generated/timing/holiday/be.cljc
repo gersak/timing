@@ -10,33 +10,34 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "02-14" {"type" "observance", :name (partial get-name "02-14")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "11-15"
-   {"type" "observance",
-    :name
-    {:nl "Koningsdag", :fr "Fête du Roi", :de "Festtag des Königs"}},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-06" {"type" "observance", :name (partial get-name "12-06")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "11-02" {"type" "observance", :name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "07-21" {:name (partial get-name "National Holiday")},
-   "01-06"
-   {"_name" "01-06",
-    "type" "observance",
-    :name {:de "Erscheinung des Herrn"}},
-   "11-11"
-   {:name
-    {:de "Waffenstillstand", :fr "Armistice", :nl "Wapenstilstand"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "02-14" {"type" "observance", :name (partial get-name "02-14")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "11-15"
+ {"type" "observance",
+  :name
+  {:nl "Koningsdag", :fr "Fête du Roi", :de "Festtag des Königs"}},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-06" {"type" "observance", :name (partial get-name "12-06")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "11-02" {"type" "observance", :name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "07-21" {:name (partial get-name "National Holiday")},
+ "01-06"
+ {"_name" "01-06",
+  "type" "observance",
+  :name {:de "Erscheinung des Herrn"}},
+ "11-11"
+ {:name
+  {:de "Waffenstillstand", :fr "Armistice", :nl "Wapenstilstand"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

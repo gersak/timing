@@ -10,103 +10,110 @@
 
 (def holidays
   {"12-08"
-   {"_name" "12-08",
-    "type" "optional",
-    "note" "Non-working Day",
-    :name
-    {:en "Feast of the Immaculate Conception of the Blessed Virgin Mary",
-     :fil
-     "Pagdiriwang ng Kalinis-linisang Paglilihi sa Mahal na Birheng Maria"}},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "04-27"
-   {"type" "observance",
-    :name {:en "Lapu-Lapu Day", :fil "Araw ni Lapu-Lapu"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "04-09" {:name {:en "Day of Valor", :fil "Araw ng Kagitingan"}},
-   "07-27"
-   {"type" "observance",
-    :name
-    {:en "Iglesia ni Cristo Day", :fil "Araw ng Iglesia ni Cristo"}},
-   "chinese 01-0-15"
-   {"type" "observance",
-    :name {:en "Lantern Festival", :fil "Piyesta ng mga Parol Tsino"}},
-   "11-01"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name (partial get-name "11-01")},
-   "02-25"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name
-    {:en "EDSA Revolution Anniversary",
-     :fil "Anibersaryo ng Rebolusyon sa EDSA"}},
-   "2011-06-19"
-   {:name
-    {:en "José Rizal's birthday",
-     :fil "Araw ng Kapanganakan ni José Rizal"}},
-   "easter -1"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name (partial get-name "easter -1")},
-   "easter" {:name (partial get-name "easter")},
-   "12-24"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name (partial get-name "12-24")},
-   "1 Muharram"
-   {"type" "observance", :name (partial get-name "1 Muharram")},
-   "chinese 01-0-01"
-   {"type" "optional",
-    :name {:en "Chinese New Year", :fil "Bagong Taon ng mga Tsino"}},
-   "08-21"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name
-    {:en "Ninoy Aquino Day",
-     :fil "Araw ng Kabayanihan ni Ninoy Aquino"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "06-12" {:name (partial get-name "Independence Day")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "11-30"
-   {:name
-    {:en "Bonifacio Day", :fil "Araw ng Kapanganakan ni Bonifacio"}},
-   "chinese 08-0-15"
-   {"type" "observance",
-    :name {:en "Mid-Autumn Festival", :fil "Piyestang Zhōngqiū Jié"}},
-   "11-02"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name (partial get-name "11-02")},
-   "05-01"
-   {"_name" "05-01",
-    :name {:en "Labour Day", :fil "Araw ng mga Manggagawa"}},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "12-30"
-   {:name
-    {:en "Rizal Day", :fil "Paggunita sa Kamatayan ni Dr. Jose Rizal"}},
-   "01-23"
-   {"type" "observance",
-    :name
-    {:en "First Philippine Republic Day",
-     :fil "Araw ng Unang Republika ng Pilipinas"}},
-   "12 Rabi al-awwal"
-   {"type" "observance", :name (partial get-name "12 Rabi al-awwal")},
-   "12-31"
-   {"type" "optional",
-    "note" "Non-working Day",
-    :name (partial get-name "12-31")},
-   "02-02"
-   {"type" "observance", :name (partial get-name "Constitution Day")},
-   "12-25" {:name (partial get-name "12-25")},
-   "06-19"
-   {"type" "observance",
-    "active" [{"from" #inst "1961-01-01T00:00:00.000-00:00"}],
-    "disable" ["2011-06-19"],
-    :name
-    {:en "José Rizal's birthday",
-     :fil "Araw ng Kapanganakan ni José Rizal"}},
-   "1st monday before September"
-   {:name {:en "National Heroes' Day", :fil "Araw ng mga Bayani"}}})
+ {"_name" "12-08",
+  "type" "optional",
+  "note" "Non-working Day",
+  :name
+  {:en "Feast of the Immaculate Conception of the Blessed Virgin Mary",
+   :fil
+   "Pagdiriwang ng Kalinis-linisang Paglilihi sa Mahal na Birheng Maria"}},
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "02-25 since 2002 prior to 2024"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name
+  {:en "EDSA Revolution Anniversary",
+   :fil "Anibersaryo ng Rebolusyon sa EDSA"}},
+ "04-27"
+ {"type" "observance",
+  :name {:en "Lapu-Lapu Day", :fil "Araw ni Lapu-Lapu"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "04-09" {:name {:en "Day of Valor", :fil "Araw ng Kagitingan"}},
+ "07-27"
+ {"type" "observance",
+  :name
+  {:en "Iglesia ni Cristo Day", :fil "Araw ng Iglesia ni Cristo"}},
+ "chinese 01-0-15"
+ {"type" "observance",
+  :name {:en "Lantern Festival", :fil "Piyesta ng mga Parol Tsino"}},
+ "11-01"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name (partial get-name "11-01")},
+ "2011-06-19"
+ {:name
+  {:en "José Rizal's birthday",
+   :fil "Araw ng Kapanganakan ni José Rizal"}},
+ "easter -1"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name (partial get-name "easter -1")},
+ "easter" {:name (partial get-name "easter")},
+ "12-24"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name (partial get-name "12-24")},
+ "1 Muharram"
+ {"type" "observance", :name (partial get-name "1 Muharram")},
+ "chinese 01-0-01"
+ {"type" "optional",
+  :name {:en "Chinese New Year", :fil "Bagong Taon ng mga Tsino"}},
+ "08-21"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name
+  {:en "Ninoy Aquino Day",
+   :fil "Araw ng Kabayanihan ni Ninoy Aquino"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "06-12" {:name (partial get-name "Independence Day")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "11-30"
+ {:name
+  {:en "Bonifacio Day", :fil "Araw ng Kapanganakan ni Bonifacio"}},
+ "chinese 08-0-15"
+ {"type" "observance",
+  :name {:en "Mid-Autumn Festival", :fil "Piyestang Zhōngqiū Jié"}},
+ "11-02"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name (partial get-name "11-02")},
+ "05-01"
+ {"_name" "05-01",
+  :name {:en "Labour Day", :fil "Araw ng mga Manggagawa"}},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "12-30"
+ {:name
+  {:en "Rizal Day", :fil "Paggunita sa Kamatayan ni Dr. Jose Rizal"}},
+ "01-23"
+ {"type" "observance",
+  :name
+  {:en "First Philippine Republic Day",
+   :fil "Araw ng Unang Republika ng Pilipinas"}},
+ "12 Rabi al-awwal"
+ {"type" "observance", :name (partial get-name "12 Rabi al-awwal")},
+ "12-31"
+ {"type" "optional",
+  "note" "Non-working Day",
+  :name (partial get-name "12-31")},
+ "02-02"
+ {"type" "observance", :name (partial get-name "Constitution Day")},
+ "12-25" {:name (partial get-name "12-25")},
+ "06-19"
+ {"type" "observance",
+  "active" [{"from" #inst "1961-01-01T00:00:00.000-00:00"}],
+  "disable" ["2011-06-19"],
+  :name
+  {:en "José Rizal's birthday",
+   :fil "Araw ng Kapanganakan ni José Rizal"}},
+ "02-25 since 2024"
+ {"type" "observance",
+  "note" "Special working day",
+  :name
+  {:en "EDSA Revolution Anniversary",
+   :fil "Anibersaryo ng Rebolusyon sa EDSA"}},
+ "1st monday before September"
+ {:name {:en "National Heroes' Day", :fil "Araw ng mga Bayani"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

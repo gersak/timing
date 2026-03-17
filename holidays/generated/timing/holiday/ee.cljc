@@ -10,57 +10,58 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "06-04"
-   {"type" "observance",
-    :name {:et "Eesti lipu päev", :en "National Flag Day"}},
-   "2nd sunday in November"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "easter" {:name (partial get-name "easter")},
-   "06-24" {:name {:et "jaanipäev", :en "Midsummer Day"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "11-16"
-   {"type" "observance",
-    :name
-    {:et "taassünni päev", :en "Day of Declaration of Sovereignty"}},
-   "06-23" {:name {:et "võidupüha", :en "Victory Day"}},
-   "06-14"
-   {"type" "observance",
-    :name {:et "leinapäev", :en "Day of Mourning and Commemoration"}},
-   "08-23"
-   {"type" "observance",
-    :name
-    {:et "kommunismi ja natsismi ohvrite mälestuspäev",
-     :en
-     "European Day of Remembrance for Victims of Stalinism and Nazism"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "2nd sunday in September"
-   {"type" "observance",
-    :name {:et "vanavanemate päev", :en "Grandparents Day"}},
-   "08-20"
-   {:name
-    {:et "taasiseseisvumispäev",
-     :en "Day of Restoration of Independence"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "11-02" {"type" "observance", :name (partial get-name "11-02")},
-   "03-14"
-   {"type" "observance",
-    :name {:et "emakeelepäev", :en "Native Language Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "09-22"
-   {"type" "observance",
-    :name {:et "vastupanuvõitluse päev", :en "Resistance Fighting Day"}},
-   "01-06" {"type" "observance", :name (partial get-name "01-06")},
-   "02-24"
-   {"type" "public", :name (partial get-name "Independence Day")},
-   "02-02"
-   {"type" "observance",
-    :name
-    {:et "Tartu rahulepingu aastapäev",
-     :en "Anniversary of the Tartu Peace Treaty"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "06-04"
+ {"type" "observance",
+  :name {:et "Eesti lipu päev", :en "National Flag Day"}},
+ "2nd sunday in November"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "easter" {:name (partial get-name "easter")},
+ "06-24" {:name {:et "jaanipäev", :en "Midsummer Day"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "11-16"
+ {"type" "observance",
+  :name
+  {:et "taassünni päev", :en "Day of Declaration of Sovereignty"}},
+ "06-23" {:name {:et "võidupüha", :en "Victory Day"}},
+ "06-14"
+ {"type" "observance",
+  :name {:et "leinapäev", :en "Day of Mourning and Commemoration"}},
+ "08-23"
+ {"type" "observance",
+  :name
+  {:et "kommunismi ja natsismi ohvrite mälestuspäev",
+   :en
+   "European Day of Remembrance for Victims of Stalinism and Nazism"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "2nd sunday in September"
+ {"type" "observance",
+  :name {:et "vanavanemate päev", :en "Grandparents Day"}},
+ "08-20"
+ {:name
+  {:et "taasiseseisvumispäev",
+   :en "Day of Restoration of Independence"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "11-02" {"type" "observance", :name (partial get-name "11-02")},
+ "03-14"
+ {"type" "observance",
+  :name {:et "emakeelepäev", :en "Native Language Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-22"
+ {"type" "observance",
+  :name {:et "vastupanuvõitluse päev", :en "Resistance Fighting Day"}},
+ "01-06" {"type" "observance", :name (partial get-name "01-06")},
+ "02-24"
+ {"type" "public", :name (partial get-name "Independence Day")},
+ "02-02"
+ {"type" "observance",
+  :name
+  {:et "Tartu rahulepingu aastapäev",
+   :en "Anniversary of the Tartu Peace Treaty"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

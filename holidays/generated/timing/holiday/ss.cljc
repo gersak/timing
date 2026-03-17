@@ -10,18 +10,19 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "1st monday in July"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "05-16" {:name {:en "SPLA Day"}},
-   "12-28" {:name {:en "Republic Day"}},
-   "2 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "03-08" {:name (partial get-name "03-08")},
-   "07-30" {:name {:en "Martyrs Day"}},
-   "01-09" {:name {:en "Peace Agreement Day"}},
-   "12 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "07-09" {:name (partial get-name "Independence Day")},
-   "12-31" {:name (partial get-name "12-31")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "1st monday in July"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "05-16" {:name {:en "SPLA Day"}},
+ "12-28" {:name {:en "Republic Day"}},
+ "2 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "03-08" {:name (partial get-name "03-08")},
+ "07-30" {:name {:en "Martyrs Day"}},
+ "01-09" {:name {:en "Peace Agreement Day"}},
+ "12 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "07-09" {:name (partial get-name "Independence Day")},
+ "12-31" {:name (partial get-name "12-31")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

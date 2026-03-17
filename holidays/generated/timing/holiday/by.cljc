@@ -10,25 +10,26 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "07-03"
-   {"active" [{"from" 1996}],
-    :name (partial get-name "Independence Day")},
-   "05-09" {:name {:en "Victory Day", :be "Дзень Перамогi"}},
-   "easter"
-   {"_name" "easter",
-    "type" "observance",
-    :name {:be "Вялiкдзень каталiцкi"}},
-   "orthodox +9" {:name {:en "Commemoration Day", :be "Радунiца"}},
-   "03-08" {:name (partial get-name "03-08")},
-   "julian 12-25" {"_name" "12-25", :name {:be "Каляды праваслаўныя"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "orthodox"
-   {"type" "observance",
-    :name {:en "Orthodox Easter", :be "Вялiкдзень праваслаўны"}},
-   "11-07"
-   {:name
-    {:en "October Revolution Day", :be "Дзень Кастрычніцкай рэвалюцыі"}},
-   "12-25" {"_name" "12-25", :name {:be "Каляды каталiцкiя"}}})
+ "07-03"
+ {"active" [{"from" 1996}],
+  :name (partial get-name "Independence Day")},
+ "05-09" {:name {:en "Victory Day", :be "Дзень Перамогi"}},
+ "easter"
+ {"_name" "easter",
+  "type" "observance",
+  :name {:be "Вялiкдзень каталiцкi"}},
+ "orthodox +9" {:name {:en "Commemoration Day", :be "Радунiца"}},
+ "03-08" {:name (partial get-name "03-08")},
+ "julian 12-25" {"_name" "12-25", :name {:be "Каляды праваслаўныя"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "orthodox"
+ {"type" "observance",
+  :name {:en "Orthodox Easter", :be "Вялiкдзень праваслаўны"}},
+ "11-07"
+ {:name
+  {:en "October Revolution Day", :be "Дзень Кастрычніцкай рэвалюцыі"}},
+ "12-25" {"_name" "12-25", :name {:be "Каляды каталiцкiя"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

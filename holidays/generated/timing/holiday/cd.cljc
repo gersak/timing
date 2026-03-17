@@ -10,37 +10,38 @@
 
 (def holidays
   {"06-30 and if sunday then next monday"
-   {"substitute" true,
-    "_name" "Independence Day",
-    :name {:fr "Anniversaire de Indépendance"}},
-   "08-01 and if sunday then next monday"
-   {"substitute" true,
-    :name {:fr "Fête des parents", :en "Parents' Day"}},
-   "05-17 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:fr "Journée de la Révolution et des Forces Armées",
-     :en "Liberation Day"}},
-   "01-04 and if sunday then next monday"
-   {"substitute" true,
-    :name {:fr "Martyrs de l'Indépendance", :en "Day of the Martyrs"}},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "01-16 and if sunday then next tuesday"
-   {"substitute" true,
-    :name
-    {:fr "Journée du Héro National Laurent Désiré Kabila",
-     :en "Anniversary of President Laurent Kabila"}},
-   "01-17 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:fr "Journée du Héro National Patrice Emery Lumumba",
-     :en "Anniversary of Prime Minister Patrice Emery Lumumba"}},
-   "2016-01-15" {:name (partial get-name "Public Holiday")},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")}})
+ {"substitute" true,
+  "_name" "Independence Day",
+  :name {:fr "Anniversaire de Indépendance"}},
+ "08-01 and if sunday then next monday"
+ {"substitute" true,
+  :name {:fr "Fête des parents", :en "Parents' Day"}},
+ "05-17 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:fr "Journée de la Révolution et des Forces Armées",
+   :en "Liberation Day"}},
+ "01-04 and if sunday then next monday"
+ {"substitute" true,
+  :name {:fr "Martyrs de l'Indépendance", :en "Day of the Martyrs"}},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "01-16 and if sunday then next tuesday"
+ {"substitute" true,
+  :name
+  {:fr "Journée du Héro National Laurent Désiré Kabila",
+   :en "Anniversary of President Laurent Kabila"}},
+ "01-17 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:fr "Journée du Héro National Patrice Emery Lumumba",
+   :en "Anniversary of Prime Minister Patrice Emery Lumumba"}},
+ "2016-01-15" {:name (partial get-name "Public Holiday")},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

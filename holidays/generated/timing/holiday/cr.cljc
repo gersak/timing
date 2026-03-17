@@ -10,22 +10,23 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "Mothers Day")},
-   "07-25"
-   {:name {:en "Guanacaste Day", :es "Anexión del Partido de Nicoya"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "08-02"
-   {:name
-    {:en "Our Lady of Los Ángeles",
-     :es "Día de la Virgen de los Ángeles"}},
-   "09-15" {:name (partial get-name "Independence Day")},
-   "04-11" {:name {:es "Gesta Heroica de Juan Santamaría"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "10-12 if monday then previous friday"
-   {:name {:en "Columbus Day", :es "Día de la Raza"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "07-25"
+ {:name {:en "Guanacaste Day", :es "Anexión del Partido de Nicoya"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "08-02"
+ {:name
+  {:en "Our Lady of Los Ángeles",
+   :es "Día de la Virgen de los Ángeles"}},
+ "09-15" {:name (partial get-name "Independence Day")},
+ "04-11" {:name {:es "Gesta Heroica de Juan Santamaría"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "10-12 if monday then previous friday"
+ {:name {:en "Columbus Day", :es "Día de la Raza"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

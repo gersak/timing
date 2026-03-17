@@ -10,34 +10,35 @@
 
 (def holidays
   {"substitutes 12-25 if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "2022-06-03" {:name {:en "Queen’s Platinum Jubilee"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "3rd sunday in June"
-   {"type" "observance", :name (partial get-name "Fathers Day")},
-   "substitutes 01-01 if saturday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "2023-05-08" {:name {:en "King Charles III's Coronation"}},
-   "substitutes 01-01 if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter -21"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1st monday before 06-01"
-   {"disable" ["2022-05-30"],
-    "enable" ["2022-06-02"],
-    :name {:en "Spring bank holiday"}},
-   "2020-05-08" {:name {:en "Early May bank holiday (VE day)"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1st monday in May"
-   {"disable" ["2020-05-04"], :name {:en "Early May bank holiday"}},
-   "2022-09-19" {:name {:en "Queen Elizabeth's Funeral Day"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "2012-06-05" {:name {:en "Queen’s Diamond Jubilee"}},
-   "substitutes 12-26 if saturday then next monday if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-26")}})
+ {"substitute" true, :name (partial get-name "12-25")},
+ "2022-06-03" {:name {:en "Queen’s Platinum Jubilee"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "3rd sunday in June"
+ {"type" "observance", :name (partial get-name "Fathers Day")},
+ "substitutes 01-01 if saturday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "2023-05-08" {:name {:en "King Charles III's Coronation"}},
+ "substitutes 01-01 if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter -21"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1st monday before 06-01"
+ {"disable" ["2022-05-30"],
+  "enable" ["2022-06-02"],
+  :name {:en "Spring bank holiday"}},
+ "2020-05-08" {:name {:en "Early May bank holiday (VE day)"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1st monday in May"
+ {"disable" ["2020-05-04"], :name {:en "Early May bank holiday"}},
+ "2022-09-19" {:name {:en "Queen Elizabeth's Funeral Day"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "2012-06-05" {:name {:en "Queen’s Diamond Jubilee"}},
+ "substitutes 12-26 if saturday then next monday if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-26")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

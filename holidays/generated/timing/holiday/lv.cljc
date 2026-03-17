@@ -10,33 +10,34 @@
 
 (def holidays
   {"05-04 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:en "Restoration of Independence day",
-     :lv "Latvijas Republikas Neatkarības atjaunošanas diena"}},
-   "2023-05-29"
-   {:name
-    {:en
-     "Bronze medal of the Latvian hockey team at the 2023 World Hockey Championship",
-     :lv
-     "Latvijas hokeja komandas 2023. gada Pasaules hokeja čempionātā bronzas medaļa"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "11-18 and if saturday,sunday then next monday"
-   {"substitute" true,
-    :name
-    {:en "Republic Day", :lv "Latvijas Republikas proklamēšanas diena"}},
-   "easter" {:name (partial get-name "easter")},
-   "06-24" {:name {:en "Midsummer", :lv "Jāņi"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "06-23" {:name {:en "Midsummer Eve", :lv "Līgo Diena"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-31" {:name (partial get-name "12-31")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"substitute" true,
+  :name
+  {:en "Restoration of Independence day",
+   :lv "Latvijas Republikas Neatkarības atjaunošanas diena"}},
+ "2023-05-29"
+ {:name
+  {:en
+   "Bronze medal of the Latvian hockey team at the 2023 World Hockey Championship",
+   :lv
+   "Latvijas hokeja komandas 2023. gada Pasaules hokeja čempionātā bronzas medaļa"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "11-18 and if saturday,sunday then next monday"
+ {"substitute" true,
+  :name
+  {:en "Republic Day", :lv "Latvijas Republikas proklamēšanas diena"}},
+ "easter" {:name (partial get-name "easter")},
+ "06-24" {:name {:en "Midsummer", :lv "Jāņi"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "06-23" {:name {:en "Midsummer Eve", :lv "Līgo Diena"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-31" {:name (partial get-name "12-31")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

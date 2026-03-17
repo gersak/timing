@@ -10,19 +10,41 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "12-31 12:00" {:name (partial get-name "12-31")},
-   "09-15" {:name (partial get-name "Independence Day")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter -1" {:name (partial get-name "easter -1")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "10-20" {:name (partial get-name "Revolution Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "12-24 12:00" {:name (partial get-name "12-24")},
-   "06-30 if tuesday then previous monday if wednesday,thursday then next friday"
-   {:name {:es "Día de las Fuerzas Armadas", :en "Army Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "12-31 12:00" {:name (partial get-name "12-31")},
+ "09-15" {:name (partial get-name "Independence Day")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter -1" {:name (partial get-name "easter -1")},
+ "10-12 if saturday then previous friday if sunday then next monday"
+ {"type" "bank", :name {:es "Día de la Raza", :en "Day of Race"}},
+ "06-25"
+ {"type" "observance",
+  :name {:es "Día del Maestro", :en "Teacher's Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "05-30"
+ {"type" "observance",
+  :name {:es "Día Nacional del Popol Vuh", :en "Popol Vuh Day"}},
+ "10-20" {:name (partial get-name "Revolution Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "02-11"
+ {"type" "observance",
+  :name {:es "Día de la Monja Blanca", :en "White Nun Day"}},
+ "05-10" {"type" "optional", :name (partial get-name "Mothers Day")},
+ "03-08" {"type" "observance", :name (partial get-name "03-08")},
+ "11-02" {"type" "observance", :name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "07-01 if tuesday,saturday then previous friday if sunday then next monday"
+ {"type" "bank",
+  :name {:es "Día del Empleado Bancario", :en "Bank Employee Day"}},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "02-20"
+ {"type" "observance",
+  :name {:es "Día de la Marimba", :en "Marimba Day"}},
+ "12-24 12:00" {:name (partial get-name "12-24")},
+ "06-30 if tuesday then previous monday if wednesday,thursday then next friday"
+ {:name {:es "Día de las Fuerzas Armadas", :en "Army Day"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "06-17" {"type" "optional", :name (partial get-name "Fathers Day")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

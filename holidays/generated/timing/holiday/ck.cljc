@@ -10,24 +10,25 @@
 
 (def holidays
   {"10-26 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name {:en "National Gospel Day"}},
-   "1st Friday in July"
-   {:name
-    {:en "Ra o te Ui Ariki (House of Ariki)", :rar "Ra o te Ui Ariki"}},
-   "08-04 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "Constitution Day")},
-   "01-01 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "1st Monday in June" {:name {:en "Queen's Birthday"}},
-   "01-02 and if Saturday then next Monday if Monday, Sunday then next Tuesday"
-   {"substitute" true, :name {:en "Day after New Year's Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "12-25 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "04-25" {:name {:en "Anzac Day"}},
-   "12-26 and if Saturday then next Monday if Monday, Sunday then next Tuesday"
-   {"substitute" true, :name (partial get-name "12-26")}})
+ {"substitute" true, :name {:en "National Gospel Day"}},
+ "1st Friday in July"
+ {:name
+  {:en "Ra o te Ui Ariki (House of Ariki)", :rar "Ra o te Ui Ariki"}},
+ "08-04 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "Constitution Day")},
+ "01-01 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "1st Monday in June" {:name {:en "Queen's Birthday"}},
+ "01-02 and if Saturday then next Monday if Monday, Sunday then next Tuesday"
+ {"substitute" true, :name {:en "Day after New Year's Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "12-25 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "04-25" {:name {:en "Anzac Day"}},
+ "12-26 and if Saturday then next Monday if Monday, Sunday then next Tuesday"
+ {"substitute" true, :name (partial get-name "12-26")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

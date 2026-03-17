@@ -10,19 +10,20 @@
 
 (def holidays
   {"easter -46" {:name (partial get-name "easter -46")},
-   "08-15" {"_name" "08-15", :name {:pt "Dia da Padroeira Nacional"}},
-   "06-01" {:name {:pt "Dia das Crianças", :en "Children's Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-20" {:name {:pt "Dia dos Heróis Nacionais", :en "Heroes' Day"}},
-   "easter -47" {:name (partial get-name "easter -47")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "07-05" {:name (partial get-name "Independence Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "01-13" {:name {:pt "Dia da Democracia", :en "Democracy Day"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "09-12" {:name {:pt "Dia Nacional", :en "National Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {"_name" "08-15", :name {:pt "Dia da Padroeira Nacional"}},
+ "06-01" {:name {:pt "Dia das Crianças", :en "Children's Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-20" {:name {:pt "Dia dos Heróis Nacionais", :en "Heroes' Day"}},
+ "easter -47" {:name (partial get-name "easter -47")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "07-05" {:name (partial get-name "Independence Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "01-13" {:name {:pt "Dia da Democracia", :en "Democracy Day"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "09-12" {:name {:pt "Dia Nacional", :en "National Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

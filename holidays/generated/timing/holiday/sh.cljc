@@ -10,27 +10,28 @@
 
 (def holidays
   {"05-21" {:name {:en "Saint Helena Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "substitutes 01-01 if saturday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "substitutes 01-01 if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "3rd monday in April" {:name {:en "Queen's Birthday"}},
-   "monday before 09-01" {:name {:en "August Bank Holiday"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "substitutes 12-26 if saturday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "substitutes 12-25 if saturday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "substitutes 12-25 if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "substitutes 12-26 if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "substitutes 01-01 if saturday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "substitutes 01-01 if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "3rd monday in April" {:name {:en "Queen's Birthday"}},
+ "monday before 09-01" {:name {:en "August Bank Holiday"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "substitutes 12-26 if saturday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "substitutes 12-25 if saturday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "substitutes 12-25 if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "substitutes 12-26 if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

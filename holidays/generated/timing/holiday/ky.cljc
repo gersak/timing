@@ -10,29 +10,30 @@
 
 (def holidays
   {"easter -46" {:name (partial get-name "easter -46")},
-   "2023-06-19" {:name {:en "Queen's Birthday"}},
-   "2020-06-15" {:name {:en "Queen's Birthday"}},
-   "2026-06-15" {:name {:en "Queen's Birthday"}},
-   "2021-06-14" {:name {:en "Queen's Birthday"}},
-   "2019-06-10" {:name {:en "Queen's Birthday"}},
-   "07-02" {:name {:en "Constitution Day"}},
-   "01-01 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "2022-06-20" {:name {:en "Queen's Birthday"}},
-   "2024-06-17" {:name {:en "Queen's Birthday"}},
-   "2025-06-16" {:name {:en "Queen's Birthday"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "4th Monday in January" {:name {:en "National Heroes Day"}},
-   "3rd Monday in May" {:name {:en "Discovery Day"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "2017-06-19" {:name {:en "Queen's Birthday"}},
-   "2021-04-14" {:name "General Election Day"},
-   "2018-06-11" {:name {:en "Queen's Birthday"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "2016-06-13" {:name {:en "Queen's Birthday"}},
-   "2017-05-24" {:name "General Election Day"}})
+ "2023-06-19" {:name {:en "Queen's Birthday"}},
+ "2020-06-15" {:name {:en "Queen's Birthday"}},
+ "2026-06-15" {:name {:en "Queen's Birthday"}},
+ "2021-06-14" {:name {:en "Queen's Birthday"}},
+ "2019-06-10" {:name {:en "Queen's Birthday"}},
+ "07-02" {:name {:en "Constitution Day"}},
+ "01-01 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "2022-06-20" {:name {:en "Queen's Birthday"}},
+ "2024-06-17" {:name {:en "Queen's Birthday"}},
+ "2025-06-16" {:name {:en "Queen's Birthday"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "4th Monday in January" {:name {:en "National Heroes Day"}},
+ "3rd Monday in May" {:name {:en "Discovery Day"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "2017-06-19" {:name {:en "Queen's Birthday"}},
+ "2021-04-14" {:name "General Election Day"},
+ "2018-06-11" {:name {:en "Queen's Birthday"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "2016-06-13" {:name {:en "Queen's Birthday"}},
+ "2017-05-24" {:name "General Election Day"}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

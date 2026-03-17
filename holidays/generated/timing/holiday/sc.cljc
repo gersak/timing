@@ -10,18 +10,19 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "06-29" {:name (partial get-name "Independence Day")},
-   "06-18" {:name (partial get-name "National Holiday")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter -1" {:name (partial get-name "easter -1")},
-   "easter" {:name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "01-01 P2D" {:name (partial get-name "01-01")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "06-29" {:name (partial get-name "Independence Day")},
+ "06-18" {:name (partial get-name "National Holiday")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter -1" {:name (partial get-name "easter -1")},
+ "easter" {:name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "01-01 P2D" {:name (partial get-name "01-01")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

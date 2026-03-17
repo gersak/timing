@@ -8,3 +8,10 @@ repl.clj
 .nrepl-port
 .nrepl-history
 .DS_Store
+.claude/
+.settings/
+.deps.clj/
+.classpath
+*.backup
+*.old
+.project

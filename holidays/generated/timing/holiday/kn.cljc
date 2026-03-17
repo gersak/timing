@@ -10,23 +10,24 @@
 
 (def holidays
   {"09-19 if Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "01-01 and if Saturday then next Monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "1st Monday in May" {:name (partial get-name "05-01")},
-   "01-02" {:name {:en "Carnival Day"}},
-   "09-16 and if Sunday then next Monday"
-   {"substitute" true, :name {:en "National Heroes' Day"}},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "1st Tuesday in August" {:name {:en "Culturama Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49"
-   {"type" "observance", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1st Monday in August" {:name {:en "Emancipation Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "01-01 and if Saturday then next Monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "1st Monday in May" {:name (partial get-name "05-01")},
+ "01-02" {:name {:en "Carnival Day"}},
+ "09-16 and if Sunday then next Monday"
+ {"substitute" true, :name {:en "National Heroes' Day"}},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "1st Tuesday in August" {:name {:en "Culturama Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49"
+ {"type" "observance", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1st Monday in August" {:name {:en "Emancipation Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

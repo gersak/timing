@@ -10,34 +10,35 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "easter 39" {"_name" "easter 39", :name {:de "Auffahrt"}},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {:name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "12-26"
-   {"_name" "12-26", :name {:de "Stephanstag", :fr "Saint-Etienne"}},
-   "08-01"
-   {:name
-    {:de "Bundesfeiertag",
-     :fr "Fête nationale",
-     :it "Giorno festivo federale"}},
-   "easter 49" {:name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "1st sunday in June"
-   {"type" "observance",
-    "active" [{"from" "2009-01-01"}],
-    :name {:de "Vätertag", :fr "Fête des pères"}},
-   "easter -3"
-   {"type" "observance", :name (partial get-name "easter -3")},
-   "3rd sunday after 09-01"
-   {:name
-    {:de "Eidg. Dank-, Buss- und Bettag",
-     :fr "Jeûne fédéral",
-     :it "Digiuno federale",
-     :en "Federal Day of Thanksgiving, Repentance and Prayer"}},
-   "12-25" {"_name" "12-25", :name {:de "Weihnachtstag"}}})
+ "easter 39" {"_name" "easter 39", :name {:de "Auffahrt"}},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {:name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "12-26"
+ {"_name" "12-26", :name {:de "Stephanstag", :fr "Saint-Etienne"}},
+ "08-01"
+ {:name
+  {:de "Bundesfeiertag",
+   :fr "Fête nationale",
+   :it "Giorno festivo federale"}},
+ "easter 49" {:name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "1st sunday in June"
+ {"type" "observance",
+  "active" [{"from" "2009-01-01"}],
+  :name {:de "Vätertag", :fr "Fête des pères"}},
+ "easter -3"
+ {"type" "observance", :name (partial get-name "easter -3")},
+ "3rd sunday after 09-01"
+ {:name
+  {:de "Eidg. Dank-, Buss- und Bettag",
+   :fr "Jeûne fédéral",
+   :it "Digiuno federale",
+   :en "Federal Day of Thanksgiving, Repentance and Prayer"}},
+ "12-25" {"_name" "12-25", :name {:de "Weihnachtstag"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

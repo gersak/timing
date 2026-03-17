@@ -10,20 +10,21 @@
 
 (def holidays
   {"easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "10-09" {:name (partial get-name "Abolition of Slavery")},
-   "easter -48"
-   {"type" "observance", :name (partial get-name "easter -48")},
-   "08-24"
-   {"type" "observance",
-    :name {:fr "Fête de Saint Barthélemy", :en "Saint Barth"}},
-   "easter -47"
-   {"type" "Observance", :name (partial get-name "easter -47")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -21"
-   {"type" "observance", :name {:fr "Mi-Carême", :en "Laetare Sunday"}},
-   "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "10-09" {:name (partial get-name "Abolition of Slavery")},
+ "easter -48"
+ {"type" "observance", :name (partial get-name "easter -48")},
+ "08-24"
+ {"type" "observance",
+  :name {:fr "Fête de Saint Barthélemy", :en "Saint Barth"}},
+ "easter -47"
+ {"type" "Observance", :name (partial get-name "easter -47")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -21"
+ {"type" "observance", :name {:fr "Mi-Carême", :en "Laetare Sunday"}},
+ "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

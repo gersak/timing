@@ -10,45 +10,46 @@
 
 (def holidays
   {"julian 12-25 and if saturday, sunday then next monday prior to 2023"
-   {"substitute" true, :name (partial get-name "julian 12-25")},
-   "08-24 and if saturday, sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "05-09 and if saturday, sunday then next monday"
-   {"substitute" true,
-    :name
-    {:uk "День перемоги над нацизмом у Другій світовій війні",
-     :en "Victory Day"}},
-   "05-01 and if saturday, sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "12-25 and if saturday, sunday then next monday since 2017"
-   {:name (partial get-name "12-25")},
-   "10-01 and if saturday, sunday then next monday since 2023"
-   {"substitute" true,
-    :name
-    {:uk "День захисників і захисниць України",
-     :en "Defenders of Ukraine Day"}},
-   "01-01 and if saturday, sunday then next tuesday"
-   {"_name" "01-01", "substitute" true, :name {:en "New Year"}},
-   "07-28 and if saturday, sunday then next monday prior to 2023"
-   {:name {:en "Statehood Day", :uk "День Української Державності"}},
-   "10-14 and if saturday, sunday then next monday since 2015 and prior to 2023"
-   {"substitute" true,
-    :name
-    {:uk "День захисника України", :en "Defenders of Ukraine Day"}},
-   "06-28 and if saturday, sunday then next monday"
-   {"substitute" true, :name (partial get-name "Constitution Day")},
-   "orthodox and if sunday then next monday"
-   {:name (partial get-name "orthodox")},
-   "orthodox 49 and if sunday then next monday"
-   {:name (partial get-name "easter 49")},
-   "01-02 and if saturday, sunday then next monday"
-   {"_name" "01-01", "substitute" true, :name {:en "New Year"}},
-   "05-02 and if saturday, sunday then next monday prior to 2018"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "07-15 and if saturday, sunday then next monday since 2023"
-   {:name {:en "Statehood Day", :uk "День Української Державності"}},
-   "03-08 and if saturday, sunday then next monday"
-   {:name (partial get-name "03-08")}})
+ {"substitute" true, :name (partial get-name "julian 12-25")},
+ "08-24 and if saturday, sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "05-09 and if saturday, sunday then next monday"
+ {"substitute" true,
+  :name
+  {:uk "День перемоги над нацизмом у Другій світовій війні",
+   :en "Victory Day"}},
+ "05-01 and if saturday, sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "12-25 and if saturday, sunday then next monday since 2017"
+ {:name (partial get-name "12-25")},
+ "10-01 and if saturday, sunday then next monday since 2023"
+ {"substitute" true,
+  :name
+  {:uk "День захисників і захисниць України",
+   :en "Defenders of Ukraine Day"}},
+ "01-01 and if saturday, sunday then next tuesday"
+ {"_name" "01-01", "substitute" true, :name {:en "New Year"}},
+ "07-28 and if saturday, sunday then next monday prior to 2023"
+ {:name {:en "Statehood Day", :uk "День Української Державності"}},
+ "10-14 and if saturday, sunday then next monday since 2015 and prior to 2023"
+ {"substitute" true,
+  :name
+  {:uk "День захисника України", :en "Defenders of Ukraine Day"}},
+ "06-28 and if saturday, sunday then next monday"
+ {"substitute" true, :name (partial get-name "Constitution Day")},
+ "orthodox and if sunday then next monday"
+ {:name (partial get-name "orthodox")},
+ "orthodox 49 and if sunday then next monday"
+ {:name (partial get-name "easter 49")},
+ "01-02 and if saturday, sunday then next monday"
+ {"_name" "01-01", "substitute" true, :name {:en "New Year"}},
+ "05-02 and if saturday, sunday then next monday prior to 2018"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "07-15 and if saturday, sunday then next monday since 2023"
+ {:name {:en "Statehood Day", :uk "День Української Державності"}},
+ "03-08 and if saturday, sunday then next monday"
+ {:name (partial get-name "03-08")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

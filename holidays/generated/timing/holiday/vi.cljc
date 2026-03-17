@@ -10,18 +10,19 @@
 
 (def holidays
   {"10-25" {"type" "observance", :name {:en "Hurricane Thanksgiving"}},
-   "07-03" {:name {:en "Emancipation Day"}},
-   "03-31" {:name {:en "Transfer Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "3rd monday in February" {:name {:en "President's Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "friday after 4th thursday in November"
-   {"type" "school", :name {:en "Day after Thanksgiving Day"}},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "2nd monday in October"
-   {:name {:en "Virgin Islands–Puerto Rico Friendship Day"}},
-   "01-06" {"_name" "01-06", :name {:en "Three Kings Day"}},
-   "4th Monday in July" {:name {:en "Hurricane Supplication Day"}}})
+ "07-03" {:name {:en "Emancipation Day"}},
+ "03-31" {:name {:en "Transfer Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "3rd monday in February" {:name {:en "President's Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "friday after 4th thursday in November"
+ {"type" "school", :name {:en "Day after Thanksgiving Day"}},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "2nd monday in October"
+ {:name {:en "Virgin Islands–Puerto Rico Friendship Day"}},
+ "01-06" {"_name" "01-06", :name {:en "Three Kings Day"}},
+ "4th Monday in July" {:name {:en "Hurricane Supplication Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

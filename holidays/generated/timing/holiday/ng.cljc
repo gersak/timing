@@ -10,26 +10,27 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "01-01")},
-   "05-27" {:name {:en "Children's Day", :type "school"}},
-   "05-01 and if Saturday then next Monday"
-   {"substitute" true, "_name" "05-01", :name {:en "Worker's Day"}},
-   "10 Dhu al-Hijjah P2D"
-   {"_name" "10 Dhu al-Hijjah", :name {:en "Id el Kabir"}},
-   "11-01 since 2020" {:name {:en "National Youth Day"}},
-   "06-12 and if Saturday then next Monday since 2018"
-   {"substitute" true, :name {:en "Democracy Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "10-01" {:name (partial get-name "Independence Day")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-29 prior to 2018" {:name {:en "Democracy Day"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "1 Shawwal P2D" {"_name" "1 Shawwal", :name {:en "Id el Fitr"}},
-   "12-31" {"type" "observance", :name (partial get-name "12-31")},
-   "06-12 prior to 2018" {:name {:en "M.K.O Abiola Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "05-27" {:name {:en "Children's Day", :type "school"}},
+ "05-01 and if Saturday then next Monday"
+ {"substitute" true, "_name" "05-01", :name {:en "Worker's Day"}},
+ "10 Dhu al-Hijjah P2D"
+ {"_name" "10 Dhu al-Hijjah", :name {:en "Id el Kabir"}},
+ "11-01 since 2020" {:name {:en "National Youth Day"}},
+ "06-12 and if Saturday then next Monday since 2018"
+ {"substitute" true, :name {:en "Democracy Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "10-01" {:name (partial get-name "Independence Day")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-29 prior to 2018" {:name {:en "Democracy Day"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "1 Shawwal P2D" {"_name" "1 Shawwal", :name {:en "Id el Fitr"}},
+ "12-31" {"type" "observance", :name (partial get-name "12-31")},
+ "06-12 prior to 2018" {:name {:en "M.K.O Abiola Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

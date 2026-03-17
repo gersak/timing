@@ -10,26 +10,27 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "07-01" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-02" {:name (partial get-name "Public Holiday")},
-   "02-01" {:name {:en "Heroes Day"}},
-   "07-04" {:name {:fr "Jour de la Libération", :en "Liberation Day"}},
-   "1st friday in August"
-   {:name
-    {:rw "Umuganura",
-     :fr "Journée nationale de récolte",
-     :en "National Harvest Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "04-07"
-   {:name
-    {:fr "Jour de Mémorial du Génocide", :en "Genocide Memorial Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "07-01" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "01-02" {:name (partial get-name "Public Holiday")},
+ "02-01" {:name {:en "Heroes Day"}},
+ "07-04" {:name {:fr "Jour de la Libération", :en "Liberation Day"}},
+ "1st friday in August"
+ {:name
+  {:rw "Umuganura",
+   :fr "Journée nationale de récolte",
+   :en "National Harvest Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "04-07"
+ {:name
+  {:fr "Jour de Mémorial du Génocide", :en "Genocide Memorial Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

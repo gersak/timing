@@ -10,78 +10,82 @@
 
 (def holidays
   {"chinese 05-0-05 not on Sunday"
-   {:name {:en "Tuen Ng Festival", :zh "端午節"}},
-   "chinese 04-0-08 not on Sunday"
-   {:name {:en "Birthday of the Buddha", :zh "佛誕"}},
-   "substitutes chinese 01-0-02 if Sunday then next Tuesday"
-   {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
-   "substitutes 07-01 if Sunday then next Monday"
-   {:name
-    {:en
-     "The day following Hong Kong Special Administrative Region Establishment Day",
-     :zh "香港特別行政區成立紀念日翌日"}},
-   "substitutes 05-01 if Sunday then next Monday"
-   {:name {:en "The day following Labour Day", :zh "勞動節翌日"}},
-   "12-25 not on Sunday" {:name {:en "Christmas Day", :zh "聖誕節"}},
-   "substitutes chinese 08-0-16 if Sunday then next Monday"
-   {:name
-    {:en "The second day following the Chinese Mid-Autumn Festival",
-     :zh "中秋節後第二日"}},
-   "chinese 01-0-03 not on Sunday"
-   {:name {:en "The third day of Lunar New Year", :zh "農曆年初三"}},
-   "substitutes 10-01 if Sunday then next Monday"
-   {:name {:en "The day following National Day", :zh "國慶日翌日"}},
-   "07-01 not on Sunday"
-   {:name
-    {:en "Hong Kong Special Administrative Region Establishment Day",
-     :zh "香港特別行政區成立紀念日"}},
-   "substitutes chinese 01-0-03 if Sunday then next Monday"
-   {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
-   "easter -1"
-   {:name {:en "The day following Good Friday", :zh "耶穌受難節翌日"}},
-   "substitutes 12-25 if Sunday then next Tuesday"
-   {:name
-    {:en "The second weekday after Christmas Day", :zh "聖誕節後第二個周日"}},
-   "substitutes chinese 04-0-08 if Sunday then next Monday"
-   {:name {:en "The day following Birthday of the Buddha", :zh "佛誕翌日"}},
-   "05-01 not on Sunday" {:name {:en "Labour Day", :zh "勞動節"}},
-   "substitutes 01-01 if Sunday then next Monday"
-   {:name
-    {:en "The day following the first day of January", :zh "一月一日翌日"}},
-   "10-01 not on Sunday" {:name {:en "National Day", :zh "國慶日"}},
-   "substitutes chinese 01-0-01 if Sunday then next Wednesday"
-   {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
-   "chinese 5-01 solarterm not on Sunday"
-   {:name {:en "Ching Ming Festival", :zh "清明節"}},
-   "substitutes chinese 05-0-05 if Sunday then next Monday"
-   {:name {:en "The day following Tuen Ng Festival", :zh "端午節翌日"}},
-   "easter -2" {:name {:en "Good Friday", :zh "耶穌受難節"}},
-   "substitutes chinese 09-0-09 if Sunday then next Monday"
-   {:name {:en "The day following Chung Yeung Festival", :zh "重陽節翌日"}},
-   "2021-04-06"
-   {:name {:en "The day following Easter Monday", :zh "復活節星期一翌日"}},
-   "easter 1"
-   {"disable" ["2021-04-05"], :name {:en "Easter Monday", :zh "復活節星期一"}},
-   "chinese 09-0-09 not on Sunday"
-   {:name {:en "Chung Yeung Festival", :zh "重陽節"}},
-   "01-01 not on Sunday"
-   {:name {:en "The first day of January", :zh "一月一日"}},
-   "substitutes 12-26 if Sunday then next Monday"
-   {:name
-    {:en "The first weekday after Christmas Day", :zh "聖誕節後第一個周日"}},
-   "chinese 01-0-01 not on Sunday"
-   {:name {:en "Lunar New Year’s Day", :zh "農曆年初一"}},
-   "12-26 not on Sunday"
-   {:name
-    {:en "The first weekday after Christmas Day", :zh "聖誕節後第一個周日"}},
-   "substitutes chinese 5-01 solarterm if Sunday then next Monday"
-   {:name {:en "The day following Ching Ming Festival", :zh "清明節翌日"}},
-   "chinese 08-0-16 not on Sunday"
-   {:name
-    {:en "The day following the Chinese Mid-Autumn Festival",
-     :zh "中秋節翌日"}},
-   "chinese 01-0-02 not on Sunday"
-   {:name {:en "The second day of Lunar New Year", :zh "農曆年初二"}}})
+ {:name {:en "Tuen Ng Festival", :zh "端午節"}},
+ "chinese 04-0-08 not on Sunday"
+ {:name {:en "Birthday of the Buddha", :zh "佛誕"}},
+ "substitutes chinese 01-0-02 if Sunday then next Tuesday"
+ {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
+ "substitutes 07-01 if Sunday then next Monday"
+ {:name
+  {:en
+   "The day following Hong Kong Special Administrative Region Establishment Day",
+   :zh "香港特別行政區成立紀念日翌日"}},
+ "substitutes 05-01 if Sunday then next Monday"
+ {:name {:en "The day following Labour Day", :zh "勞動節翌日"}},
+ "12-25 not on Sunday" {:name {:en "Christmas Day", :zh "聖誕節"}},
+ "substitutes chinese 08-0-16 if Sunday then next Monday"
+ {:name
+  {:en "The second day following the Chinese Mid-Autumn Festival",
+   :zh "中秋節後第二日"}},
+ "chinese 01-0-03 not on Sunday"
+ {:name {:en "The third day of Lunar New Year", :zh "農曆年初三"}},
+ "substitutes 10-01 if Sunday then next Monday"
+ {:name {:en "The day following National Day", :zh "國慶日翌日"}},
+ "07-01 not on Sunday"
+ {:name
+  {:en "Hong Kong Special Administrative Region Establishment Day",
+   :zh "香港特別行政區成立紀念日"}},
+ "substitutes chinese 01-0-03 if Sunday then next Monday"
+ {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
+ "easter -1"
+ {:name {:en "The day following Good Friday", :zh "耶穌受難節翌日"}},
+ "substitutes 12-25 if Sunday then next Tuesday"
+ {:name
+  {:en "The second weekday after Christmas Day", :zh "聖誕節後第二個周日"}},
+ "substitutes chinese 04-0-08 if Sunday then next Monday"
+ {:name {:en "The day following Birthday of the Buddha", :zh "佛誕翌日"}},
+ "05-01 not on Sunday" {:name {:en "Labour Day", :zh "勞動節"}},
+ "substitutes 01-01 if Sunday then next Monday"
+ {:name
+  {:en "The day following the first day of January", :zh "一月一日翌日"}},
+ "10-01 not on Sunday" {:name {:en "National Day", :zh "國慶日"}},
+ "substitutes chinese 01-0-01 if Sunday then next Wednesday"
+ {:name {:en "The fourth day of Lunar New Year", :zh "農曆年初四"}},
+ "chinese 5-01 solarterm not on Sunday"
+ {:name {:en "Ching Ming Festival", :zh "清明節"}},
+ "substitutes chinese 05-0-05 if Sunday then next Monday"
+ {:name {:en "The day following Tuen Ng Festival", :zh "端午節翌日"}},
+ "easter -2" {:name {:en "Good Friday", :zh "耶穌受難節"}},
+ "2026-04-07"
+ {:name {:en "The day following Easter Monday", :zh "復活節星期一翌日"}},
+ "substitutes chinese 09-0-09 if Sunday then next Monday"
+ {:name {:en "The day following Chung Yeung Festival", :zh "重陽節翌日"}},
+ "2021-04-06"
+ {:name {:en "The day following Easter Monday", :zh "復活節星期一翌日"}},
+ "easter 1"
+ {"disable" ["2021-04-05" "2026-04-06"],
+  :name {:en "Easter Monday", :zh "復活節星期一"}},
+ "chinese 09-0-09 not on Sunday"
+ {:name {:en "Chung Yeung Festival", :zh "重陽節"}},
+ "01-01 not on Sunday"
+ {:name {:en "The first day of January", :zh "一月一日"}},
+ "substitutes 12-26 if Sunday then next Monday"
+ {:name
+  {:en "The first weekday after Christmas Day", :zh "聖誕節後第一個周日"}},
+ "chinese 01-0-01 not on Sunday"
+ {:name {:en "Lunar New Year’s Day", :zh "農曆年初一"}},
+ "12-26 not on Sunday"
+ {:name
+  {:en "The first weekday after Christmas Day", :zh "聖誕節後第一個周日"}},
+ "substitutes chinese 5-01 solarterm if Sunday then next Monday"
+ {:name {:en "The day following Ching Ming Festival", :zh "清明節翌日"}},
+ "chinese 08-0-16 not on Sunday"
+ {:name
+  {:en "The day following the Chinese Mid-Autumn Festival",
+   :zh "中秋節翌日"}},
+ "chinese 01-0-02 not on Sunday"
+ {:name {:en "The second day of Lunar New Year", :zh "農曆年初二"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

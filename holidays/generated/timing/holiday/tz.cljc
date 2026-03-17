@@ -10,23 +10,24 @@
 
 (def holidays
   {"10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "01-01" {:name (partial get-name "01-01")},
-   "01-02" {:name {:en "Zanzibar Revolution Day"}},
-   "04-26" {:name {:en "Union Day"}},
-   "10-14" {:name {:en "Nyerere Day"}},
-   "08-08" {:name {:en "Nane Nane Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-26" {:name (partial get-name "12-25")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "12-09" {:name (partial get-name "Independence Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "07-07" {:name {:en "Saba Saba Day"}},
-   "12 Rabi al-awwal"
-   {"_name" "12 Rabi al-awwal", :name {:en "Maulid Day"}},
-   "1 Shawwal P2D" {:name (partial get-name "1 Shawwal")},
-   "04-07" {:name {:en "Karume Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "01-02" {:name {:en "Zanzibar Revolution Day"}},
+ "04-26" {:name {:en "Union Day"}},
+ "10-14" {:name {:en "Nyerere Day"}},
+ "08-08" {:name {:en "Nane Nane Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-26" {:name (partial get-name "12-25")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "12-09" {:name (partial get-name "Independence Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "07-07" {:name {:en "Saba Saba Day"}},
+ "12 Rabi al-awwal"
+ {"_name" "12 Rabi al-awwal", :name {:en "Maulid Day"}},
+ "1 Shawwal P2D" {:name (partial get-name "1 Shawwal")},
+ "04-07" {:name {:en "Karume Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

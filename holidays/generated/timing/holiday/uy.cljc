@@ -10,40 +10,41 @@
 
 (def holidays
   {"easter -48"
-   {"type" "observance", :name {:en "Carnival", :es "Carnaval"}},
-   "08-25" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "07-18" {:name (partial get-name "Constitution Day")},
-   "easter -47"
-   {"type" "observance", :name (partial get-name "easter -47")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "04-19 if tuesday,wednesday then previous monday if thursday,friday then next monday"
-   {"type" "observance",
-    :name
-    {:en "Landing of the 33 Orientals",
-     :es "Desembarco de los 33 Orientales"}},
-   "12-24" {"type" "observance", :name (partial get-name "12-24")},
-   "05-18 if tuesday,wednesday then previous monday if thursday,friday then next monday"
-   {"type" "observance",
-    :name {:en "Battle of Las Piedras", :es "Batalla de las Piedras"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "easter -6 P5D"
-   {"type" "observance",
-    :name {:en "Tourism Week", :es "Semana de Turismo"}},
-   "11-02" {"type" "observance", :name (partial get-name "11-02")},
-   "10-12 if tuesday,wednesday then previous monday if thursday,friday then next monday"
-   {"type" "observance",
-    :name {:en "Columbus Day", :es "Día de la Raza"}},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "01-06" {"type" "observance", :name (partial get-name "01-06")},
-   "12-31" {"type" "observance", :name (partial get-name "12-31")},
-   "12-25" {:name (partial get-name "12-25")},
-   "06-19"
-   {"type" "observance",
-    :name
-    {:en "Birthday of José Gervasio Artigas and Never Again Day",
-     :es "Natalicio de Artigas y Día del Nunca Más"}}})
+ {"type" "observance", :name {:en "Carnival", :es "Carnaval"}},
+ "08-25" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "07-18" {:name (partial get-name "Constitution Day")},
+ "easter -47"
+ {"type" "observance", :name (partial get-name "easter -47")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "04-19 if tuesday,wednesday then previous monday if thursday,friday then next monday"
+ {"type" "observance",
+  :name
+  {:en "Landing of the 33 Orientals",
+   :es "Desembarco de los 33 Orientales"}},
+ "12-24" {"type" "observance", :name (partial get-name "12-24")},
+ "05-18 if tuesday,wednesday then previous monday if thursday,friday then next monday"
+ {"type" "observance",
+  :name {:en "Battle of Las Piedras", :es "Batalla de las Piedras"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "easter -6 P5D"
+ {"type" "observance",
+  :name {:en "Tourism Week", :es "Semana de Turismo"}},
+ "11-02" {"type" "observance", :name (partial get-name "11-02")},
+ "10-12 if tuesday,wednesday then previous monday if thursday,friday then next monday"
+ {"type" "observance",
+  :name {:en "Columbus Day", :es "Día de la Raza"}},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "01-06" {"type" "observance", :name (partial get-name "01-06")},
+ "12-31" {"type" "observance", :name (partial get-name "12-31")},
+ "12-25" {:name (partial get-name "12-25")},
+ "06-19"
+ {"type" "observance",
+  :name
+  {:en "Birthday of José Gervasio Artigas and Never Again Day",
+   :es "Natalicio de Artigas y Día del Nunca Más"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

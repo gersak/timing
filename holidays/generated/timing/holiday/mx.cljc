@@ -10,42 +10,43 @@
 
 (def holidays
   {"3rd monday in November"
-   {"active" [{"from" #inst "2006-01-18T00:00:00.000-00:00"}],
-    :name (partial get-name "Revolution Day")},
-   "11-20"
-   {"active" [{"to" #inst "2006-01-17T00:00:00.000-00:00"}],
-    :name (partial get-name "Revolution Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "12-01 every 6 years since 1934"
-   {:name
-    {:en "Change of Federal Government",
-     :es "Transmisión del Poder Ejecutivo Federal"}},
-   "1st monday in February"
-   {"active" [{"from" #inst "2006-01-18T00:00:00.000-00:00"}],
-    :name (partial get-name "Constitution Day")},
-   "09-16" {:name (partial get-name "Independence Day")},
-   "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
-   "02-05"
-   {"active" [{"to" #inst "2006-01-17T00:00:00.000-00:00"}],
-    :name (partial get-name "Constitution Day")},
-   "05-10" {"type" "observance", :name (partial get-name "Mothers Day")},
-   "11-02" {"type" "bank", :name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {"type" "bank", :name (partial get-name "easter -3")},
-   "3rd monday in March"
-   {"active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
-    :name
-    {:en "Benito Juárez's birthday", :es "Natalicio de Benito Juárez"}},
-   "03-21"
-   {"active" [{"to" #inst "2006-12-31T00:00:00.000-00:00"}],
-    :name
-    {:en "Benito Juárez's birthday", :es "Natalicio de Benito Juárez"}},
-   "12-25" {:name (partial get-name "12-25")},
-   "12-12"
-   {"type" "bank",
-    :name
-    {:en "Day of the Virgin of Guadalupe",
-     :es "Día de la Virgen de Guadalupe"}}})
+ {"active" [{"from" #inst "2006-01-18T00:00:00.000-00:00"}],
+  :name (partial get-name "Revolution Day")},
+ "11-20"
+ {"active" [{"to" #inst "2006-01-17T00:00:00.000-00:00"}],
+  :name (partial get-name "Revolution Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "12-01 every 6 years since 1934"
+ {:name
+  {:en "Change of Federal Government",
+   :es "Transmisión del Poder Ejecutivo Federal"}},
+ "1st monday in February"
+ {"active" [{"from" #inst "2006-01-18T00:00:00.000-00:00"}],
+  :name (partial get-name "Constitution Day")},
+ "09-16" {:name (partial get-name "Independence Day")},
+ "easter -2" {"type" "bank", :name (partial get-name "easter -2")},
+ "02-05"
+ {"active" [{"to" #inst "2006-01-17T00:00:00.000-00:00"}],
+  :name (partial get-name "Constitution Day")},
+ "05-10" {"type" "observance", :name (partial get-name "Mothers Day")},
+ "11-02" {"type" "bank", :name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {"type" "bank", :name (partial get-name "easter -3")},
+ "3rd monday in March"
+ {"active" [{"from" #inst "2007-01-01T00:00:00.000-00:00"}],
+  :name
+  {:en "Benito Juárez's birthday", :es "Natalicio de Benito Juárez"}},
+ "03-21"
+ {"active" [{"to" #inst "2006-12-31T00:00:00.000-00:00"}],
+  :name
+  {:en "Benito Juárez's birthday", :es "Natalicio de Benito Juárez"}},
+ "12-25" {:name (partial get-name "12-25")},
+ "12-12"
+ {"type" "bank",
+  :name
+  {:en "Day of the Virgin of Guadalupe",
+   :es "Día de la Virgen de Guadalupe"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

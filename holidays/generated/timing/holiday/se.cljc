@@ -9,66 +9,71 @@
    [timing.holiday.compiler :as compiler]))
 
 (def holidays
-  {"01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "12-13"
-   {"type" "observance",
-    :name {:sv "Luciadagen", :en "Saint Lucy's Day"}},
-   "06-06" {:name {:sv "Sveriges nationaldag", :en "National Day"}},
-   "easter -1"
-   {"type" "observance", :name (partial get-name "easter -1")},
-   "03-25"
-   {"type" "observance",
-    :name
-    {:sv "Marie Bebådelsedag",
-     :en "Annunciation Day",
-     :lat "Annuntiatio Mariæ"}},
-   "easter 50"
-   {"type" "observance", :name (partial get-name "easter 50")},
-   "04-30 12:00"
-   {"type" "optional",
-    :name {:sv "Valborgsmässoafton", :en "Walpurgis Night"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-24" {"type" "bank", :name (partial get-name "12-24")},
-   "friday after 06-19"
-   {"type" "bank",
-    :name
-    {:sv "Midsommarafton", :en "Midsummer Eve", :fi "Juhannusaatto"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "12-10"
-   {"type" "observance", :name {:sv "Nobeldagen", :en "Nobel Day"}},
-   "01-13"
-   {"type" "observance",
-    :name {:sv "Tjugondag Knut", :en "Saint Knut's Day"}},
-   "1st sunday in March" {"type" "observance", :name {:sv "Vasaloppet"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 49" {"type" "public", :name (partial get-name "easter 49")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "11-06"
-   {"type" "observance",
-    :name {:sv "Gustav-Adolf-dagen", :en "Gustavus Adolphus Day"}},
-   "sunday before 06-01"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3"
-   {"type" "observance", :name (partial get-name "easter -3")},
-   "easter 48"
-   {"type" "observance", :name {:sv "Pingstafton", :en "Whitsun Eve"}},
-   "friday after 10-30 12:00"
-   {"type" "optional", :name {:sv "Allhelgonaafton", :en "Halloween"}},
-   "saturday after 06-20"
-   {:name
-    {:sv "Midsommardagen", :en "Midsummer Day", :fi "Juhannuspäivä"}},
-   "01-06" {:name (partial get-name "01-06")},
-   "01-05 12:00"
-   {"type" "optional",
-    :name {:sv "Trettondagsafton", :en "Twelfth Night"}},
-   "12-31" {"type" "bank", :name (partial get-name "12-31")},
-   "saturday after 10-31" {:name (partial get-name "11-01")},
-   "11-11"
-   {"type" "observance",
-    :name {:sv "Mårtensgås", :en "Saint Martin's Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+  {"03-25 prior to 1990"
+ {"type" "observance",
+  :name
+  {:sv "Marie Bebådelsedag",
+   :en "Annunciation Day",
+   :lat "Annuntiatio Mariæ"}},
+ "06-06 since 2005"
+ {:name {:sv "Sveriges nationaldag", :en "National Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "12-13"
+ {"type" "observance",
+  :name {:sv "Luciadagen", :en "Saint Lucy's Day"}},
+ "easter -1"
+ {"type" "observance", :name (partial get-name "easter -1")},
+ "easter 50"
+ {"type" "observance", :name (partial get-name "easter 50")},
+ "04-30 12:00"
+ {"type" "optional",
+  :name {:sv "Valborgsmässoafton", :en "Walpurgis Night"}},
+ "easter" {:name (partial get-name "easter")},
+ "12-24" {"type" "bank", :name (partial get-name "12-24")},
+ "friday after 06-19"
+ {"type" "bank",
+  :name
+  {:sv "Midsommarafton", :en "Midsummer Eve", :fi "Juhannusaatto"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "12-10"
+ {"type" "observance", :name {:sv "Nobeldagen", :en "Nobel Day"}},
+ "01-13"
+ {"type" "observance",
+  :name {:sv "Tjugondag Knut", :en "Saint Knut's Day"}},
+ "1st sunday in March" {"type" "observance", :name {:sv "Vasaloppet"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 49" {"type" "public", :name (partial get-name "easter 49")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "11-06"
+ {"type" "observance",
+  :name {:sv "Gustav-Adolf-dagen", :en "Gustavus Adolphus Day"}},
+ "sunday before 06-01"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3"
+ {"type" "observance", :name (partial get-name "easter -3")},
+ "easter 48"
+ {"type" "observance", :name {:sv "Pingstafton", :en "Whitsun Eve"}},
+ "friday after 10-30 12:00"
+ {"type" "optional", :name {:sv "Allhelgonaafton", :en "Halloween"}},
+ "saturday after 06-20"
+ {:name
+  {:sv "Midsommardagen", :en "Midsummer Day", :fi "Juhannuspäivä"}},
+ "01-06" {:name (partial get-name "01-06")},
+ "06-06 since 1983 prior to 2005"
+ {"type" "observance",
+  :name {:sv "Sveriges nationaldag", :en "National Day"}},
+ "01-05 12:00"
+ {"type" "optional",
+  :name {:sv "Trettondagsafton", :en "Twelfth Night"}},
+ "12-31" {"type" "bank", :name (partial get-name "12-31")},
+ "saturday after 10-31" {:name (partial get-name "11-01")},
+ "11-11"
+ {"type" "observance",
+  :name {:sv "Mårtensgås", :en "Saint Martin's Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

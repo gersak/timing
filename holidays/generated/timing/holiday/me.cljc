@@ -10,57 +10,58 @@
 
 (def holidays
   {"08-15" {"type" "observance", :name (partial get-name "08-15")},
-   "julian 12-26" {:name (partial get-name "12-26")},
-   "27 Ramadan"
-   {"type" "observance", :name (partial get-name "27 Ramadan")},
-   "05-02 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "27 Rajab" {"type" "observance", :name (partial get-name "27 Rajab")},
-   "11-01" {:name (partial get-name "11-01")},
-   "07-14 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:hr "Dan državnosti", :sr "Дан државности", :en "Statehood Day"}},
-   "15 Shaban"
-   {"type" "observance", :name (partial get-name "15 Shaban")},
-   "easter" {:name (partial get-name "easter")},
-   "07-13 and if sunday then next tuesday"
-   {"substitute" true,
-    :name
-    {:hr "Dan državnosti", :sr "Дан државности", :en "Statehood Day"}},
-   "12-24" {:name (partial get-name "12-24")},
-   "julian 12-24" {:name (partial get-name "12-24")},
-   "1 Muharram"
-   {"type" "observance", :name (partial get-name "1 Muharram")},
-   "julian 01-01"
-   {"type" "observance", :name (partial get-name "julian 01-01")},
-   "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
-   "1 Tishrei"
-   {"type" "observance", :name (partial get-name "1 Tishrei")},
-   "01-01 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "05-21 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "15 Nisan P2D" {:name (partial get-name "15 Nisan")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "01-02 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "12-26" {:name (partial get-name "12-25")},
-   "easter 1" {:name (partial get-name "easter")},
-   "orthodox -2" {:name (partial get-name "easter -2")},
-   "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "julian 12-25" {:name (partial get-name "12-25")},
-   "05-22 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "Independence Day")},
-   "05-01 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "10 Tishrei P2D" {:name (partial get-name "10 Tishrei")},
-   "orthodox" {:name (partial get-name "easter")},
-   "12 Rabi al-awwal"
-   {"type" "observance", :name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")},
-   "1 Ramadan"
-   {"type" "observance", :name (partial get-name "1 Ramadan")}})
+ "julian 12-26" {:name (partial get-name "12-26")},
+ "27 Ramadan"
+ {"type" "observance", :name (partial get-name "27 Ramadan")},
+ "05-02 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "27 Rajab" {"type" "observance", :name (partial get-name "27 Rajab")},
+ "11-01" {:name (partial get-name "11-01")},
+ "07-14 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:hr "Dan državnosti", :sr "Дан државности", :en "Statehood Day"}},
+ "15 Shaban"
+ {"type" "observance", :name (partial get-name "15 Shaban")},
+ "easter" {:name (partial get-name "easter")},
+ "07-13 and if sunday then next tuesday"
+ {"substitute" true,
+  :name
+  {:hr "Dan državnosti", :sr "Дан државности", :en "Statehood Day"}},
+ "12-24" {:name (partial get-name "12-24")},
+ "julian 12-24" {:name (partial get-name "12-24")},
+ "1 Muharram"
+ {"type" "observance", :name (partial get-name "1 Muharram")},
+ "julian 01-01"
+ {"type" "observance", :name (partial get-name "julian 01-01")},
+ "1 Shawwal P3D" {:name (partial get-name "1 Shawwal")},
+ "1 Tishrei"
+ {"type" "observance", :name (partial get-name "1 Tishrei")},
+ "01-01 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "05-21 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "15 Nisan P2D" {:name (partial get-name "15 Nisan")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "01-02 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "12-26" {:name (partial get-name "12-25")},
+ "easter 1" {:name (partial get-name "easter")},
+ "orthodox -2" {:name (partial get-name "easter -2")},
+ "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "julian 12-25" {:name (partial get-name "12-25")},
+ "05-22 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "Independence Day")},
+ "05-01 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "10 Tishrei P2D" {:name (partial get-name "10 Tishrei")},
+ "orthodox" {:name (partial get-name "easter")},
+ "12 Rabi al-awwal"
+ {"type" "observance", :name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")},
+ "1 Ramadan"
+ {"type" "observance", :name (partial get-name "1 Ramadan")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

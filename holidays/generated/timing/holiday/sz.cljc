@@ -10,28 +10,29 @@
 
 (def holidays
   {"12-28 P6D" {:name {:ss "Incwala", :en "Incwala Festival"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "05-01 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-26 and if Sunday then next Monday"
-   {:name (partial get-name "12-26")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1st Monday in September"
-   {:name {:ss "Umhlanga Reed Dance", :en "Umhlanga Reed Dance"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "07-22 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name {:en "Birthday of the late King Sobhuza"}},
-   "04-19 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name {:en "Birthday of King Mswati III"}},
-   "09-06 and if Saturday, Sunday then next Monday"
-   {"substitute" true,
-    "_name" "Independence Day",
-    :name {:ss "Somhlolo Day"}},
-   "04-25 and if Saturday, Sunday then next Monday"
-   {"substitute" true, :name {:en "National Flag Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "05-01 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "12-26 and if Sunday then next Monday"
+ {:name (partial get-name "12-26")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1st Monday in September"
+ {:name {:ss "Umhlanga Reed Dance", :en "Umhlanga Reed Dance"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "07-22 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name {:en "Birthday of the late King Sobhuza"}},
+ "04-19 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name {:en "Birthday of King Mswati III"}},
+ "09-06 and if Saturday, Sunday then next Monday"
+ {"substitute" true,
+  "_name" "Independence Day",
+  :name {:ss "Somhlolo Day"}},
+ "04-25 and if Saturday, Sunday then next Monday"
+ {"substitute" true, :name {:en "National Flag Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,19 +10,20 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "01-01" {:name (partial get-name "01-01")},
-   "06-29" {:name (partial get-name "06-29")},
-   "11-01" {:name (partial get-name "11-01")},
-   "10-08" {:name {:en "Battle of Angamos", :es "Combate de Angamos"}},
-   "easter" {:name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "08-30"
-   {:name {:en "Santa Rosa de Lima", :es "Día de Santa Rosa de Lima"}},
-   "07-29" {:name (partial get-name "Independence Day")},
-   "05-01" {:name (partial get-name "05-01")},
-   "easter -3" {:name (partial get-name "easter -3")},
-   "07-28" {:name (partial get-name "Independence Day")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "01-01" {:name (partial get-name "01-01")},
+ "06-29" {:name (partial get-name "06-29")},
+ "11-01" {:name (partial get-name "11-01")},
+ "10-08" {:name {:en "Battle of Angamos", :es "Combate de Angamos"}},
+ "easter" {:name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "08-30"
+ {:name {:en "Santa Rosa de Lima", :es "Día de Santa Rosa de Lima"}},
+ "07-29" {:name (partial get-name "Independence Day")},
+ "05-01" {:name (partial get-name "05-01")},
+ "easter -3" {:name (partial get-name "easter -3")},
+ "07-28" {:name (partial get-name "Independence Day")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

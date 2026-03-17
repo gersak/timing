@@ -10,22 +10,23 @@
 
 (def holidays
   {"monday before 06-20" {:name {:en "Queen's Birthday"}},
-   "09-10 and if sunday, saturday then previous monday"
-   {"substitute" true,
-    "active" [{"from" 2015}],
-    :name {:en "Gibraltar National Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "monday before September" {:name {:en "Late Summer Bank Holiday"}},
-   "2020-05-08" {:name {:en "Victory in Europe Day (VE Day)"}},
-   "2nd monday in March" {:name {:en "Commonwealth Day"}},
-   "09-10"
-   {"active" [{"to" 2015}], :name {:en "Gibraltar National Day"}},
-   "04-28"
-   {"disable" ["2015-04-28"],
-    "enable" ["2015-04-27"],
-    :name {:en "Workers Memorial Day"}},
-   "05-01 if sunday, saturday then next monday"
-   {"substitute" true, :name {:en "May Day"}}})
+ "09-10 and if sunday, saturday then previous monday"
+ {"substitute" true,
+  "active" [{"from" 2015}],
+  :name {:en "Gibraltar National Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "monday before September" {:name {:en "Late Summer Bank Holiday"}},
+ "2020-05-08" {:name {:en "Victory in Europe Day (VE Day)"}},
+ "2nd monday in March" {:name {:en "Commonwealth Day"}},
+ "09-10"
+ {"active" [{"to" 2015}], :name {:en "Gibraltar National Day"}},
+ "04-28"
+ {"disable" ["2015-04-28"],
+  "enable" ["2015-04-27"],
+  :name {:en "Workers Memorial Day"}},
+ "05-01 if sunday, saturday then next monday"
+ {"substitute" true, :name {:en "May Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

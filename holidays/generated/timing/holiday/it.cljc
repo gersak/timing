@@ -10,22 +10,25 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "01-01" {:name (partial get-name "01-01")},
-   "06-02" {:name {:it "Festa della Repubblica", :en "Republic Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter" {:name (partial get-name "easter")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "2011-03-17"
-   {:name {:it "Festa Nazionale 2011", :en "National Day 2011"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "01-06" {:name (partial get-name "01-06")},
-   "04-25"
-   {:name {:it "Anniversario della Liberazione", :en "Liberation Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "08-15" {:name (partial get-name "08-15")},
+ "01-01" {:name (partial get-name "01-01")},
+ "06-02" {:name {:it "Festa della Repubblica", :en "Republic Day"}},
+ "10-04 since 2026"
+ {:name {:it "San Francesco d'Assisi", :en "Francis of Assisi"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter" {:name (partial get-name "easter")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "2011-03-17"
+ {:name {:it "Festa Nazionale 2011", :en "National Day 2011"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "01-06" {:name (partial get-name "01-06")},
+ "04-25"
+ {:name {:it "Anniversario della Liberazione", :en "Liberation Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

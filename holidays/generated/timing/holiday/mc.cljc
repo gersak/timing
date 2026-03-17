@@ -10,27 +10,28 @@
 
 (def holidays
   {"12-08" {:name (partial get-name "12-08")},
-   "08-15" {:name (partial get-name "08-15")},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter 50" {:name (partial get-name "easter 50")},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "12-25 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "11-19 and if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:en "H.S.H. the Sovereign Prince's Day", :fr "La Fête du Prince"}},
-   "easter -2"
-   {"type" "observance", :name (partial get-name "easter -2")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, "_name" "05-01", :name {:fr "1er mai"}},
-   "01-27 and if sunday then next monday"
-   {"substitute" true,
-    :name {:en "Saint Devota's Day", :fr "Sainte Dévote"}}})
+ "08-15" {:name (partial get-name "08-15")},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter 50" {:name (partial get-name "easter 50")},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "12-25 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "11-19 and if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:en "H.S.H. the Sovereign Prince's Day", :fr "La Fête du Prince"}},
+ "easter -2"
+ {"type" "observance", :name (partial get-name "easter -2")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, "_name" "05-01", :name {:fr "1er mai"}},
+ "01-27 and if sunday then next monday"
+ {"substitute" true,
+  :name {:en "Saint Devota's Day", :fr "Sainte Dévote"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

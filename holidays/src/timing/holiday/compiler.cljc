@@ -220,6 +220,8 @@
      rel-nth :nth
      rel-week-day :week-day
      rel-day-in-month :day-in-month
+     rel-easter? :easter?
+     rel-easter-offset :offset
      in? :in?
      :or {rel-day-in-month 1}} :relative-to
     :or {_nth 1
@@ -239,7 +241,7 @@
                 (+ value (v/weeks (if before?
                                     (dec _nth)
                                     (- (dec _nth))))))))]
-    (fn [{:keys [value]
+    (fn [{:keys [value year]
           week-day :day}]
       ;; Only if weekday matches
       (when (= week-day _week-day)
@@ -259,6 +261,16 @@
                     (inc (* 7 (dec rel-nth)))
                     (:day-in-month rctx)
                     (* 7 rel-nth)))
+              true))
+          ;; relative to easter-based date
+          rel-easter?
+          (let [easter (catholic/easter year)
+                easter-value (:value (->day-time-context year (:month easter) (:day-in-month easter)))
+                ;; Target date is easter + offset (e.g. easter -46 for Ash Wednesday)
+                target-value (+ easter-value (v/days (or rel-easter-offset 0)))
+                ;; Find the weekday before/after the target
+                result-value (first-week-day _week-day predicate target-value)]
+            (when (= value result-value)
               true))
           ;; relative to static date
           (and rel-day-in-month rel-month)

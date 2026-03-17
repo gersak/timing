@@ -10,33 +10,34 @@
 
 (def holidays
   {"easter -48" {:name (partial get-name "easter -48")},
-   "04-27"
-   {:name {:pap "Aña di Rey", :nl "Koningsdag", :en "Kings Day"}},
-   "01-01" {:name (partial get-name "01-01")},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "03-18 and if saturday then previous friday if sunday then next monday"
-   {"substitute" true,
-    :name
-    {:pap "Dia di Himno y Bandera",
-     :nl "Herdenking Vlag en Volkslied",
-     :en "National Anthem and Flag Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "06-24"
-   {"type" "observance",
-    :name {:pap "Dera Gai", :nl "Dera Gai", :en "Dera Gai"}},
-   "12-05"
-   {"type" "observance",
-    :name {:nl "Sinterklaasavond", :en "St. Nicholas' Eve"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "05-01 if sunday then next monday" {:name (partial get-name "05-01")},
-   "01-25"
-   {:name
-    {:pap "Dia di Betico",
-     :nl "Herdenking G. F. Croes",
-     :en "Betico Croes Day"}},
-   "12-26" {:name (partial get-name "12-26")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "04-27"
+ {:name {:pap "Aña di Rey", :nl "Koningsdag", :en "Kings Day"}},
+ "01-01" {:name (partial get-name "01-01")},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "03-18 and if saturday then previous friday if sunday then next monday"
+ {"substitute" true,
+  :name
+  {:pap "Dia di Himno y Bandera",
+   :nl "Herdenking Vlag en Volkslied",
+   :en "National Anthem and Flag Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "06-24"
+ {"type" "observance",
+  :name {:pap "Dera Gai", :nl "Dera Gai", :en "Dera Gai"}},
+ "12-05"
+ {"type" "observance",
+  :name {:nl "Sinterklaasavond", :en "St. Nicholas' Eve"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "05-01 if sunday then next monday" {:name (partial get-name "05-01")},
+ "01-25"
+ {:name
+  {:pap "Dia di Betico",
+   :nl "Herdenking G. F. Croes",
+   :en "Betico Croes Day"}},
+ "12-26" {:name (partial get-name "12-26")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

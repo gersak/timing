@@ -10,30 +10,31 @@
 
 (def holidays
   {"10 Dhu al-Hijjah"
-   {"note" "For all persons belonging to the Islamic faith.",
-    :name (partial get-name "10 Dhu al-Hijjah")},
-   "10-20 and if sunday then next monday"
-   {"substitute" true,
-    :name {:sw "Siku ya Mashujaa", :en "Mashujaa Day"}},
-   "12-25 and if sunday then next tuesday"
-   {"substitute" true, :name (partial get-name "12-25")},
-   "10-10 and if sunday then next monday"
-   {"substitute" true, :name {:en "Moi Day"}},
-   "01-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "01-01")},
-   "easter" {:name (partial get-name "easter")},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "12-26 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "12-26")},
-   "06-01 and if sunday then next monday"
-   {"substitute" true,
-    :name {:sw "Siku ya Madaraka", :en "Madaraka Day"}},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01 and if sunday then next monday"
-   {"substitute" true, :name (partial get-name "05-01")},
-   "12-12 and if sunday then next monday"
-   {"substitute" true, :name {:sw "Siku ya Jamhuri", :en "Jamhuri Day"}}})
+ {"note" "For all persons belonging to the Islamic faith.",
+  :name (partial get-name "10 Dhu al-Hijjah")},
+ "10-20 and if sunday then next monday"
+ {"substitute" true,
+  :name {:sw "Siku ya Mashujaa", :en "Mashujaa Day"}},
+ "12-25 and if sunday then next tuesday"
+ {"substitute" true, :name (partial get-name "12-25")},
+ "10-10 and if sunday then next monday"
+ {"substitute" true, :name {:en "Moi Day"}},
+ "01-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "01-01")},
+ "easter" {:name (partial get-name "easter")},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "12-26 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "12-26")},
+ "06-01 and if sunday then next monday"
+ {"substitute" true,
+  :name {:sw "Siku ya Madaraka", :en "Madaraka Day"}},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01 and if sunday then next monday"
+ {"substitute" true, :name (partial get-name "05-01")},
+ "12-12 and if sunday then next monday"
+ {"substitute" true, :name {:sw "Siku ya Jamhuri", :en "Jamhuri Day"}}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

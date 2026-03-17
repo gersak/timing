@@ -10,23 +10,24 @@
 
 (def holidays
   {"08-15" {:name (partial get-name "08-15")},
-   "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "10-02" {:name (partial get-name "Independence Day")},
-   "01-01" {:name (partial get-name "01-01")},
-   "27 Ramadan" {:name (partial get-name "27 Ramadan")},
-   "05-25"
-   {:name
-    {:fr "Anniversaire de l'Organisation de l'unité africaine (OUA)",
-     :en "Africa Day"}},
-   "04-03"
-   {:name
-    {:fr "Fête Nationale de la deuxième République",
-     :en "National Holiday"}},
-   "1 Shawwal" {:name (partial get-name "1 Shawwal")},
-   "easter 1" {:name (partial get-name "easter 1")},
-   "05-01" {:name (partial get-name "05-01")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "10 Dhu al-Hijjah" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "10-02" {:name (partial get-name "Independence Day")},
+ "01-01" {:name (partial get-name "01-01")},
+ "27 Ramadan" {:name (partial get-name "27 Ramadan")},
+ "05-25"
+ {:name
+  {:fr "Anniversaire de l'Organisation de l'unité africaine (OUA)",
+   :en "Africa Day"}},
+ "04-03"
+ {:name
+  {:fr "Fête Nationale de la deuxième République",
+   :en "National Holiday"}},
+ "1 Shawwal" {:name (partial get-name "1 Shawwal")},
+ "easter 1" {:name (partial get-name "easter 1")},
+ "05-01" {:name (partial get-name "05-01")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

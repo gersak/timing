@@ -10,36 +10,37 @@
 
 (def holidays
   {"easter -48 14:00" {:name {:fr "Lundi Gras", :en "Lundi Gras"}},
-   "easter -46"
-   {"type" "observance", :name (partial get-name "easter -46")},
-   "08-15" {:name (partial get-name "08-15")},
-   "10-17"
-   {:name
-    {:fr "Anniversaire de la mort de Dessalines",
-     :en "Anniversary of the death of Dessalines"}},
-   "easter 60" {:name (partial get-name "easter 60")},
-   "01-01" {:name (partial get-name "Independence Day")},
-   "01-02" {:name {:fr "Jour des Aieux", :en "Ancestry Day"}},
-   "easter 39" {:name (partial get-name "easter 39")},
-   "easter -47" {:name {:fr "Mardi Gras", :en "Mardi Gras"}},
-   "05-18"
-   {:name
-    {:fr "Jour du Drapeau et de l'Université",
-     :en "Flag and Universities' Day"}},
-   "11-01" {:name (partial get-name "11-01")},
-   "easter" {:name (partial get-name "easter")},
-   "12-05"
-   {"type" "observance",
-    :name {:fr "Découverte d'Haïti", :en "Discovery Day"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "11-02" {:name (partial get-name "11-02")},
-   "05-01" {:name (partial get-name "05-01")},
-   "01-06"
-   {"_name" "01-06",
-    "type" "observance",
-    :name {:fr "Le Jour des Rois"}},
-   "11-18" {:name {:fr "Vertières", :en "Battle of Vertières Day"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ "easter -46"
+ {"type" "observance", :name (partial get-name "easter -46")},
+ "08-15" {:name (partial get-name "08-15")},
+ "10-17"
+ {:name
+  {:fr "Anniversaire de la mort de Dessalines",
+   :en "Anniversary of the death of Dessalines"}},
+ "easter 60" {:name (partial get-name "easter 60")},
+ "01-01" {:name (partial get-name "Independence Day")},
+ "01-02" {:name {:fr "Jour des Aieux", :en "Ancestry Day"}},
+ "easter 39" {:name (partial get-name "easter 39")},
+ "easter -47" {:name {:fr "Mardi Gras", :en "Mardi Gras"}},
+ "05-18"
+ {:name
+  {:fr "Jour du Drapeau et de l'Université",
+   :en "Flag and Universities' Day"}},
+ "11-01" {:name (partial get-name "11-01")},
+ "easter" {:name (partial get-name "easter")},
+ "12-05"
+ {"type" "observance",
+  :name {:fr "Découverte d'Haïti", :en "Discovery Day"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "11-02" {:name (partial get-name "11-02")},
+ "05-01" {:name (partial get-name "05-01")},
+ "01-06"
+ {"_name" "01-06",
+  "type" "observance",
+  :name {:fr "Le Jour des Rois"}},
+ "11-18" {:name {:fr "Vertières", :en "Battle of Vertières Day"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

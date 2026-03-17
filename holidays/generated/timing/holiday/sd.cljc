@@ -10,15 +10,16 @@
 
 (def holidays
   {"01-01" {:name (partial get-name "Independence Day")},
-   "12-19" {:name (partial get-name "Revolution Day")},
-   "1 Muharram" {:name (partial get-name "1 Muharram")},
-   "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
-   "julian 12-25"
-   {"_name" "julian 12-25", :name {:en "Coptic Christmas"}},
-   "orthodox" {"_name" "orthodox", :name {:en "Coptic Easter"}},
-   "1 Shawwal P4D" {:name (partial get-name "1 Shawwal")},
-   "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
-   "12-25" {:name (partial get-name "12-25")}})
+ "12-19" {:name (partial get-name "Revolution Day")},
+ "1 Muharram" {:name (partial get-name "1 Muharram")},
+ "10 Dhu al-Hijjah P3D" {:name (partial get-name "10 Dhu al-Hijjah")},
+ "julian 12-25"
+ {"_name" "julian 12-25", :name {:en "Coptic Christmas"}},
+ "orthodox" {"_name" "orthodox", :name {:en "Coptic Easter"}},
+ "1 Shawwal P4D" {:name (partial get-name "1 Shawwal")},
+ "12 Rabi al-awwal" {:name (partial get-name "12 Rabi al-awwal")},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv

@@ -10,46 +10,47 @@
 
 (def holidays
   {"substitutes 07-01 if sunday then next monday"
-   {"note" "except mining industy", :name {:en "Public Holiday"}},
-   "substitutes 01-02 if monday then next tuesday"
-   {"note" "except mining industy", :name {:en "Public Holiday"}},
-   "07-01"
-   {"note" "except mining industy", :name {:en "Sir Seretse Khama Day"}},
-   "01-01"
-   {"note" "except mining industy", :name (partial get-name "01-01")},
-   "01-02"
-   {"note" "except mining industy", :name {:en "New Year's Holiday"}},
-   "easter 39"
-   {"note" "except mining industy",
-    :name (partial get-name "easter 39")},
-   "tuesday after 3rd monday in July"
-   {"note" "except mining industy",
-    :name {:en "President’s Day Holiday"}},
-   "substitutes 05-01 if sunday then next monday"
-   {"note" "except mining industy", :name {:en "Public Holiday"}},
-   "easter -1"
-   {"note" "except mining industy",
-    :name (partial get-name "easter -1")},
-   "09-30" {:name {:en "Botswana Day"}},
-   "easter" {"type" "observance", :name (partial get-name "easter")},
-   "substitutes 12-26 if monday then next tuesday"
-   {:name {:en "Public Holiday"}},
-   "easter -2" {:name (partial get-name "easter -2")},
-   "2nd sunday in May"
-   {"type" "observance", :name (partial get-name "Mothers Day")},
-   "3rd monday in July"
-   {"note" "except mining industy", :name {:en "President’s Day"}},
-   "12-26"
-   {"_name" "12-26",
-    "note" "except mining industy",
-    :name {:en "Family Day"}},
-   "easter 1"
-   {"note" "except mining industy", :name (partial get-name "easter 1")},
-   "05-01"
-   {"note" "except mining industy", :name (partial get-name "05-01")},
-   "substitutes 09-30 if saturday,sunday then next monday"
-   {:name {:en "Public Holiday"}},
-   "12-25" {:name (partial get-name "12-25")}})
+ {"note" "except mining industy", :name {:en "Public Holiday"}},
+ "substitutes 01-02 if monday then next tuesday"
+ {"note" "except mining industy", :name {:en "Public Holiday"}},
+ "07-01"
+ {"note" "except mining industy", :name {:en "Sir Seretse Khama Day"}},
+ "01-01"
+ {"note" "except mining industy", :name (partial get-name "01-01")},
+ "01-02"
+ {"note" "except mining industy", :name {:en "New Year's Holiday"}},
+ "easter 39"
+ {"note" "except mining industy",
+  :name (partial get-name "easter 39")},
+ "tuesday after 3rd monday in July"
+ {"note" "except mining industy",
+  :name {:en "President’s Day Holiday"}},
+ "substitutes 05-01 if sunday then next monday"
+ {"note" "except mining industy", :name {:en "Public Holiday"}},
+ "easter -1"
+ {"note" "except mining industy",
+  :name (partial get-name "easter -1")},
+ "09-30" {:name {:en "Botswana Day"}},
+ "easter" {"type" "observance", :name (partial get-name "easter")},
+ "substitutes 12-26 if monday then next tuesday"
+ {:name {:en "Public Holiday"}},
+ "easter -2" {:name (partial get-name "easter -2")},
+ "2nd sunday in May"
+ {"type" "observance", :name (partial get-name "Mothers Day")},
+ "3rd monday in July"
+ {"note" "except mining industy", :name {:en "President’s Day"}},
+ "12-26"
+ {"_name" "12-26",
+  "note" "except mining industy",
+  :name {:en "Family Day"}},
+ "easter 1"
+ {"note" "except mining industy", :name (partial get-name "easter 1")},
+ "05-01"
+ {"note" "except mining industy", :name (partial get-name "05-01")},
+ "substitutes 09-30 if saturday,sunday then next monday"
+ {:name {:en "Public Holiday"}},
+ "12-25" {:name (partial get-name "12-25")}}
+)
 
 (def locale-holiday-mapping
   (reduce-kv
