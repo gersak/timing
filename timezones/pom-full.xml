@@ -2,23 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.gersak</groupId>
-  <artifactId>timing.cron</artifactId>
-  <version>0.6.1</version>
-  <name>timing.cron</name>
+  <artifactId>timing.timezones.full</artifactId>
+  <version>0.6.0</version>
+  <name>timing.timezones.full</name>
   <packaging>jar</packaging>
-
-  <dependencies>
-    <dependency>
-      <groupId>dev.gersak</groupId>
-      <artifactId>timing.core</artifactId>
-      <version>0.6.4</version>
-    </dependency>
-  </dependencies>
 
   <build>
     <resources>
       <resource>
-        <directory>src</directory>
+        <directory>src-full</directory>
       </resource>
     </resources>
   </build>
@@ -31,7 +23,7 @@
     </repository>
   </distributionManagement>
 
-  <description>Timing cron expression parser and scheduler</description>
+  <description>Timing timezone DB with full historical rules</description>
   <url>https://github.com/gersak/timing</url>
   <licenses>
     <license>

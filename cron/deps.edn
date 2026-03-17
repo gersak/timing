@@ -1,8 +1,5 @@
 {:deps
- {dev.gersak/timing.core {:local/root "../core"}
-  ; dev.gersak/timing.core {:mvn/version "0.6.4"}
-  kovacnica/dreamcatcher {:mvn/version "1.0.9"
-                          :exclusions [org.clojure/clojurescript]}}
+ {dev.gersak/timing.core {:local/root "../core"}}
  :paths ["src"]
  :aliases
  {:cider
