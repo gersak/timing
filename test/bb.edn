@@ -1,2 +1,2 @@
-{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.8.0"}
-        dev.gersak/timing.holidays {:mvn/version "0.8.0"}}}
+{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.8.1"}
+        dev.gersak/timing.holidays {:mvn/version "0.8.1"}}}

@@ -13,7 +13,7 @@ approach refreshing.
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
 </p>
 
-# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.0/doc/readme)
+# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.1/doc/readme)
 
 
 ## 🤔 Why Try Timing?
@@ -77,28 +77,34 @@ Handle edge cases naturally with smart period functions:
 ### Installation
 ```clojure
 ;; deps.edn - Full umbrella library
-{:deps {dev.gersak/timing {:mvn/version "0.8.0"}}}
+{:deps {dev.gersak/timing {:mvn/version "0.8.1"}}}
 
 ;; Leiningen
-[dev.gersak/timing "0.8.0"]
+[dev.gersak/timing "0.8.1"]
 ```
 
 ### Modular Installation
 You can also pick specific modules:
 ```clojure
-;; Just core functionality (no dependencies)
-{:deps {dev.gersak/timing.core {:mvn/version "0.8.0"}}}
-
-;; Timezones - choose ONE:
-{:deps {dev.gersak/timing.timezones {:mvn/version "0.8.0"}}}      ; Current rules only (~66KB)
-{:deps {dev.gersak/timing.timezones.full {:mvn/version "0.8.0"}}} ; With historical data (~529KB)
+;; Core + standard timezones (current rules only)
+{:deps {dev.gersak/timing.core {:mvn/version "0.8.1"}}}
 
 ;; Holidays
-{:deps {dev.gersak/timing.holidays {:mvn/version "0.8.0"}}}
+{:deps {dev.gersak/timing.holidays {:mvn/version "0.8.1"}}}
 
 ;; Cron expressions
-{:deps {dev.gersak/timing.cron {:mvn/version "0.8.0"}}}
+{:deps {dev.gersak/timing.cron {:mvn/version "0.8.1"}}}
 ```
+
+> **⚠️ Using Historical Timezones:** `timing.core` depends on `timing.timezones` by default.
+> If you need historical timezone data, you must exclude it and use `timing.timezones.full` instead:
+> ```clojure
+> {:deps {dev.gersak/timing.core {:mvn/version "0.8.1"
+>                                 :exclusions [dev.gersak/timing.timezones]}
+>         dev.gersak/timing.timezones.full {:mvn/version "0.8.1"}}}
+> ```
+> Both artifacts provide the same `timing.timezones.db` namespace. The `.full` variant adds ~529KB
+> but includes complete IANA tzdata history for accurate historical date calculations.
 
 ### Basic Usage
 ```clojure

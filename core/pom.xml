@@ -4,10 +4,17 @@
   <packaging>jar</packaging>
   <groupId>dev.gersak</groupId>
   <artifactId>timing.core</artifactId>
-  <version>0.8.0</version>
+  <version>0.8.1</version>
   <name>timing.core</name>
-  
-  
+
+  <dependencies>
+    <dependency>
+      <groupId>dev.gersak</groupId>
+      <artifactId>timing.timezones</artifactId>
+      <version>0.8.1</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <resources>
       <resource>
@@ -31,6 +38,6 @@
     <url>https://github.com/gersak/timing</url>
     <connection>scm:git:git://github.com/gersak/timing.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/gersak/timing.git</developerConnection>
-    <tag>v0.8.0</tag>
+    <tag>v0.8.1</tag>
   </scm>
 </project>
