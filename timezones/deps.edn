@@ -1,4 +1,4 @@
-{:paths ["src"]
+{:paths ["src-full"]  ;; Use full historical db for development
  :deps {dev.gersak/timing.core {:local/root "../core"}}
  :aliases
  {:dev
@@ -6,6 +6,18 @@
    :extra-deps
    {me.raynes/fs {:mvn/version "1.4.6"}
     instaparse/instaparse {:mvn/version "1.4.10"}}}
+  :compile
+  {:extra-paths ["compiler" "resources"]
+   :extra-deps
+   {me.raynes/fs {:mvn/version "1.4.6"}
+    instaparse/instaparse {:mvn/version "1.4.10"}}
+   :main-opts ["-m" "timing.timezones.compile"]}
+  :compile-full
+  {:extra-paths ["compiler" "resources"]
+   :extra-deps
+   {me.raynes/fs {:mvn/version "1.4.6"}
+    instaparse/instaparse {:mvn/version "1.4.10"}}
+   :main-opts ["-m" "timing.timezones.compile-full"]}
   :cider
   {:extra-deps {org.clojure/clojure {:mvn/version "1.10.1"}
                 cider/cider-nrepl {:mvn/version "0.27.3"}}

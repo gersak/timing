@@ -286,37 +286,81 @@
           (recur rest-rules history active)))))))
 
 
-(defn create-timezone-data []
-    (reduce
-      (fn [r zone]
-        (let [{:keys [zones rules]} (extract-data (read-zone zone))]
-          (let [zones' (reduce
-                         (fn [result [zone rules]]
-                           (assoc result 
-                             zone
-                             (if (string? rules) rules (:current (process-zone rules)))))
-                         {}
-                         zones)
-                rules' (reduce
-                         (fn [result [rule-name rules]]
-                           (assoc result 
+(defn create-timezone-data
+  "Creates timezone data with current rules only (no history)."
+  []
+  (reduce
+    (fn [r zone]
+      (let [{:keys [zones rules]} (extract-data (read-zone zone))]
+        (let [zones' (reduce
+                       (fn [result [zone rules]]
+                         (assoc result
+                           zone
+                           (if (string? rules) rules (:current (process-zone rules)))))
+                       {}
+                       zones)
+              rules' (reduce
+                       (fn [result [rule-name rules]]
+                         (assoc result
+                           rule-name
+                           (:current (process-rules rules))))
+                       {}
+                       rules)]
+          (->
+            r
+            (update :zones merge zones')
+            (update :rules merge rules')))))
+    {}
+    [:europe
+     :africa
+     :northamerica
+     :southamerica
+     :asia
+     :australasia
+     :backward
+     :etcetera]))
+
+(defn create-timezone-data-full
+  "Creates timezone data with full historical rules."
+  []
+  (reduce
+    (fn [r zone]
+      (let [{:keys [zones rules]} (extract-data (read-zone zone))]
+        (let [zones' (reduce
+                       (fn [result [zone rules]]
+                         (assoc result
+                           zone
+                           (if (string? rules)
+                             rules
+                             (let [{:keys [current history]} (process-zone rules)]
+                               (if (seq history)
+                                 {:current current :history history}
+                                 current)))))
+                       {}
+                       zones)
+              rules' (reduce
+                       (fn [result [rule-name rules]]
+                         (let [{:keys [current history]} (process-rules rules)]
+                           (assoc result
                              rule-name
-                             (:current (process-rules rules))))
-                         {}
-                         rules)]
-            (->
-              r
-              (update :zones merge zones')
-              (update :rules merge rules')))))
-      {}
-      [:europe
-       :africa
-       :northamerica
-       :southamerica
-       :asia
-       :australasia
-       :backward
-       :etcetera]))
+                             (if (seq history)
+                               {:current current :history history}
+                               current))))
+                       {}
+                       rules)]
+          (->
+            r
+            (update :zones merge zones')
+            (update :rules merge rules')))))
+    {}
+    [:europe
+     :africa
+     :northamerica
+     :southamerica
+     :asia
+     :australasia
+     :backward
+     :etcetera]))
 
 
 (defn create-locale-data []

@@ -7,8 +7,10 @@
 (declare db locales)
 
 
-(defn get-rule [rule]
-  (get-in db [:rules rule]))
+(defn get-rule
+  "Returns DST rule by name. Timestamp argument is ignored (current rules only)."
+  ([rule] (get-in db [:rules rule]))
+  ([rule _timestamp] (get-in db [:rules rule])))
 
 
 (defn- normalize-zone-name
@@ -36,20 +38,24 @@
         suggestions (distinct (concat exact prefix contains))]
     (take n suggestions)))
 
-(defn get-timezone [zone-name]
-  (if-let [zone' (get-in db [:zones zone-name])]
-    (if (string? zone') (get-timezone zone')
-        zone')
-    (let [suggestions (similar-zones zone-name 5)
-          msg (if (seq suggestions)
-                (str "No such zone '" zone-name "'. Did you mean: "
-                     (clojure.string/join ", " suggestions) "?")
-                (str "No such zone '" zone-name "'."))]
-      (throw
-       (ex-info msg
-                {:timezone zone-name
-                 :suggestions suggestions
-                 :available-timezones (keys (:zones db))})))))
+(defn get-timezone
+  "Returns timezone data by name. Timestamp argument is ignored (current rules only)."
+  ([zone-name]
+   (if-let [zone' (get-in db [:zones zone-name])]
+     (if (string? zone') (get-timezone zone')
+         zone')
+     (let [suggestions (similar-zones zone-name 5)
+           msg (if (seq suggestions)
+                 (str "No such zone '" zone-name "'. Did you mean: "
+                      (clojure.string/join ", " suggestions) "?")
+                 (str "No such zone '" zone-name "'."))]
+       (throw
+        (ex-info msg
+                 {:timezone zone-name
+                  :suggestions suggestions
+                  :available-timezones (keys (:zones db))})))))
+  ([zone-name _timestamp]
+   (get-timezone zone-name)))
 
 
 (def locales

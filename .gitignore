@@ -15,3 +15,4 @@ repl.clj
 *.backup
 *.old
 .project
+all_holidays.edn
