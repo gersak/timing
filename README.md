@@ -5,9 +5,13 @@
 
 **A time library that thinks in numbers and embraces functional programming.**
 
-Timing offers a different approach to time computation by working in the numeric domain first. 
-If you enjoy functional programming, sequences, and immutable data, you might find Timing's 
+Timing offers a different approach to time computation by working in the numeric domain first.
+If you enjoy functional programming, sequences, and immutable data, you might find Timing's
 approach refreshing.
+
+> **Core Philosophy:** `time->value` → *do your thing* → `value->time`
+>
+> Convert time to numbers, use all the arithmetic and sequence operations you love, then convert back when needed.
 
 <p align="center">
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
@@ -43,20 +47,9 @@ Timing was built to work well with Clojure's sequence operations:
      (map #(add-months (time->value (date 2024 1 1)) %))
      (map value->time))
 ; => (#inst "2024-01-01T00:00:00.000-00:00"
-;     #inst "2024-04-01T00:00:00.000-00:00" 
+;     #inst "2024-04-01T00:00:00.000-00:00"
 ;     #inst "2024-07-01T00:00:00.000-00:00"
 ;     #inst "2024-10-01T00:00:00.000-00:00")
-
-;; Business days using familiar sequence functions
-(def q1 (time->value (date 2024 1 15)))
-(->> (business-days-in-range (start-of-quarter q1) (end-of-quarter q1))
-     (take 5)
-     (map value->time))
-; => (#inst "2024-01-01T23:00:00.000-00:00"
-;     #inst "2024-01-02T23:00:00.000-00:00"
-;     #inst "2024-01-03T23:00:00.000-00:00"
-;     #inst "2024-01-04T23:00:00.000-00:00"
-;     #inst "2024-01-07T23:00:00.000-00:00")
 ```
 
 ### **Flexible Period Arithmetic**
@@ -173,10 +166,10 @@ t/week        ; => 604800000
 ### **3. Flexible Rounding & Alignment**
 ```clojure
 ;; Round to any precision
-(t/round-number 182.8137 0.25 :up)      ; => 183.0
-(t/round-number 182.8137 0.25 :down)    ; => 182.75
-(t/round-number 182.8137 0.25 :ceil)    ; => 183.0
-(t/round-number 182.8137 0.25 :floor)   ; => 182.75
+(t/round-number 182.8137 0.25 :ceil)    ; => 183.0  (always up)
+(t/round-number 182.8137 0.25 :floor)   ; => 182.75 (always down)
+(t/round-number 182.875 0.25 :up)       ; => 183.0  (ties round up)
+(t/round-number 182.875 0.25 :down)     ; => 182.75 (ties round down)
 
 ;; Align to time boundaries
 (def test-value (t/time->value (t/date 2024 6 15 14 30 45)))
@@ -232,16 +225,16 @@ t/week        ; => 604800000
 (def today (t/time->value (t/date 2024 6 15)))  ; Saturday
 
 (adj/next-day-of-week today 1)        ; Next Monday
-; => 1718496000000 (converts to #inst "2024-06-16T22:00:00.000-00:00")
+; => 1718582400000 (converts to #inst "2024-06-16T22:00:00.000-00:00")
 
 (adj/first-day-of-month-on-day-of-week today 5)  ; First Friday of month
-; => 1717716000000 (converts to #inst "2024-06-06T22:00:00.000-00:00")
+; => 1717718400000 (converts to #inst "2024-06-06T22:00:00.000-00:00")
 
 (adj/last-day-of-month-on-day-of-week today 5)   ; Last Friday of month
-; => 1719525600000 (converts to #inst "2024-06-27T22:00:00.000-00:00")
+; => 1719532800000 (converts to #inst "2024-06-27T22:00:00.000-00:00")
 
 (adj/nth-day-of-month-on-day-of-week today 2 3)  ; 3rd Tuesday of month
-; => 1718582400000 (converts to #inst "2024-06-17T22:00:00.000-00:00")
+; => 1718668800000 (converts to #inst "2024-06-17T22:00:00.000-00:00")
 
 ;; Period boundaries
 (adj/start-of-week today)             ; Start of current week
@@ -493,10 +486,6 @@ timing/
 └── util/        # Utility functions (timing.util, timing.adjusters)
 ```
 
-Both timezone artifacts provide the same `timing.timezones.db` namespace. Choose based on your needs:
-- **timing.timezones**: Smaller footprint, current timezone rules only
-- **timing.timezones.full**: Complete IANA tzdata history for accurate historical date calculations
-
 ### **Design Philosophy**
 
 1. **Numeric Domain First** - Computation in milliseconds, objects for display
@@ -510,23 +499,6 @@ Both timezone artifacts provide the same `timing.timezones.db` namespace. Choose
 - **Memory Friendly** - Minimal object allocation during computation
 - **Lazy-Friendly** - Works well with lazy sequences
 - **Composable** - Easy to combine with other functional operations
-
-## 🤝 When to Choose Timing
-
-Timing might be a good fit if you:
-- Enjoy functional programming patterns
-- Prefer working with sequences and transformations
-- Want to avoid external dependencies
-- Like the numeric domain approach to time
-- Need cross-platform Clojure/ClojureScript compatibility
-- Appreciate immutable, composable operations
-
-Other excellent time libraries like `clj-time` and Java 8 Time API excel in different areas:
-- **clj-time**: Rich object model, extensive parsing/formatting
-- **Java 8 Time API**: Comprehensive feature set, strong typing
-- **js-joda**: JavaScript port of JSR-310 with excellent browser support
-
-Each approach has its strengths, and the best choice depends on your specific needs and preferences.
 
 ## 🎨 Usage Patterns
 
@@ -570,44 +542,6 @@ Each approach has its strengths, and the best choice depends on your specific ne
 (adj/business-days-in-range (adj/start-of-month today) (adj/end-of-month today))
 ```
 
-## ⚡ Tips for Best Results
-
-1. **Stay in Numeric Domain** - Minimize conversions to/from Date objects
-2. **Embrace Lazy Sequences** - Let Clojure's laziness work for you
-3. **Batch Operations** - Process collections functionally
-4. **Cache Computations** - Store frequently used values
-
-```clojure
-;; Efficient: Stay numeric  
-(map #(+ % (t/days 1)) timestamps)
-
-;; Less efficient: Convert back and forth
-(map #(t/value->time (+ (t/time->value %) (t/days 1))) dates)
-```
-
-## 🚀 Getting Started
-
-1. **Add Timing to your project**
-2. **Start with basic date arithmetic**
-3. **Explore calendar frames for UI components**
-4. **Add temporal adjusters for complex logic**
-5. **Use holidays and timezones as needed**
-
-```clojure
-;; Your first Timing program
-(require '[timing.core :as t])
-(require '[timing.adjusters :as adj])
-
-(def today (t/time->value (t/date)))
-(def next-friday
-  (-> today
-      (t/midnight)
-      (adj/next-day-of-week 5)
-      (+ (t/hours 17))))  ; 5 PM
-
-(println "Next Friday at 5 PM:" (t/value->time next-friday))
-```
-
 ## 🔧 Important Notes
 
 ### **Timezone-Aware Date Display**
@@ -615,27 +549,6 @@ Due to timezone handling, dates may display with timezone offsets. This is norma
 ```clojure
 (t/value->time (t/time->value (t/date 2024 6 15)))
 ; => #inst "2024-06-14T22:00:00.000-00:00" (with timezone offset)
-```
-
-### **Holiday Name Extraction**
-Holiday functions return holiday objects that need to be processed with `holiday/name`:
-```clojure
-;; Don't expect direct string results
-(holiday/? :us (t/time->value (t/date 2024 7 4)))
-; => {:name #function, ...}
-
-;; Use holiday/name to get readable names
-(def holiday-obj (holiday/? :us (t/time->value (t/date 2024 7 4))))
-(holiday/name :en holiday-obj)  ; => "Independence Day"
-```
-
-### **Rounding Behavior**
-The `round-number` function behavior varies by strategy:
-```clojure
-(t/round-number 182.8137 0.25 :up)    ; => 183.0
-(t/round-number 182.8137 0.25 :down)  ; => 182.75
-(t/round-number 182.8137 0.25 :ceil)  ; => 183.0
-(t/round-number 182.8137 0.25 :floor) ; => 182.75
 ```
 
 ## 📜 License
