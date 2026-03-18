@@ -1,4 +1,4 @@
-(ns timing.holiday.ortodox)
+(ns timing.holiday.orthodox)
 
 (defn orthodox-easter [{:keys [year]}]
   (let [a (mod year 4)

@@ -15,7 +15,7 @@
   dispatch)
 
 (defmethod is-holiday? :default [dispatch _]
-  (let [message (str "Unkonwn dispatch " (pr-str dispatch) ". Are you sure that target multimethod implementation is loaded(required)?")]
+  (let [message (str "Unknown dispatch " (pr-str dispatch) ". Are you sure that target multimethod implementation is loaded(required)?")]
     (throw
      #?(:clj (Exception. message)
         :cljs (js/Error. message)))))

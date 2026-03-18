@@ -4,7 +4,7 @@
    [clojure.string :as str]
    [timing.core :as v]
    [timing.holiday.catholic :as catholic]
-   [timing.holiday.ortodox :as ortodox]
+   [timing.holiday.orthodox :as orthodox]
    [timing.holiday.util
     :refer [->day-time-context day-name->num]]))
 
@@ -132,7 +132,7 @@
         m :month
         y :year
         value :value}]
-    (let [orthodox (ortodox/orthodox-easter {:year y})
+    (let [orthodox (orthodox/orthodox-easter {:year y})
           orthodox-d (:day-in-month orthodox)
           orthodox-m (:month orthodox)
           orthodox-value (:value (->day-time-context y orthodox-m orthodox-d))
