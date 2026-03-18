@@ -24,4 +24,19 @@
                            {:git/url "https://github.com/cognitect-labs/test-runner.git"
                             :sha "209b64504cb3bd3b99ecfec7937b358a879f55c1"}}
               :extra-paths ["test"]
-              :main-opts ["-m" "cognitect.test-runner"]}}}
+              :main-opts ["-m" "cognitect.test-runner"]}
+  ;;
+  :codox {:extra-deps {codox/codox {:mvn/version "0.10.8"}}
+          :extra-paths ["core/src" "timezones/src-full" "cron/src" "holidays/src"]
+          :exec-fn codox.main/generate-docs
+          :exec-args {:name "Timing"
+                      :version "0.8.2"
+                      :source-paths ["core/src" "timezones/src-full" "cron/src" "holidays/src"]
+                      :output-path "docs"
+                      :doc-paths ["doc"]
+                      :metadata {:doc/format :markdown}
+                      :namespaces [timing.core timing.adjusters timing.util
+                                   timing.cron
+                                   timing.timezones.db
+                                   timing.holiday]
+                      :source-uri "https://github.com/gersak/timing/blob/{git-commit}/{filepath}#L{line}"}}}}

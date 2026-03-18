@@ -13,7 +13,7 @@ approach refreshing.
   <img width="460" height="300" src="resources/images/infinityclock.jpg" style="border-radius:20px;">
 </p>
 
-# [API](https://cljdoc.org/d/dev.gersak/timing.core/0.8.2/doc/readme)
+# [API Documentation](https://gersak.github.io/timing/)
 
 
 ## 🤔 Why Try Timing?
@@ -23,7 +23,7 @@ approach refreshing.
 - Cross-platform compatibility between JVM and JavaScript
 - Immutable operations that play nicely with functional code
 - Support for multiple calendar systems (Gregorian, Julian, Hebrew, Islamic)
-- Holiday awareness for ~200 countries
+- [Holiday awareness for ~200 countries](#holiday-integration)
 
 ### **Numbers-First Philosophy**
 Instead of working with date objects, Timing encourages you to:
@@ -108,7 +108,8 @@ You can also pick specific modules:
 
 ### Basic Usage
 ```clojure
-(require '[timing.core :as t])
+(require '[timing.core :as t]
+         '[timing.adjusters :as adj])
 
 ;; Create dates
 (def birthday (t/date 1990 5 15))
@@ -120,7 +121,7 @@ You can also pick specific modules:
 
 ;; Time arithmetic  
 (def next-week (+ (t/time->value now) (t/days 7)))
-(def next-month (t/add-months (t/time->value now) 1))
+(def next-month (adj/add-months (t/time->value now) 1))
 
 ;; Convert back to dates
 (t/value->time next-week)
@@ -150,19 +151,19 @@ t/week        ; => 604800000
 ### **2. Smart Period Arithmetic**
 ```clojure
 ;; Variable-length periods with edge case handling
-(t/add-months (t/time->value (t/date 2024 1 31)) 1)  
+(adj/add-months (t/time->value (t/date 2024 1 31)) 1)  
 ; => Converts Jan 31 -> Feb 28, 2024 (handles month-end properly)
 
-(t/add-months (t/time->value (t/date 2023 1 31)) 1)  
+(adj/add-months (t/time->value (t/date 2023 1 31)) 1)  
 ; => Converts Jan 31 -> Feb 27, 2023 (non-leap year handling)
 
-(t/add-years (t/time->value (t/date 2024 2 29)) 1)   
+(adj/add-years (t/time->value (t/date 2024 2 29)) 1)   
 ; => Feb 29 -> Feb 27, 2025 (Feb 29 doesn't exist in 2025)
 
 ;; Chain operations naturally
 (-> (t/time->value (t/date 2024 1 15))
-    (t/add-months 6)
-    (t/add-years 2)  
+    (adj/add-months 6)
+    (adj/add-years 2)  
     (+ (t/days 10))
     (+ (t/hours 8))
     t/value->time)
@@ -360,24 +361,32 @@ With `timing.timezones.full`, you can look up timezone rules as they existed at 
 ```
 
 ### **Holiday Integration**
+
+Holiday data is loaded on-demand. Cherry-pick only the countries you need to minimize bundle size, or load all ~200 countries at once:
+
 ```clojure
 (require '[timing.holiday :as holiday])
-;; Note: For full holiday support, also require:
-;; (require '[timing.holiday.all]) ; Add all holiday implementations
 
-;; Check holidays by country
-(holiday/? :us (t/time->value (t/date 2024 7 4)))     ; => holiday map
-(holiday/? :us (t/time->value (t/date 2024 12 25)))   ; => holiday map
-(holiday/? :us (t/time->value (t/date 2024 1 1)))     ; => holiday map
+;; Option 1: Cherry-pick specific countries (recommended for smaller bundles)
+(require '[timing.holiday.us])  ; Load US holidays
+(require '[timing.holiday.pl])  ; Load Polish holidays
+(require '[timing.holiday.de])  ; Load German holidays
 
-;; Get holiday name (important: use holiday/name function!)
-(def july4-holiday (holiday/? :us (t/time->value (t/date 2024 7 4))))
-(holiday/name :en july4-holiday)  ; => "Independence Day"
+;; Option 2: Load ALL countries (~200 locales)
+(require '[timing.holiday.all])
 
-(def christmas-holiday (holiday/? :us (t/time->value (t/date 2024 12 25))))
-(holiday/name :en christmas-holiday)  ; => "Christmas Day"
+;; Check if a date is a holiday
+(holiday/? :us (t/time->value (t/date 2024 7 4)))     ; => holiday map or nil
+(holiday/? :pl (t/time->value (t/date 2024 11 11)))   ; => Polish Independence Day
 
-;; Supports ~200 countries
+;; Get holiday name (use holiday/name function)
+(def july4 (holiday/? :us (t/time->value (t/date 2024 7 4))))
+(holiday/name :en july4)  ; => "Independence Day"
+
+;; Localized names (when available)
+(def christmas (holiday/? :pl (t/time->value (t/date 2024 12 25))))
+(holiday/name :pl christmas)  ; => "Boże Narodzenie"
+(holiday/name :en christmas)  ; => "Christmas Day"
 ```
 
 ### **Cron Expression Parser**
@@ -437,7 +446,7 @@ With `timing.timezones.full`, you can look up timezone rules as they existed at 
 ;; Every 2nd Tuesday for next 6 months
 (def bi-weekly-meetings
   (->> (adj/every-nth-day-of-week today 2 2)  ; Every 2nd Tuesday
-       (take-while #(< % (t/add-months today 6)))
+       (take-while #(< % (adj/add-months today 6)))
        (take 12)
        (map t/value->time)))
 
@@ -530,7 +539,7 @@ Each approach has its strengths, and the best choice depends on your specific ne
 (->> employees
      (map :hire-date)
      (map t/time->value)  
-     (map #(t/add-years % 1))         ; One year anniversary
+     (map #(adj/add-years % 1))         ; One year anniversary
      (map #(adj/next-day-of-week % 5)) ; Move to Friday
      (map t/value->time)              ; Back to dates
      (take 3))
@@ -543,7 +552,7 @@ Each approach has its strengths, and the best choice depends on your specific ne
 ```clojure
 (-> (t/date 2024 1 1)
     t/time->value
-    (t/add-months 6)
+    (adj/add-months 6)
     (adj/start-of-quarter)
     (adj/next-business-day)
     t/value->time)

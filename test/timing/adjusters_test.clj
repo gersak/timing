@@ -241,3 +241,12 @@
         ;; Last should be Friday the 22nd
         (is (= 5 (day? (last bdays))))
         (is (= 22 (:day-in-month (day-time-context (last bdays)))))))))
+
+
+(comment
+  (def today (date))
+  (def bi-weekly-meetings
+    (->> (adj/every-nth-day-of-week today 2 2)  ; Every 2nd Tuesday
+         (take-while #(< % (add-months today 6)))
+         (take 12)
+         (map value->time))))
